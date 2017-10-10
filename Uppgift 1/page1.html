@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- Mark of the web -->
+    <!-- saved from url=(0014)about:internet -->
+    <meta charset="UTF-8">
+    <title>Sida 1</title>
+</head>
+<body>
+    <h1>Uppgift 1 - sida 1</h1>
+    <hr>
+    <ul>
+        <li>
+            <b>HTML-dokument byggs upp</b> med hjälp av taggar. Taggar kan introducera antingen layoutinställningar och
+            /eller semantiska meningar med en bit text, ett område på skärmen eller ett helt dokument.
+            Hela dokumentet innesluts av <code>html</code>-taggen,
+            sedan en <code>head</code> sektion som innehåller deklarationer för stylesheets och inkluderade javascript-filer och
+            till sist <code>body</code> där sidans material/text/bilder/video skrivs in.
+            <p>
+                För att innan vi går vidare ge en kort beskrivning om hur HTML fungerar så ger jag här en kort
+                beskrivning för att ni ska kunna hänga med på senare sidor: <br>
+                <code>&lt;tagg attribut="värde för attribut"&gt; Element/text inom taggen &lt;/slut-tagg&gt;</code><br>
+                Ovan ser ni hur HTML fungerar. En tagg har en början, ett innehåll och ett slut. Start-taggen kan ha
+                attribut som påverkar utseende och/eller funktionalitet. Notera dock att alla taggar INTE har en slut-
+                tagg, till exempel taggen för radbrytningar <code>&lt;br&gt;</code>. Slut-taggar har alltid ett '/'.
+            </p>
+        </li>
+        <li>
+            <code>!DOCTYPE</code> indikerar vilken standard som dokumentet följer. <code>&lt;!DOCTYPE html&gt;</code>
+            som sätts in i den översta delen av HTML-dokumentet betyder att dokumentet följer HTML5.
+        </li>
+        <li>
+            <code>charset="UTF-8"</code> indikerar att UTF-8 används för att konvertera dokumentet när det sparas och när det
+            sedan laddas upp igen. UTF-8 är vanligast idag för Engelska webbsidor. Denna inställning spesas i dokumentets
+            <code>head</code> som ett eget element med hjälp av en <code>&lt;meta&gt;</code>-tagg. Ställ in detta genom
+            att sätta attributet <code>charset="UTF-8"</code> på meta-taggen.
+        </li>
+        <li>
+            <code>lang=sv</code> som är satt som attribut på html-taggen är en konvention som bör användas för att indikera vilket språk
+            sidan är skriven på. Det påverkar inte sidan mer än att till exempel sökmotorer kan använda informationen.
+        </li>
+        <li>
+            <b>Valideringsverktyg</b> kan användas för att bekräfta att ett HTML-dokument är korrekt utformat. Det kan
+            upptäcka saker såsom: saknad titel, saknade sluttaggar för olika element och taggar som saknar obligatoriska
+            attribut.
+        </li>
+    </ul>
+    <a href="page2.html">Nästa sida</a>
+
+</body>
+</html>
