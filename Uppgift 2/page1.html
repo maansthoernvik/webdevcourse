@@ -5,29 +5,60 @@
     <title>Uppgift 2</title>
 </head>
 <body>
+    <header>
+        <h1>Här är hemsidans titel!</h1>
+        Detta är hemsidans &lt;header&gt; element.
+    </header>
+
     <article>
         <header>
-            <h1>Det här är en extremt intressant nyhetssida med en massa artiklar om bilar</h1>
-            Det här är en header som visas i överkant på sidan. Den innehåller i detta fallet titeln för sin &lt;article&gt;
+            <h2>Det här är en extremt intressant artikel om bilar</h2>
+            <p>Det här är en header för artikeln. Den innehåller i detta fallet titeln för sin &lt;article&gt;</p>
         </header>
-        <h2>Här är den första artikeln på nyhetssidan</h2>
-        <p>Här är början av en av artiklarna, sen kommer en bild.</p>
+        <p>Här är början och beskrivningen av de innehållande delarna i artikeln, sen kommer en bild.</p>
         <figure>
             <img src="ugly_car.jpg" alt="En gul bil">
             <figcaption>Den här bilden visar en gul bil, den här texten är skriven i en &lt;figcaption&gt;</figcaption>
         </figure>
 
+        <h3>Här är nästa del av artikeln</h3>
+        <p>Här börjar den inledande texten av den andra delen av artikeln.</p>
+
+        <aside>
+            <p>Här är en &lt;aside&gt; del i artikeln. Detta är en bit information som är tillför något till artikeln
+            men som inte ska finnas i den löpande texten.</p>
+        </aside>
+
+        <details>
+            <summary>Mer information</summary>
+            <p>Den här informationen är innesluten med två &lt;details&gt; taggar. Vissa webbläsare gömmer därmed
+            den här texten och visar en liten pil som visar/gömmer den.</p>
+        </details>
     </article>
 
-    <section>
+    <aside>
+        <p>Här är ytterligare en &lt;aside&gt; som agerar som sido-modul. Den innehåller sidans primära navigering men också
+            flera andra element såsom en sektion med extra information om hemsidan.</p>
         <nav>
+            <h2>Navigering</h2>
+            Här är navigeringen för hemsidan, denna finns i ett &lt;nav&gt; för att vara lättillgängligt för screen-
+            readers.
             <a href="nav1.html">En navigeringslänk</a>
             <a href="nav1.html">En annan navigeringslänk</a>
         </nav>
-    </section>
+
+        <section>
+            <h2>Om hemsidan</h2>
+            <p>Här finns mer information om hemsidan, inneslutet av en &lt;section&gt;, det passar bra eftersom att
+            denna del använder sig av en titel. Hade den inte haft en titel skulle en &lt;div&gt; passat bättre.
+                Här slutar sidomodulen!</p>
+        </section>
+    </aside>
 
     <footer>
-        Det här är en footer som alltid visas i nederkant på sidan.
+        Det här är en footer som alltid visas i nederkant på sidan. Officiellt så ska den inte innehålla så mycket text,
+        mest sammanfattande, kort information. Dock så har detta ofta gåtts ifrån och dagens footers är ofta stora med
+        mycket "flare".
     </footer>
 </body>
 </html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Uppgift 3</title>
+</head>
+<body>
+    <header>
+        <h1>Uppgift 3</h1>
+    </header>
+
+    <main>
+        <article>
+            <header>
+                <h2>&lt;mark&gt;, &lt;time&gt; och &lt;wbr&gt;</h2>
+                <p>Här visas exempel på och gås igenom vad innebörden av de ovanstående semantiska textelementen är.</p>
+            </header>Title
+
+            <h3>&lt;time&gt;</h3>
+            <p>
+                Med time-taggarna så kan ett tidselement ramas in. Detta är hjälpsamt för både sökmotorer, andra
+                programmerare och skärmläsare för personer med nedsatt syn. Time använder det universella formatet på
+                tid: YYYY-mm-dd HH:MM, detta måste följas när man använder time-elementet. Nedan är en tid <br>
+                <mark><time datetime="2017-10-11 21:40">11<sup>e</sup> oktober, 2017 klockan 21:40</time></mark><br>
+                Tiden ovan definierades inom time-taggar, men texten följer inte formatet YYYY-mm-dd osv? Detta är helt
+                ok, så länge taggen har elementet 'datetime' satt till det faktiska datumet som tidselementet pekar på
+                så bryts inga regler för hur &lt;time&gt; ska användas.
+            </p>
+
+            <h3>&lt;mark&gt;</h3>
+            <p>
+                Här är en inledande paragraf <mark>med lite markerad text.</mark> &lt;mark&gt; kan användas för att
+                markera text som har <mark>extra betydelse</mark> i en löpande text, nyckelord eller annat som håller
+                högre viktighet i det nuvarande sammanhanget.
+            </p>
+
+            <h3>&lt;wbr&gt;</h3>
+            <p>
+                &lt;wbr&gt; används för att tala om för webbläsaren att just denna platsen passar bra att bryta till ny
+                rad. Notera att &lt;wbr&gt; inte har någon sluttagg! Nedan är ett exempel på ett
+                långt (och påhittat) ord med förutbestämt radbryt med &lt;wbr&gt;:<br>
+                långtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordBRYT!<wbr>långtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtord
+            </p>
+        </article>
+    </main>
+
+</body>
+</html>
