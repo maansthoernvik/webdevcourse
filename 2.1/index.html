@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Uppgift 2.1</title>
+</head>
+<body>
+    <header>
+        <h1>Uppgift 2.1</h1>
+    </header>
+    <main>
+        <article>
+            <header>
+                <h2>Grundläggande CSS</h2>
+            </header>
+
+            <section>
+                <h3>Externt länkade CSS-filer</h3>
+                <p>
+                    Externa CSS filer har flera fördelar mot intern CSS-kod. För det första så skapar det en
+                    separering mellan HTML markup och kod relaterad till design. Det blir lätt mycket design-
+                    relaterad kod vilket då leder till att, om man inte använder externa CSS-filer, att HTML-
+                    dokumenten lätt blir väldigt stora.
+                </p>
+                <p>
+                    Förutom detta så skapar även intern CSS-kod potentiellt en väldig massa copy-paste. Om en
+                    webbsida består av flera olika HTML-dokument så måste en &lt;style&gt; tagg användas på alla
+                    sidor som ska styleas och CSS-kod kommer antagligen att bli kopierad mellan sidorna. Har man
+                    istället en eller flera externa CSS-fil(er) så kan all designkod definieras på ett istället
+                    för flera ställen.
+                </p>
+            </section>
+
+            <section>
+                <h3>Arv</h3>
+                <p>
+                    När man talar om arv i CSS så handlar det arv av olika designelement mellan HTML-taggar. Arv
+                    kan, tillexempel, ske när en behållare såsom en &lt;div&gt; får en grön färg tilldelad.
+                    Alla paragrafer och andra element inuti denna &lt;div&gt; kommer efter detta också att ha en
+                    grön färg. Även taggar som definieras inuti &lt;p&gt;-taggen kommer att få en grön
+                    färg, detta eftersom att de båda är barn (och barnbarn) av den översta diven.
+                </p>
+                <p>
+                    Alla olika attribut ärvs dock inte av barnen. Margins och borders, tillexempel, ärvs inte.
+                </p>
+            </section>
+
+            <section>
+                <h3>The cascade & selektorer</h3>
+                <p>
+                    The cascade är "processen" som gås igenom när en webbläsare ska avgöra hur olika HTML-element
+                    ska se ut, beroende på dess CSS-attribut. The cascade går igenom alla attribut som är satta
+                    och avgör hur tillexempel en paragraf ska positioneras. The cascade avgörs genom bland annat
+                    arv men vad händer om en paragraf har fått sin font-storlek satt till två olika värden på två
+                    olika ställen? Vilken stil vinner?
+                </p>
+                <p>
+                    För att webbläsaren ska kunna avgöra den slutgiltiga font-storleken för en paragraf som fått
+                    denna satt på två olika ställen i CSS-filen så räknar den en sorts "poäng" för olika
+                    <em>selektorer</em>. Selektorer är en sorts tagg som används av CSS för att markera vilket
+                    HTML-element som ska formatteras. Olika selektorer är olika värda i CSS ögon. Nedan listas poängen:
+                </p>
+                <ul>
+                    <li>
+                        Tagg-selektor: 1 poäng (låg specificitet)
+                    </li>
+                    <li>
+                        Klass-selektor: 10 poäng
+                    </li>
+                    <li>
+                        ID-selektor: 100 poäng (hög specificitet)
+                    </li>
+                </ul>
+                <p>
+                    Från listan så kan man se att om man väljer att designa <em>alla</em> &lt;p&gt;-taggar med en
+                    tagg-selektor så räknas denna stil som 1 poäng för webbläsaren. Skulle CSS-filen då innehålla
+                    en till stil som istället designar en &lt;p&gt;-tagg med en klass-selektor så vinner denna stil
+                    över den som bara designade med en tagg-selektor.
+                </p>
+                <p>
+                    Så vad händer då om webbläsaren märker att poängen för två designer är lika? Kanske används
+                    två tagg-selektorer för &lt;p&gt;-taggen. I detta fall så används den stil som lagts på sist,
+                    det vill säga den stil som finns definierad <em>längst ned</em> i CSS-filen.
+                </p>
+
+                <h4>Mer om selektorer</h4>
+                <p>
+                    Vi vet redan om att det finns tagg, klass och ID-selektorer men det finns också fler.
+
+                </p>
+            </section>
+
+        </article>
+    </main>
+</body>
+</html>
