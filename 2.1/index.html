@@ -3,11 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Uppgift 2.1</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>Uppgift 2.1</h1>
     </header>
+    <nav>
+        <a href="../2.2/index.html">Gå till uppgift 2.2</a>
+        <a href="../2.3/index.html">Gå till uppgift 2.3</a>
+        <a href="../2.4/index.html">Gå till uppgift 2.4</a>
+        <a href="../2.5/index.html">Gå till uppgift 2.5</a>
+        <a href="../2.6/index.html">Gå till uppgift 2.6</a>
+        <a href="../2.7/index.html">Gå till uppgift 2.7</a>
+        <a href="../2.8/index.html">Gå till uppgift 2.8</a>
+    </nav>
     <main>
         <article>
             <header>
@@ -86,10 +96,148 @@
                 <h4>Mer om selektorer</h4>
                 <p>
                     Vi vet redan om att det finns tagg, klass och ID-selektorer men det finns också fler.
-
+                </p>
+                <ul>
+                    <li>
+                        En tagg-selektor: <code>div { }</code>
+                        <p>
+                            Tagg-selektorer läggs på alla taggar som matchar. Tillexempel alla &lt;div&gt; som ovan.
+                        </p>
+                    </li>
+                    <li>
+                        En klass-selektor: <code>.klassnamn { }</code>
+                        <p>
+                            Klass-selektorer läggs på alla HTML-element som har en viss klass associerad med sig.
+                        </p>
+                    </li>
+                    <li>
+                        En id-selektor: <code>#idnummer { }</code>
+                        <p>
+                            Id-selektorer läggs på det HTML-element som har samma id-nummer som det som definierats i
+                            CSS.
+                        </p>
+                    </li>
+                    <li>
+                        En attribut-selektor: <code>a[href="mönster att matcha"] { }</code>
+                        <p>
+                            En attribut-selektor kan läggas till på en tagg-selektor för att också välja vilket attribut
+                            taggen ska ha för att den ska formatteras med just den här CSS-regeln. Tillexempel en viss
+                            adress för en &lt;a&gt;-tagg som ovan.
+                        </p>
+                    </li>
+                    <li>
+                        En barn-selektor: <code>body > h1 { }</code>
+                        <p>
+                            Det finns mängder av barn-selektorer, den mest grundläggande ovan. Denna gör så att alla
+                            &lt;h1&gt;-taggar som är direkta barn av &lt;body&gt;-taggen får formattering. Arv kommer
+                            alltså inte in här. Om det finns två &lt;h1&gt;-taggar inuti body-taggen men en av dessa
+                            headers ligger inuti en div medans den andra ligger direkt under body så kommer den header
+                            som är inuti div-taggen INTE att få formattering. Detta eftersom att den inte är ett direkt
+                            barn av body-taggen.
+                        </p>
+                        <p>
+                            Det finns även en hel del fler barnselektorer som fungerar som ovan men med sina egna
+                            tvister. <code>&lt;h1&gt;:first-child</code> kan tillexempel tillämpas för att bara
+                            formattera den första h1-taggen, om det finns flera. Den fullständiga koden blir då: <br>
+                            <code>body > h1:first-child { }</code>
+                        </p>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Enheter</h3>
+                <p>
+                    Det finns flera enheter för att bestämma storlek på olika HTML-element.
+                </p>
+                <ul>
+                    <li>
+                        <p>
+                            <em>in</em> står för "inch", en inch är 2.54 centimeter.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <em>cm</em> är vanliga centimetrar.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <em>mm</em> står för millimetrar.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <em>pt</em> står för "points" och 1pt är lika med 1/72 av 1in.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <em>pc</em> står för "picas" och 1pc är lika med 12pt.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <em>px</em> står för "pixels" och 1px är lika med 1/96 av 1in.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <em>em</em> är en storlek som är relativ mot den nuvarande fontstorleken. 1em är 100% av den
+                            nuvarande fontstorleken, 2em är 200% osv. Med nuvarande fontstorlek så menas det för det
+                            nuvarande HTML-elementet, tillexempel för en inneslutande &lt;div&gt;.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <em>ex</em> är en inte så vanlig storlek som räknar på x-storleken för den nuvarande fonten.
+                            x-storleken är höjden för den nuvarande fontens små bokstäver.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <em>%</em> är en relativ storlek som räknar på en %-sats för det inneslutande elementet.
+                            Sätts detta när tex. &lt;body&gt; är den direkta föräldern så blir %-satsen tex. 20% av hela
+                            skärmens yta (eftersom att &lt;body&gt; fyller fönstret).
+                        </p>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Hur ett CSS-dokument är uppbyggt</h3>
+                <p>
+                    Ett CSS-dokument består av en massa designregler som läses av, uppifrån och ned. Såsom nämnt
+                    tidigare så används den "regler" längst ned om två eller flera kolliderar (har samma prio) för ett
+                    element. För att klargöra ytterligare för hur en CSS-stil ska se ut så finns här några exempel:
+                </p>
+                <pre>
+                    <code>
+                        body {
+                            color: white;
+                            background-color: black;
+                        }
+                    </code>
+                </pre>
+                <p>
+                    Se på stilen ovan, den sätter färgen för alla element under &lt;body&gt;-taggen till vitt och
+                    bakgrunden till svart. Notera att stilerna måste avslutas med semi-kolon för att termineras och hela
+                    stil-klassen innesluts av <code>{}</code>. CSS-filen fylls på med stiler precis som ovan för olika
+                    element. De kan ha barn-selektorer, id-selektorer eller andra för att rätt element ska få rätt
+                    utseende. Se nedan hur en &lt;div&gt; med klassen .beautybox får ett tillägg.
+                </p>
+                <pre>
+                    <code>
+                        div .beautybox {
+                            font-family: Verdana;
+                            font-size: 1.2em;
+                        }
+                    </code>
+                </pre>
+                <p>
+                    Text inuti &lt;div&gt; med klassen .beautybox kommer att få Verdana-fonten och texten kommer att
+                    förstoras med 20%. Dock så kan denna formattering förstås skrivas över om fler designregler läggs
+                    till som är mer specifika än denna, eller lika specifik, bara definierad längre ned i filen.
                 </p>
             </section>
-
         </article>
     </main>
 </body>
