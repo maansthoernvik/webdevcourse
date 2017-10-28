@@ -2,3 +2,6 @@ body {
     margin: 0 auto;
     width: 75%;
 }
+p.big_space {
+    margin-bottom: 2em;
+}

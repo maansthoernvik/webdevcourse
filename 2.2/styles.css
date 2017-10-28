@@ -2,3 +2,34 @@ body {
     margin: 0 auto;
     width: 75%;
 }
+.formatted_text {
+    font-style: italic;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+}
+.formatted_text {
+    font: italic normal x-large Arial, Helvetica, sans-serif;
+}
+.formatted_list {
+    list-style-type: circle;
+    list-style-position: inside;
+}
+.formatted_list {
+    list-style: circle inside;
+}
+p.one {
+    color: orange;
+}
+p.two {
+    color: #00ff00;
+}
+p.three {
+    color: rgb(255, 255, 0);
+}
+p.four {
+    color: hsl(50, 100%, 50%);
+}
+p.five {
+    color: rgba(50, 255, 255, 0.5);
+}

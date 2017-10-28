@@ -10,7 +10,138 @@
         <h1>Uppgift 2.3</h1>
     </header>
     <main>
+        <article>
+            <h2>Boxmodellen</h2>
+            <p>
+                En webbläsare ser allt innehåll i en webbsida som lådor, fyrkantiga former som bygger upp webbplatsen.
+                En paragraf är en låda med text, en bild är en låda med en bild, det finns till och med lådor med ännu
+                fler, mindre lådor inuti. För att styra hur lådorna integragerar så behöver du veta om några
+                grundläggande koncept.
+            </p>
+            <h3>Paddning</h3>
+            <p>
+                Paddning är mellanrum mellan till exempel en paragrafs text och lådan som innehåller textens kant. Du
+                kan se det som att paddningen är ramen runt en tavla och bilden i ramen är det faktiska materialet,
+                antingen en bild eller text eller något annat, kanske fler, mindre tavlor till och med.
+            </p>
+            <h3>Kantlinjer</h3>
+            <p>
+                Kantlinjer kan läggas till runt olika lådor. Man behöver inte lägga till kantlinjer på alla sidor utan
+                kan lägga till dem på en sida i taget också, till exempel över och under, till vänster eller runt hela
+                lådan.
+            </p>
+            <h3>Marginaler</h3>
+            <p>
+                Marginaler är mellanrum &gt;mellan&lt; lådor, alltså utanför en lådas kant fram till en annan lådas kant
+            </p>
+            <h3>Innehåll</h3>
+            <p>
+                Innehåll är "anledningen" varför en låda ens finns. Om lådan är tom så fyller den inte riktigt någon
+                funktion för din webbsida. Innehållet kan till exempel vara text, en bild eller fler mindre lådor.
+            </p>
+            <h3>Boxmodellen forts.</h3>
+            <p>
+                Koncepten ovan kan alla kombineras på valfritt sätt. Man kan ha bara padding, padding och margin eller
+                allting på en gång. Det går också helt OK att sätta padding och/eller margin bara på en sida av ett
+                element, se nedan för ett exempel.
+            </p>
+            <p class="big_space">En bit text</p><p>En till bit text</p>
+            <p>
+                Som du ser ovan så är mellanrummet mellan paragraferna väldigt stort i nederkant på den första i
+                förhållande till överkanten på den andra paragragen, men mellanrummet till den föregående är inte
+                förändrat. Detta kan åstadkommas genom att bara sätta <code>margin-bottom</code> på den första paragrafen eller
+                <code>margin-top</code> på den andra paragrafen.
 
+            <h2>Layoutbegrepp och hur de används</h2>
+            <p>
+                Margin, padding och borders är alla viktiga att förstå för att styra sina lådor på en webbplats.
+            </p>
+            <h3><code>margin</code></h3>
+            <p>
+                <code>margin</code> används som sagt för att lägga till mellanrum mellan sina lådor, utanför deras
+                respektive kanter. Man kan antingen använda genvägen <code>margin</code> eller ställa specifikt med en
+                egen attribut per sida med: <code>margin-right</code>, <code>margin-left</code>, <code>margin-top</code>,
+                <code>margin-bottom</code>. <code>margin</code> används genom att mata in fyra värden medans de mer
+                specifika attributen bara tar ett.
+            </p>
+            <pre>
+                <code>
+                    p {
+                        margin-top: 1em;
+                        margin-bottom: 1em;
+                        margin-left: 1em;
+                        margin-right: 1em;
+                        margin: 1em 1em 1em 1em;
+                    }
+                </code>
+            </pre>
+            <p>
+                Notera ovan att det <strong>inte</strong> behövs mellanrum mellan <code>margin</code>s olika värden.
+                Värdena läses in i följande ordning: ovan, höger, under, vänster. Om du ger margin tre värden istället
+                för fyra så läses följande in: ovan, höger och vänster, under. Om du ger margin två värden blir det
+                första för ovan och under och det andra för höger och vänster. Ger du margin ett värde sätts det för
+                <strong>alla</strong> sidor.
+            </p>
+            <h3><code>border</code></h3>
+            <p>
+                Kantlinjer hos en låda kan ställas in i detalj med olika CSS-attribut. <code>border</code> är precis
+                som <code>margin</code> ett snabbt sätt att ställa in allting med en gång. Se nedan för ett exempel.
+            </p>
+            <pre>
+                <code>
+                    p {
+                        border: 2px solid red;
+                        border-color: red;
+                        border-style: solid;
+                        border-width: 2px;
+                    }
+                </code>
+            </pre>
+            <p>
+                <code>border</code> tar tre argument: tjocklek, stil och färg. Kommandot ovan kommer att skapa en 2
+                pixlar bred solid kant runt alla paragrafer. Notera att de specifika attributen under <code>border</code>
+                visar hur man ska skriva om man inte vill använda genvägen utan ställa in allting separat.
+            </p>
+            <h3><code>padding</code></h3>
+            <p>
+                <code>padding</code> är, till skillnad från <code>margin</code> ett sätt att lägga till plats inuti
+                en box istället för runt utkanten med <code>margin</code>.
+            </p>
+            <pre>
+                <code>
+                    p {
+                        padding: 1em 1em 1em 1em;
+                        padding-top: 1em;
+                        padding-right: 1em;
+                        padding-bottom: 1em;
+                        padding-left: 1em;
+                    }
+                </code>
+            </pre>
+            <p>
+                Precis som med <code>margin</code> så kan <code>padding</code> ställas in med en genväg som tar 4
+                argument, ovan, höger, nedan, vänster. Det går även att följa <code>margin</code>s mönster där man
+                passerar färre värden till <code>padding</code>, då fungerar detta precis som med <code>margin</code>,
+                till exempel om tre värden har givits till <code>padding</code> så blir det första för ovan det andra
+                för höger och vänster och det sista för under osv.
+            </p>
+            <h3><code>outline</code></h3>
+            <p>
+                En kantlinje är gränsen för vart en låda slutar, efter kantlinjen så tar <code>outline</code> vid.
+                <code>outline</code> blir som en "extra" kantlinje utanför kantlinjen. <code>outline</code> innehåller
+                precis samma inställningar som en <code>border</code>
+            </p>
+            <pre>
+                <code>
+                    p {
+                        outline: 2px solid red;
+                        outline-color: red;
+                        outline-style: solid;
+                        outline-width: 2px;
+                    }
+                </code>
+            </pre>
+        </article>
     </main>
 </body>
 </html>

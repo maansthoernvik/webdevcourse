@@ -10,7 +10,33 @@
         <h1>Uppgift 2.4</h1>
     </header>
     <main>
-
+        <article>
+            <h2><code>background</code></h2>
+            <p>
+                <code>background</code> är ett kortkommande för att ställa in en bakgrund i CSS, precis som
+                <code>border</code>, <code>margin</code> eller <code>outline</code> tar den ett antal argument.
+            </p>
+            <pre>
+                <code>
+                    p {
+                        background: url(space_wallpaper.jpg) center top / 100% no-repeat fixed #fff;
+                    }
+                </code>
+            </pre>
+            <p>
+                Det första argumentet tar bilden som ska visas i bakgrunden, de följande två hanterar positioneringen av
+                bilden. center top ger en bild som är satt överkant på bilden mot överkant på lådan samt med mitten
+                centrerad. center top kan också ersättas med andra enheter, till exempel procent. En centrerad bild sätts till 50%
+                50%. '/ 100%' sätter skalan på bilden, 100% är normal bildstorlek medans 50% halverar storleken.
+                no-repeat gör så att bilden inte dupliceras för att fylla ut resterande utrymme <strong>om</strong>
+                bilden är mindre än den element den blev satt som bakgrund på. Den sista biten är en hexadecimal färgkod
+                för att ställa in bakgrundfärgen.
+            </p>
+            <p>
+                fixed talar om för webbläsaren att denna bild inte ska scrollas med när användaren bläddrar nedåt eller
+                uppåt på sidan. Bakgrundsbilden hålls alltså statisk när det scrollas.
+            </p>
+        </article>
     </main>
 </body>
 </html>

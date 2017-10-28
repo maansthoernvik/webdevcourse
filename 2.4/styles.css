@@ -1,4 +1,6 @@
 body {
     margin: 0 auto;
     width: 75%;
+    color: #FFFFFF;
+    background: url(space_wallpaper.jpg) center top / 100% no-repeat fixed #fff;
 }
