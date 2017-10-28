@@ -18,7 +18,7 @@
             </p>
             <pre>
                 <code>
-                    p {
+                    body {
                         background: url(space_wallpaper.jpg) center top / 100% no-repeat fixed #fff;
                     }
                 </code>
@@ -35,6 +35,42 @@
             <p>
                 fixed talar om för webbläsaren att denna bild inte ska scrollas med när användaren bläddrar nedåt eller
                 uppåt på sidan. Bakgrundsbilden hålls alltså statisk när det scrollas.
+            </p>
+            <p>
+                Denna sidan har fått en bakgrund satt på <code>body</code>-taggen, här nere ser vi att en bakgrundsbild
+                satts på en paragraf och en header-tagg.
+            </p>
+            <p class="background">Lite text</p>
+            <h2 class="background">En stor header</h2>
+            <p>
+                Som vi ser så sätts en bild även på dessa, mindre, element.
+            </p>
+
+            <h2>CSS och <code>&lt;img&gt;</code></h2>
+            <p>
+                Bilden nedan är stylead med padding, float, border och border-radius. Float gör så att bilden "fästs"
+                vid den sida som specifierats med float-attributen och border-radius tar bort den 90-gradiga kanten och
+                ersätter den med en kurva istället. Borders är användbara för att rama in en bild, padding för att skapa
+                avstånd, float för att få layouten att se ut som man vill och border-radius lägger till en snygg finish
+                så att alla bilder inte ser så kantiga ut. Exemplet nedan använder lite av allt. Anledningen till att
+                det är ett mellanrum mellan ramen (border) och bilden är för att <code>1em</code> padding har lagts till.
+                Bilden visas till höger eftersom att <code>float</code> attributen har satts till 'right'.
+            </p>
+            <img src="BstJX4q.jpg" alt="Ostrich eating">
+            <p>
+                Den här texten visar sig vid sidan av bilden men kommer aldrig för nära med hjälp av en vänsterlagd
+                margin på bild-elementet. Detta gör att texten inte "stör" bildelementet så att det inte ser så trångt
+                ut. När en huvudrubrik kommer (h2 nedan) så ska denna visas inunder bilden för att klart visa att "här
+                börjar ett nytt stycke". Detta görs genom att använda <code>clear</code> propertyn. <code>clear</code>
+                bestämmer att det varken får finnas ett element till höger eller vänster om det element som attributen
+                är satt på.
+            </p>
+            <h2 class="clear">Testrubrik</h2>
+            <p>
+                Testar att detta hamnar nedanför bilden!
+                TesttextTesttextTesttextTesttextTesttextTesttext TesttextTesttextTesttextTesttextTesttextTesttext
+                TesttextTesttextTesttextTesttextTesttextTesttextTesttextTesttextTesttextTesttextTesttextTesttext
+                TesttextTesttextTesttextTesttextTesttextTesttextTesttextTesttextTesttextTesttextTesttextTesttextTesttext
             </p>
         </article>
     </main>

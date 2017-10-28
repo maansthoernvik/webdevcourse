@@ -2,5 +2,26 @@ body {
     margin: 0 auto;
     width: 75%;
     color: #FFFFFF;
-    background: url(space_wallpaper.jpg) center top / 100% no-repeat fixed #fff;
+    background: url(space_wallpaper.jpg) center center / 100% no-repeat fixed #fff;
+}
+
+p {
+    font: normal normal medium Arial, Helvetica, sans-serif;
+}
+
+.background {
+    color: black;
+    background: url(BstJX4q.jpg);
+}
+
+.clear {
+    clear: both;
+}
+
+img {
+    float: right;
+    border: 5px white solid;
+    border-radius: 50px;
+    padding: 1em 1em 1em 1em;
+    margin-left: 2em;
 }

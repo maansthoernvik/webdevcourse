@@ -2,3 +2,56 @@ body {
     margin: 0 auto;
     width: 75%;
 }
+
+p {
+    font: normal normal medium Arial, Helvetica, sans-serif;
+}
+
+a:link {
+    color: orange;
+    text-decoration: none;
+}
+a:visited {
+    color: orangered;
+}
+a:hover {
+    color: red;
+    background-color: yellow;
+    text-decoration: underline;
+    cursor: crosshair;
+}
+a:active {
+    color: yellow;
+    background-color: red;
+}
+
+a.button_link:link {
+    border: 2px solid black;
+    background-color: lightgray;
+    padding: 5px;
+    margin: 5em;
+    border-radius: 5px;
+    color: white;
+}
+a.button_link:visited {
+    color: green;
+}
+a.button_link:hover {
+    color: lime;
+    background-color: white;
+    text-decoration: overline underline;
+    cursor: pointer;
+}
+a.button_link:active {
+    color: white;
+    background-color: lime;
+}
+
+a.picture_link {
+    background-image: url(download.png);
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding: 5px 5px 5px 25px;
+    border-radius: 5px;
+}
