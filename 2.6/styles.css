@@ -2,3 +2,63 @@ body {
     margin: 0 auto;
     width: 75%;
 }
+
+p {
+    font: normal normal medium Arial, Helvetica, sans-serif;
+}
+
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 1px dotted black;
+    text-align: left;
+    vertical-align: baseline;
+}
+
+table caption {
+    font-size: large;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.column {
+    width: 200px;
+}
+
+th {
+    color: white;
+    background-color: darkblue;
+}
+
+tr, td, th {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+col:nth-of-type(odd) {
+    background-color: lightgray;
+}
+
+form .label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    padding: 10px;
+}
+
+form input[type="submit"] {
+    margin: 10px 10px 10px 140px;
+}
+
+form.color input {
+    background-color: lightgray;
+}
+
+form.color input:focus {
+    background-color: white;
+}
+
+form.fieldset fieldset {
+    border-radius: 25px;
+    background-color: beige;
+}

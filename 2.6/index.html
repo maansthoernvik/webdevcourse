@@ -10,7 +10,107 @@
         <h1>Uppgift 2.6</h1>
     </header>
     <main>
+        <article>
+            <h2><code>table-layout</code></h2>
+            <p>
+                <code>table-layout</code> används för att ställa in hur webbläsaren ska rita en tabell. Inställningen
+                kan göra ritningen av tabellen snabbare genom att använda inställningen <code>fixed</code>. <code>fixed</code>
+                gör så att webbläsaren tvignas att rendera alla kolumner med samma bredd som bredden hos den första
+                radens kolumner, något som gör renderingen snabbare. <code>auto</code> kan också användas och berättar
+                då för webbläsaren att "rendera som du vill". Tabellen nedan använder <code>fixed</code>.
+            </p>
+            <table>
+                <caption>Här är caption</caption>
+                <colgroup>
+                    <col>
+                    <col class="column">
+                    <col>
+                    <col>
+                </colgroup>
+                <tr>
+                    <th>Kolumn 1</th>
+                    <th>Kolumn 2</th>
+                    <th>Kolumn 3</th>
+                    <th>Kolumn 4</th>
+                </tr>
+                <tr>
+                    <td>Data 1</td>
+                    <td>Data 2Data 2Data 2Data 2Data 2</td>
+                    <td>Data 3</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Data 1</td>
+                    <td>Data 2Data 2Data 2Data 2Data 2Data 2Data 2</td>
+                    <td>Data 3</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Data 1</td>
+                    <td>Data 2Data 2Data 2Data 2Data 2Data 2Data 2Data 2</td>
+                    <td>Data 3</td>
+                    <td></td>
+                </tr>
+            </table>
 
+            <h2><code>form</code> och CSS</h2>
+            <p>
+                Formulär kan modifieras på (förstås) många olika sätt med CSS. Ett bra sätt att få sina formulär att se
+                bättre ut är att ställa in fasta storlekar för alla <code>label</code>-element som associeras med
+                <code>input</code>-element. På detta sätt kan man få en rak linje med beskrivande text och dess inputfält.
+                Nedan ser vi ett exempel på denna inställning i ett basic formulär.
+            </p>
+            <form method="post" action=".">
+                <fieldset>
+                    <legend>Personinfo</legend>
+                    <label class="label" for="firstname1">Förnamn</label>
+                    <input type="text" name="firstname" id="firstname1"><br>
+
+                    <label class="label" for="lastname1">Efternamn</label>
+                    <input type="text" name="lastname" id="lastname1"><br>
+
+                    <label class="label" for="age">Ålder</label>
+                    <input type="number" name="age" id="age">
+                </fieldset>
+                <input type="submit">
+            </form>
+            <p>
+                Det går givetvis också bra med dessa inputfält att använda pseudo-klasser, nedan kan vi se hur fältet
+                ändrar färg när det väljs gentemot hur det ser ut när det är inaktivt.
+            </p>
+            <form class="color" method="post" action=".">
+                <fieldset>
+                    <legend>Personinfo</legend>
+                    <label class="label" for="firstname2">Förnamn</label>
+                    <input type="text" name="firstname" id="firstname2"><br>
+
+                    <label class="label" for="lastname2">Efternamn</label>
+                    <input type="text" name="lastname" id="lastname2"><br>
+
+                    <label class="label" for="age2">Ålder</label>
+                    <input type="number" name="age" id="age2">
+                </fieldset>
+                <input type="submit">
+            </form>
+            <p>
+                Ett <code>fieldset</code> är ett bra sätt att gruppera <code>input</code>-element och ger bra möjlighet
+                för CSS-formattering. Nedan ser vi hur bakgrunden har ändrats samt att kanterna jämnats ut.
+            </p>
+            <form class="fieldset" method="post" action=".">
+                <fieldset>
+                    <legend>Personinfo</legend>
+                    <label class="label" for="firstname3">Förnamn</label>
+                    <input type="text" name="firstname" id="firstname3"><br>
+
+                    <label class="label" for="lastname3">Efternamn</label>
+                    <input type="text" name="lastname" id="lastname3"><br>
+
+                    <label class="label" for="age3">Ålder</label>
+                    <input type="number" name="age" id="age3">
+                </fieldset>
+                <input type="submit">
+            </form>
+        </article>
     </main>
 </body>
 </html>
