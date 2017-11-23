@@ -1,0 +1,15 @@
+.container {
+    display: -webkit-flex;
+    display: flex;
+    height: 100px;
+    width: 100%;
+}
+
+.flexItem {
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.targetDiv {
+    background-color: black;
+}

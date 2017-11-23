@@ -1,0 +1,15 @@
+#blinkingDiv {
+    height: 100px;
+}
+
+#timeoutDiv {
+    height: 100px;
+}
+
+.blink {
+    background-color: lime;
+}
+
+.timeout {
+    background-color: red;
+}
