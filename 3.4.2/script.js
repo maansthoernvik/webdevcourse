@@ -1,7 +1,7 @@
 $(document).ready(function() {
     // Preloading av bilder.
     var images = [
-        'images/bild1.png',
+        'images/jslogo.png',
         'images/bild2.png',
         'images/squirrel.png'
     ];

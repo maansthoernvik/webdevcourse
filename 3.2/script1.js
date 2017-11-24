@@ -5,10 +5,10 @@ $(document).ready(function() {
         var currentPicture = $('#pictureToChange').attr('src');
 
         // Beroende på vilken bild som visas, visa den andra.
-        if (currentPicture === 'bild1.png') {
-            $('#pictureToChange').attr('src', 'bild2.png');
+        if (currentPicture === 'images/jslogo.png') {
+            $('#pictureToChange').attr('src', 'images/bild2.png');
         } else {
-            $('#pictureToChange').attr('src', 'bild1.png');
+            $('#pictureToChange').attr('src', 'images/jslogo.png');
         }
     })
 

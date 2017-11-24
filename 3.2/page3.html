@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Uppgift 3.2</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="../jquery/jquery-3.2.1.js"></script>
+    <script src="../jquery/jquery-3.2.1.min.js"></script>
     <script src="script3.js"></script>
 </head>
 <body>
@@ -48,12 +48,13 @@
         <section>
             <h2>Scroll</h2>
             <p>
-                Genom att scrolla i rutan full med text så kommer text att läggas till i rutan inunder.
+                Genom att scrolla i rutan full med text så kommer text att läggas till i rutan inunder. Tryck på knappen
+                för att stänga av scroll-funktionaliteten.
             </p>
+            <button id="disableScroll">Stäng av scroll</button>
             <div id="textBox">
                 TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
             </div>
-            <button id="disableScroll">Stäng av scroll</button>
             <div id="scrollTarget"></div>
         </section>
     </main>
