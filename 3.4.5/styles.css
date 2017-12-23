@@ -1,0 +1,31 @@
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label.error {
+    display: block;
+    color: red;
+}
+
+input {
+    display: block;
+}
+
+input.inline {
+    display: inline;
+}
+
+input.focus {
+    border: 1px solid darkgreen;
+    background: lightgreen;
+}
+
+label.block {
+    display: block;
+}
+
+p span {
+    padding-left: 5px;
+    padding-right: 5px;
+}
