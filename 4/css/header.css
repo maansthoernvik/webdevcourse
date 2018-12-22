@@ -1,0 +1,12 @@
+#header h1 {
+    cursor: pointer;
+    color: red;
+}
+
+#header a {
+    color: lawngreen;
+}
+
+#header {
+    background-color: black;
+}
