@@ -7,78 +7,84 @@
 <body>
     <h1>Uppgift 1.1 - sida 4</h1>
     <hr>
-    <ul>
-        <li id="span">
-            <code>span</code> är en tagg som kan vara användbar för att stylea text inuti ett textflöde. <code>div</code>
-            är ett annat element som precis som span inte egentligen gör någonting men div skiljer sig i det att det elementet
-            bryter den nuvarande raden. <code>span</code> är nedan satt runt texten "span span span" och som det syns så påverkar
-            den ingenting, dock så kan man som sagt fritt stylea den texten inuti <code>span</code> taggen genom att koppla den
-            till ett id. För att koppla ett html-element till ett id använder man attributet <code>id</code> på den tagg
-            som man vill sätta ett id på. Så här:<br><code>&lt;span id="span_id"&gt;Min span text&lt;/span&gt;</code>
+    <nav>
+      <a href="page3.html">Förra sidan</a>
+      <a href="page5.html">Nästa sida</a>
+    </nav>
+    <hr>
+    <p>
+        <code>span</code> är en tagg som kan vara användbar för att stylea text inuti ett textflöde. <code>div</code>
+        är ett annat element som precis som span inte egentligen gör någonting men div skiljer sig i det att det elementet
+        bryter den nuvarande raden. <code>span</code> är nedan satt runt texten "span span span" och som det syns så påverkar
+        den ingenting, dock så kan man som sagt fritt stylea den texten inuti <code>span</code> taggen genom att koppla den
+        till ett id eller klass eller en generell CSS-regel som appliceras på alla <code>span</code>-taggar.
+        För att koppla ett html-element till ett id eller en klass använder man attributet <code>id</code> eller <code>class</code>
+        på den tagg som man vill sätta ett id på. Så här:<br><code>&lt;span id="span_id" class="span_class"&gt;Min span text&lt;/span&gt;</code>
+    </p>
+    <p>
+        Här är en massa text som löper på... här kommer ett <span>span span span</span> men det påverkar
+        inte formattering eller någonting annat, så länge man inte vill att det ska det och kopplar in ett
+        stylesheet.
+    </p>
 
-            <p>
-                Här är en massa text som löper på... här kommer ett <span>span span span</span> men det påverkar
-                inte formattering eller någonting annat, så länge man inte vill att det ska det och kopplar in ett
-                stylesheet.
-            </p>
-        </li>
-        <li>
-            <code>a</code>, anchor tags kan användas på flera olika sätt. De kan användas för navigering (såsom denna
-            genomgång strukturerats), för att skicka e-post eller ladda ner material och de kan även se ut på många olika sätt.
-            För att peka på en plats som <code>a</code> taggen ska ta användaren till så används attributet <code>href="plats att gå till"</code>.
-            Den spesade platsen kan vara ett annat html-dokument, en mailadress eller en serveradress, mm.
-            <br>
-            <a href="klickad_bild.html">
-                <img src="ugly_car.jpg" alt="Ugly car">
-            </a>
+    <p>
+        <b>Bilder</b> sätts in i ett html-dokument med hjälp av <code>img</code>-taggen. Bilder behöver källan från vart bilden ska
+        hämtas vilket spesas med <code>src</code>-attributet på <code>img</code>-taggen. Det går även att
+        lägga till ett <code>alt</code>-attribut för bilder som är en beskrivande text om bilden som visas om bilden inte
+        kan hämtas av någon anledning. Bilden på bilen nedan har spesats på följande sätt:
+        <pre>
+          &lt;img src="ugly_car.jpg" alt="Ugly car"&gt;
+        </pre>
+        Lägg märke till att <code>img</code>-taggen inte behöver en sluttagg <code>&lt;/img&gt;</code> såsom många andra taggar gör!
+    </p>
 
-            <p>
-                Bilden ovan är en länk, <code>a</code> taggen kan innehålla mängder av material och alla element som läggs inuti den
-                blir klickbart. Bilden ovan är ett element mellan start och sluttaggen för en anchor-tag. <br><br>
-                En annan viktig del av anchor-tags är att destinationen de pekar mot kan vara relativ
-                platsen du just nu är på eller fast. En relativ destination spesas på följande sätt: <br>
-                <em>destination_jag_vill_gå_till.html</em> <br>
-                medans en absolut länk spesar hela sökvägen, så här: <br>
-                <em>http://www.minhemsida.se/destination_jag_vill_gå_till.html</em>
-            </p>
+    <h2>Länkar</h2>
+    <p>
+      <code>a</code>, anchor tags kan användas på flera olika sätt. De kan användas för navigering (såsom denna
+      genomgång strukturerats med länkar mellan sidor), för att skicka e-post eller ladda ner material och de kan även se ut på många olika sätt.
+      För att peka på en plats som <code>a</code> taggen ska ta användaren till så används attributet <code>href="plats att gå till"</code>.
+      Den spesade platsen kan vara ett annat html-dokument, en mailadress eller en serveradress, mm.
+    </p>
 
-            <p>
-                För att skapa en länk som kan användas för att skicka ett mail så måste man lägga till ytterligare
-                information i anchor-taggens 'href' attribut så att den vet att den ska skapa ett mail när den klickats
-                på. Detta görs genom att skriva: <br>
-                <em>href="mailto:mans@gmail.com?Subject=ämne"</em> <br>
-                Subjectdelen kan läggas till om man även till att ämnet automatiskt ska komma med den skapade e-posten.
-                <a href="mailto:mans@gmail.com?Subject=hello!">Här finns ett färdigt exempel!</a>
-            </p>
+    <a href="klickad_bild.html">
+        <img src="ugly_car.jpg" alt="Ugly car">
+    </a>
+    <p>
+        Bilden ovan är en länk, <code>a</code> taggen kan innehålla mängder av material och alla element som läggs inuti den
+        blir klickbart. Bilden ovan är ett element mellan start och sluttaggen för en anchor-tag. <br><br>
+        En annan viktig del av anchor-tags är att destinationen de pekar mot kan vara relativ
+        platsen du just nu är på eller fast. En relativ destination spesas på följande sätt: <br>
+        <em>destination_jag_vill_gå_till.html</em> <br>
+        medans en absolut länk spesar hela sökvägen, så här: <br>
+        <em>http://www.minhemsida.se/destination_jag_vill_gå_till.html</em>
+    </p>
 
-            <p>
-                Anchortags kan inte bara användas för att länka till något utanför den nuvarande sidan, klicka
-                <a href="">här</a> för att gå tillbaka till sidans topp. Genom att lämna en tom attribut för <code>href</code> så
-                länkar denna tillbaka till den nuvarande sidans topp. Man kan dock även sätta idn hos olika html-element
-                som tidigare nämnt. Om man sedan skriver '#' efterföljt av elementets id som href navigerar nu den <code>a</code>
-                taggen till det givna id-numret.
-                Klicka <a href="#span">här</a> för att gå till beskrivningen av 'span' och se hur vi kan navigera till en
-                specifik plats.
-            </p>
+    <p>
+        För att skapa en länk som kan användas för att skicka ett mail så måste man lägga till ytterligare
+        information i anchor-taggens <code>href</code> attribut så att den vet att den ska skapa ett mail när den klickats
+        på. Detta görs genom att skriva: <br>
+        <em>href="mailto:mans@gmail.com?Subject=ämne"</em> <br>
+        Subjectdelen kan läggas till om man även till att ämnet automatiskt ska komma med den skapade e-posten. Den här länken kommer
+        att öppna den e-postklient som är default på användarens datum, skapa ett nytt utkast samt lägga till "hello" i ämnesraden.
+        <a href="mailto:mans@gmail.com?Subject=hello!">Klicka här för att skapa ett nytt e-postmeddelande!</a>
+    </p>
 
-            <p>
-                Slutligen så kan man även med hjälp av anchor tags även länka till andra protokoll än http, som är
-                standard för webbsidor. Behöver man länka till en ftp-server för att exempelvis hämta en fil så måste
-                man speficicera vilket protokoll som följs hos destinationen genom att skriva: <br>
-                <code>href="ftp://adressen till servern"</code> för href-attributet för den anchor tag som ska kontakta ftp-servern.
-            </p>
-        </li>
-        <li>
-            <p>
-                <b>Bilder</b> sätts in i ett html-dokument mha. <code>img</code>-taggen. Bilder behöver källan från vart bilden ska
-                hämtas vilket spesas med <code>src</code>-attributet på <code>img</code>-elementet. Det går även att
-                lägga till ett <code>alt</code>-attribut för bilder som är en beskrivande text om bilden som visas om bilden inte
-                kan hämtas.
-            </p>
-        </li>
-    </ul>
-    <a href="page3.html">Förra sidan</a>
-    <br>
-    <a href="page5.html">Nästa sida</a>
+    <p>
+        Anchortags kan inte bara användas för att länka till något utanför den nuvarande sidan, klicka
+        <a href="">här</a> för att gå tillbaka till sidans topp. Genom att lämna en tom attribut för <code>href</code> så
+        länkar denna tillbaka till den nuvarande sidans topp. Man kan dock även sätta idn hos olika html-element
+        som tidigare nämnt. Om man sedan skriver '#' efterföljt av elementets id som href navigerar nu den <code>a</code>
+        taggen till det givna id-numret.
+        Klicka <a href="#span">här</a> för att gå till beskrivningen av 'span' och se hur vi kan navigera till en
+        specifik plats på en webbsida. Notera att addressfältet i din webbläsare ändras till "nuvarande plats på sidan/#span"
+        för att indikera att idt "span" är dit vi navigerat efter att länken har klickats.
+    </p>
+
+    <p>
+        Slutligen så kan man även med hjälp av anchor tags även länka till andra protokoll än http, som är
+        standard för webbsidor. Behöver man länka till en ftp-server för att exempelvis hämta en fil så måste
+        man speficicera vilket protokoll som följs hos destinationen genom att skriva: <br>
+        <code>href="ftp://adressen till servern"</code> för <code>href</code>-attributet för den anchor tag som ska kontakta ftp-servern.
+    </p>
 </body>
 </html>

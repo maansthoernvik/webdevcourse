@@ -9,6 +9,10 @@
 <body>
     <h1>Uppgift 1.1 - sida 1</h1>
     <hr>
+    <nav>
+      <a href="page2.html">Nästa sida</a>
+    </nav>
+    <hr>
     <ul>
         <li>
             <b>HTML-dokument byggs upp</b> med hjälp av taggar. Taggar kan introducera antingen layoutinställningar och
@@ -19,20 +23,40 @@
             <p>
                 För att innan vi går vidare ge en kort beskrivning om hur HTML fungerar så ger jag här en kort
                 beskrivning för att ni ska kunna hänga med på senare sidor: <br>
-                <code>&lt;tagg attribut="värde för attribut"&gt; Element/text inom taggen &lt;/slut-tagg&gt;</code><br>
+                <code>&lt;tagg attribut="värde för attribut"&gt; Element eller text inom taggen &lt;/slut-tagg&gt;</code><br>
                 Ovan ser ni hur HTML fungerar. En tagg har en början, ett innehåll och ett slut. Start-taggen kan ha
                 attribut som påverkar utseende och/eller funktionalitet. Notera dock att alla taggar INTE har en slut-
-                tagg, till exempel taggen för radbrytningar <code>&lt;br&gt;</code>. Slut-taggar har alltid ett '/'.
+                tagg, till exempel taggen för radbrytningar <code>&lt;br&gt;</code>. Slut-taggar har alltid ett snedstreck '/' för
+                att indikera att de är just sluttaggar. Nedan ser du hur taggar kan innesluta andra tagget och därigenom skapa
+                HTML-dokumentets hierarki:
+            </p>
+            <p>
+              <pre>
+                &lt;html&gt;
+                &lt;head&gt;
+                  &lt;title&gt;Sidans titel&lt;/title&gt;
+
+                  &lt;meta charset="UTF-8"&gt;
+                  &lt;meta ...&gt;
+
+                  &lt;script src="script.js"&gt;
+                  &lt;link rel="stylesheet" href="styles.css"&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                  Sidans innehåll läggs till här med taggar, text, video och annat material!
+                &lt;/body&gt;
+                &lt;/html&gt;
+              </pre>
             </p>
         </li>
         <li>
             <code>!DOCTYPE</code> indikerar vilken standard som dokumentet följer. <code>&lt;!DOCTYPE html&gt;</code>
-            som sätts in i den översta delen av HTML-dokumentet betyder att dokumentet följer HTML5.
+            som sätts in i den översta delen av HTML-dokumentet betyder att dokumentet följer HTML5-standarden.
         </li>
         <li>
             <code>charset="UTF-8"</code> indikerar att UTF-8 används för att konvertera dokumentet när det sparas och när det
             sedan laddas upp igen. UTF-8 är vanligast idag för Engelska webbsidor. Denna inställning spesas i dokumentets
-            <code>head</code> som ett eget element med hjälp av en <code>&lt;meta&gt;</code>-tagg. Ställ in detta genom
+            <code>head</code>-sektion som ett eget element med hjälp av en <code>&lt;meta&gt;</code>-tagg. Ställ in detta genom
             att sätta attributet <code>charset="UTF-8"</code> på meta-taggen.
         </li>
         <li>
@@ -42,10 +66,10 @@
         <li>
             <b>Valideringsverktyg</b> kan användas för att bekräfta att ett HTML-dokument är korrekt utformat. Det kan
             upptäcka saker såsom: saknad titel, saknade sluttaggar för olika element och taggar som saknar obligatoriska
-            attribut.
+            attribut. W3C som utvecklar HTML5-standarden tillhandahåller ett webbverktyg som man kan använda för att validera
+            sina HTML-dokument för att se att de följer standarden. Detta verktyg kan hittas på den här länken:
+            <a href="https://validator.w3.org/" alt="länken kunde inte hittas">W3C HTML5-validator</a>
         </li>
     </ul>
-    <a href="page2.html">Nästa sida</a>
-
 </body>
 </html>

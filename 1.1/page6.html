@@ -7,70 +7,102 @@
 <body>
     <h1>Uppgift 1.1 - sida 6</h1>
     <hr>
-    <ul>
+    <nav>
+      <a href="page5.html">Förra sidan</a>
+    </nav>
+    <hr>
+    <h2>Tabeller</h2>
+    <div>
+      <b>Tabeller</b> skapas med <code>table</code>-taggen. För att strukturera upp sin tabell så kan man först och främst
+      lägga till en överskrift med hjälp av <code>caption</code>-taggen. Caption måste vara det första elementet inuti
+      tabellen för att den ska vara verksam!
+      <br>
+      För att lägga till en ny rad till tabellen så använder man <code>tr</code> (för table row), inuti denna så kan man
+      sedan lägga till data och headers (överskrifter) för sina columner. Överskrifter lägger man till med <code>th</code>
+      och datan med <code>td</code>. Nedan ser du ett exempel: <br>
+      <table>
+          <caption><em>Här är caption</em></caption>
+          <tr>
+              <th>Kolumn 1</th>
+              <th>Kolumn 2</th>
+          </tr>
+          <tr>
+              <td>Data 1</td>
+              <td>Data 2</td>
+              <td>Data 3</td>
+          </tr>
+      </table>
+      Som det syns ovan så finns det 3 kolumner data för rad 2, men ingen överskrift för den tredje kolumnen,
+      detta är för att det bara sattes in två th-element i den första raden, så här ser den underliggande koden ut:
+      <pre>
+        &lt;table&gt;
+            &lt;caption&gt;&lt;em&gt;Här är caption&lt;/em&gt;&lt;/caption&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Kolumn 1&lt;/th&gt;
+                &lt;th&gt;Kolumn 2&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Data 1&lt;/td&gt;
+                &lt;td&gt;Data 2&lt;/td&gt;
+                &lt;td&gt;Data 3&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+      </pre>
+      Som syns ovan så är alltså bara två kolumner definierade på den första tabellraden, medans det finns tre kolumner
+      med data, därav saknas en överskrift för den tredje kolumnen.
+    </div>
+
+    <h2 id="maps">Maps</h2>
+    <div>
+      <p>
+        <b>Maps</b> kan användas i samband med bilder (som beskrevs på sidan 4) för att skapa klickbara områden inuti
+        en bild. Det kan tillexempel vara användbart för kartor för att kunna klicka på olika platser på kartan. Du kan
+        skapa en map genom att använda <code>map</code>-taggen.
+      </p>
+      <p>
+        För att skapa ett klickbart område så måste <code>area</code>-taggen användas som ett element inuti <code>map</code>-taggen.
+        <code>area</code>-taggen måste kompletteras med vart inuti bilden som det klickbara området ska placeras. Detta görs genom att
+        använda <code>coords</code> och <code>shape</code> attributen på <code>area</code>-taggen.
+      </p>
+      <ul>
         <li>
-            <b>Tabeller</b> skapas med <code>table</code>-taggen. För att strukturera upp sin tabell så kan man först och främst
-            lägga till en överskrift med hjälp av <code>caption</code>-taggen. Caption måste vara det första elementet inuti
-            tabellen för att den ska vara verksam!
-            <br>
-            För att lägga till en ny rad till tabellen så använder man <code>tr</code> (för table row), inuti denna så kan man
-            sedan lägga till data och headers (överskrifter) för sina columner. Överskrifter lägger man till mha. <code>th</code>
-            och datan med <code>td</code>. Nedan ser du ett exempel: <br>
-            <table>
-                <caption><em>Här är caption</em></caption>
-                <tr>
-                    <th>Kolumn 1</th>
-                    <th>Kolumn 2</th>
-                </tr>
-                <tr>
-                    <td>Data 1</td>
-                    <td>Data 2</td>
-                    <td>Data 3</td>
-                </tr>
-            </table>
-            Som det syns ovan så finns det 3 kolumner data för rad 2, men ingen överskrift för den tredje kolumnen,
-            detta är för att det bara sattes in två th-element i den första raden.
+          För en cirkel så spesas först två koordinater, x och y och sedan radien för cirkeln, till exempel: x, y, r. X och Y kommer att vara mittpunkten för det
+          skapade, cirkulära, klickbara området. För att lägga till en cirkel så måste då också <code>shape="circle"</code> anges.
+        </li>
+        <li>
+          För en rektangel anges istället x1, y1, x2, y2 där 1-paret är det övre vänstra hörnet och 2-paret är det
+          nedre högra hörnet. För att lägga till en rektangel så måste också <code>shape="rect"</code> anges.
         </li>
 
         <li>
-            <b>Maps</b> kan användas i samband med bilder som beskrevs på sidan 4 för att skapa klickbara områden inuti
-            en bild. Det kan tillexempel vara användbar för kartor för att kunna klicka på olika platser på kartan. Du kan
-            skapa en map genom att använda <code>map</code>-taggen.<br><br>
-
-            För att skapa ett klickbart område så måste <code>area</code>-taggen användas som ett element inuti map-taggen.
-            Area måste kompletteras med vart inuti bilden som det klickbara området ska placeras. Detta görs genom att
-            använda <code>coords</code> och <code>shape</code> attributen på area-taggen. För en cirkel så spesas först två koordinater, x
-            och y och sedan radien för cirkeln, till exempel: x, y, r. X och Y kommer att vara mittpunkten för den
-            skapade cirkeln. För att lägga till en cirkel så måste då också <code>shape="circle"</code> anges.<br><br>
-
-            För en rektangel anges istället x1, y1, x2, y2 där 1-paret är det övre vänstra hörnet och 2-paret är det
-            nedre högra hörnet. För att lägga till en rektangel så måste också <code>shape="rect"</code> anges.<br><br>
-
-            För en månghörning så används <code>shape="poly"</code> och därefter så kan x & y-par läggas till för så många hörn
-            som månghörningen ska ha.<br><br>
-
-            För att området faktiskt ska vara klickbart så måste även en <code>href</code> attribut läggas till på area-taggen,
-            länka sedan till det som ska hända när området klickats på. Nedan finns ett exempel på en bild med klickbara
-            områden i övre vänstra och nedre högra hörnet.<br><br>
-
-            <img src="ugly_car.jpg" alt="Ugly car" usemap="#carmap">
-
-            <map name="carmap">
-                <area shape="rect" coords="0,0,50,50" href="klickad_bild2.html" alt="vänster">
-                <area shape="rect" coords="460,300,510,350" href="klickad_bild2.html" alt="höger">
-            </map>
-            <br>
-
-            För att till sist koppla ihop den skapade mapen med bilden så att bilden förstår att den ska vara klickbar
-            på de spesade ställena, lägg först till ett namn på map-taggen med attributet <code>name</code>. Sätt sedan på img-
-            taggen attributet <code>usemap</code> till exakt det namn som sattes på mapen. Så här: <br>
-            <code>&lt;img src="bild.jpg" alt="en bild" usemap="#map"&gt;</code><br>
-            <code>&lt;map name="map"&gt;</code><br>
-            <pre>    <code>&lt;area coords="..." shape="..."&gt;...</code><br></pre>
-            <code>&lt;/map&gt;</code>
+          För en månghörning så används <code>shape="poly"</code> och därefter så kan x & y-par läggas till för så många hörn
+          som månghörningen ska ha.
         </li>
-    </ul>
-    <a href="page5.html">Förra sidan</a>
-    <br>
+
+        <li>
+          För att området faktiskt ska vara klickbart så måste även en <code>href</code> attribut läggas till på area-taggen,
+          länka sedan till det som ska hända när området klickats på. Nedan finns ett exempel på en bild med klickbara
+          områden i övre vänstra och nedre högra hörnet.
+        </li>
+      </ul>
+
+      <img src="ugly_car.jpg" alt="Ugly car" usemap="#carmap">
+
+      <map name="carmap">
+          <area shape="rect" coords="0,0,50,50" href="klickad_bild2.html" alt="vänster">
+          <area shape="rect" coords="460,300,510,350" href="klickad_bild2.html" alt="höger">
+      </map>
+      <br>
+
+      För att till sist koppla ihop den skapade mapen med bilden så att bilden förstår att den ska vara klickbar
+      på de spesade ställena, lägg först till ett namn på map-taggen med attributet <code>name</code>. Sätt sedan på img-
+      taggen attributet <code>usemap</code> till exakt det namn som sattes på mapen. Så här: <br>
+      <pre>
+      &lt;img src="bild.jpg" alt="en bild" usemap="#map"&gt;
+      &lt;map name="map"&gt;
+        &lt;area shape="rect" coords="100,200" href="annat_html_dokument.html" alt="alternativ text"&gt;
+      &lt;/map&gt;
+      </pre>
+    </div>
 </body>
 </html>

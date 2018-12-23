@@ -7,23 +7,38 @@
 <body>
     <h1>Uppgift 1.1 - sida 5</h1>
     <hr>
+    <nav>
+      <a href="page4.html">Förra sidan</a>
+      <a href="page6.html">Nästa sida</a>
+    </nav>
+    <hr>
     <h2>Listor</h2>
     Listor finns i ett par olika utformanden som kan väljas mellan beroende på behov.
     <ul>
         <li>
             <b>Unordered lists</b>, <code>ul</code> visar bara en indikation per listelement, ingen numrering eller annan
             indikering som kan särskilja elementen från varandra. Varje listelement sätts in genom <code>li</code>-taggen som
-            måste användas för varje nytt element som ska visas i listan.
+            måste användas för varje nytt element som ska visas i listan. Den lista som använts för denna sidan är en <code>ul</code>-lista.
         </li>
         <li>
             <b>Ordered lists</b>, <code>ol</code> visar numrering för sina element, som också går att ändra utformning på mha.
             <code>type</code> attributet på ol-taggen. Type kan sättas till: 1 (default), A, a, I eller i beroende på vilken
-            utformning man vill ha på sin numrering. li-taggen används även här för att skapa nya listelement.
+            utformning man vill ha på sin numrering. li-taggen används även här för att skapa nya listelement. Så här kan en
+            <code>ol</code>-lista se ut, denna lista börjar på "A" eftersom att den har attributet <code>type</code> satt till "A":
+            <ol type="A">
+              <li>
+                Första listelementet
+              </li>
+              <li>
+                Andra listelementet
+              </li>
+            </ol>
         </li>
         <li>
             <b>Description lists</b>, <code>dl</code> används för att skapa listor med termer och en beskrivning för varje term.
             Varje term definieras med <code>dt</code>, beskrivningen ska sedan följa efter, efter sluttaggen för termen, med
-            <code>dt</code>. Så här kan det då se ut: <br>
+            <code>dt</code>. En beskrivning för en term som definierats med <code>&lt;dt&gt;term&lt;/dt&gt;</code> skall direkt följas
+            med en termbeskrivning som läggs till med hjälp av <code>&lt;dd&gt;</code>-taggen.
             <dl>
                 <dt>HTML</dt>
                 <dd>Hyper Text Markup Language</dd>
@@ -32,10 +47,12 @@
                 <dt>CSS</dt>
                 <dd>Cascading StyleSheets</dd>
             </dl>
+            Ovan så har termen och beskrivningen för CSS skrivits så här:
+            <pre>
+              &lt;dt&gt;CSS&lt;/dt&gt;
+              &lt;dd&gt;Cascading StyleSheets&lt;/dd&gt;
+            </pre>
         </li>
     </ul>
-    <a href="page4.html">Förra sidan</a>
-    <br>
-    <a href="page6.html">Nästa sida</a>
 </body>
 </html>

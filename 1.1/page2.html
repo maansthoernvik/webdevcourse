@@ -14,58 +14,71 @@
 <body>
     <h1>Uppgift 1.1 - sida 2</h1>
     <hr>
+    <nav>
+      <a href="index.html">Förra sidan</a>
+      <a href="page3.html">Nästa sida</a>
+    </nav>
+    <hr>
+    <p>
+      Här kommer exempel på de mest centrala delarna av alla HTML-dokument!
+    </p>
     <ul>
-        <li>
-            <code>html</code> taggen innesluter hela dokumentets innehåll, därför sätts tillexempel <code>lang=sv</code>
-            på denna tagg (som nämnt på sidan innan) för att märka vilket språk hela sidan är skrivet på.
-        </li>
-        <li>
-            I <code>head</code> så skrivs mer information om sidan in, här kan saker såsom stylesheet, javascriptfiler
-            som används, meta-information och sidans titel läggas till.
-        </li>
-        <li>
-            <code>title</code>-taggen som läggs in i sidans <code>head</code>-tagg kommer att visas överst i webbläsarfönstret (på tabben om
-            man tillexempel använder sig av Google Chrome).
-        </li>
-        <li>
-            <code>body</code>-taggen innehåller sidans innehåll, antingen det som ska läsas, ses eller höras.
-        </li>
-        <li>
-            <code>Meta</code>-taggar är information om data. Meta-taggar kan ha ett <code>name</code>-attribut beskriver det som skrivits in
-            efter name i ett <code>content</code>-attribut, exempel på name-attribut till meta-taggen är:
-            <ul>
-                <li>
-                    <code>author</code> beskriver sidans författare. Exempel på <code>content</code> attribut för denna
-                    kan vara Måns Thörnvik, eftersom att jag är författaren.
-                </li>
-                <li>
-                    <code>description</code> beskriver sidans innehåll. Exempel på <code>content</code> attribut kan vara
-                    Distanskurs i webbutveckling.
-                </li>
-                <li>
-                    <b>keywords</b> beskriver vad sidan kan kopplas till för nyckelord. <code>content</code> kan vara
-                    HTML, CSS, JavaScript, JS mm.
-                </li>
-                <li>
-                    <b>robots</b> låter dig kontrollera hur sidan ska visas i sökresultat. Tillexempel så kan <code>content</code>
-                    sättas till 'noindex' för att <em>inte</em> visa sidan i sökresultat.
-                </li>
-                <li>
-                    <b>generator</b> specificerar en av de mjukvaror som använts för att generera html-dokumentet i
-                    fråga. I detta fall N/A sedan sidan skrivits för hand och inte genererats.
-                </li>
-            </ul>
-            <code>http-equiv</code> användes tidigare som attribut på en <code>meta</code>-tagg(innan html5) för att
-            sätta character-encoding som gicks igenom på förra sidan. Numera så kan denna också användas för att sätta default-stylesheet och ett refresh attribut. Refresh
-            attributet måste sedan kompletteras med ett tidsintervall i <code>content</code>-attributet och sidan kommer då att
-            laddas om efter den spesade tiden. Denna refresh bör dock inte användas eftersom att den tar kontrollen av
-            sidan från användaren.
+      <li>
+          <code>html</code> taggen innesluter hela dokumentets innehåll, därför sätts tillexempel <code>lang=sv</code>
+          på denna tagg (som nämnt på sidan innan) för att märka vilket språk hela sidan är skriven på.
+      </li>
+      <li>
+          I <code>head</code> så skrivs mer information om sidan in, här kan saker såsom stylesheet, javascriptfiler
+          som används, meta-information och sidans titel läggas till.
+      </li>
+      <li>
+          <code>title</code>-taggen som läggs in i sidans <code>head</code>-tagg kommer att visas överst i webbläsarfönstret (på tabben om
+          man tillexempel använder sig av Google Chrome).
+      </li>
+      <li>
+          <code>body</code>-taggen är sidans faktiska sidans innehåll, antingen det som ska läsas, ses eller höras ska läggas till här.
+      </li>
+      <li>
+          <code>Meta</code>-taggar innehåller information om data på sidan. Meta-taggar kan ha ett <code>name</code>-attribut beskriver det som skrivits in
+          efter name i ett <code>content</code>-attribut, exempel på name-attribut till meta-taggen är:
+          <ul>
+              <li>
+                  <code>author</code> beskriver sidans författare. Exempel på <code>content</code> attribut för denna
+                  kan vara Måns Thörnvik, eftersom att jag är författaren.
+              </li>
+              <li>
+                  <code>description</code> beskriver sidans innehåll. Exempel på <code>content</code> attribut kan vara
+                  Distanskurs i webbutveckling.
+              </li>
+              <li>
+                  <code>keywords</code> beskriver vad sidan kan kopplas till för nyckelord. <code>content</code> kan vara
+                  HTML, CSS, JavaScript, JS mm. Dessa kan läggas till som en kommaseparerad text till <code>content</code> såsom nedan.
+              </li>
+              <li>
+                  <code>robots</code> låter dig kontrollera hur sidan ska visas i sökresultat. Tillexempel så kan <code>content</code>
+                  sättas till 'noindex' för att <em>inte</em> visa sidan i sökresultat.
+              </li>
+              <li>
+                  <code>generator</code> specificerar en av de mjukvaror som använts för att generera html-dokumentet i
+                  fråga. I detta fall N/A sedan sidan skrivits för hand och inte genererats.
+              </li>
+              <li>
+                Så här skulle alltså denna sidas &lt;meta&gt;-taggar utformas:
+                <pre>
+                  &lt;meta name="author" content="Måns Thörnvik"&gt;
+                  &lt;meta name="description" content="En introduktion till HTML5-standarden"&gt;
+                  &lt;meta name="keywords" content="HTML5,html,webb"&gt;
+                </pre>
+              </li>
+          </ul>
+          <code>http-equiv</code> användes tidigare som attribut på en <code>meta</code>-tagg(innan HTML5) för att
+          sätta character-encoding som gicks igenom på förra sidan. Numera så kan denna också användas för att sätta default-stylesheet och ett refresh attribut. Refresh
+          attributet måste sedan kompletteras med ett tidsintervall i <code>content</code>-attributet och sidan kommer då att
+          laddas om efter den spesade tiden. Denna refresh bör dock inte användas eftersom att den tar kontrollen av
+          sidan från användaren.
 
-            <a href="refresh_exempel.html">Exempel på refresh finns här!</a>
-        </li>
+          <a href="refresh_exempel.html">Exempel på refresh finns här!</a>
+      </li>
     </ul>
-    <a href="index.html">Förra sidan</a>
-    <br>
-    <a href="page3.html">Nästa sida</a>
 </body>
 </html>
