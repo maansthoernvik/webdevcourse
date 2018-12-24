@@ -5,60 +5,89 @@
     <title>Uppgift 1.2</title>
 </head>
 <body>
+  <header>
+    <h1>Här är hemsidans titel</h1>
+    <p>
+      Detta är hemsidans <code>&lt;header&gt;</code> element som insluter både titeln ovan och denna text.
+    </p>
+
+    <nav>
+      <h2>Navigering</h2>
+      <p>
+        Här är navigeringen för hemsidan, denna finns i ett <code>&lt;nav&gt;</code> för att vara lättillgängligt för screen-
+        readers.
+      </p>
+      <a href="nav1.html">En navigeringslänk</a>
+      <a href="nav1.html">En annan navigeringslänk</a>
+    </nav>
+  </header>
+
+  <article>
     <header>
-        <h1>Här är hemsidans titel!</h1>
-        Detta är hemsidans &lt;header&gt; element.
+        <h2>Det här är en artikel om bilar</h2>
+        <p>Det här är en <code>&lt;header&gt;</code> för artikeln. Den innehåller i detta fallet titeln för sin <code>&lt;article&gt;</code></p>
     </header>
 
-    <article>
-        <header>
-            <h2>Det här är en extremt intressant artikel om bilar</h2>
-            <p>Det här är en header för artikeln. Den innehåller i detta fallet titeln för sin &lt;article&gt;</p>
-        </header>
-        <p>Här är början och beskrivningen av de innehållande delarna i artikeln, sen kommer en bild.</p>
-        <figure>
-            <img src="ugly_car.jpg" alt="En gul bil">
-            <figcaption>Den här bilden visar en gul bil, den här texten är skriven i en &lt;figcaption&gt;</figcaption>
-        </figure>
+    <p>
+      Här är början och beskrivningen av de innehållande delarna i artikeln.
+    </p>
 
-        <h3>Här är nästa del av artikeln</h3>
-        <p>Här börjar den inledande texten av den andra delen av artikeln.</p>
+    <figure>
+      <img src="ugly_car.jpg" alt="En gul bil">
+      <figcaption>
+        Den här bilden visar en gul bil, den här texten är skriven i en <code>&lt;figcaption&gt;</code>.
+        Både bilden och denna text är inuti <code>&lt;figure&gt;</code>-taggen.
+      </figcaption>
+    </figure>
 
-        <aside>
-            <p>Här är en &lt;aside&gt; del i artikeln. Detta är en bit information som är tillför något till artikeln
-            men som inte ska finnas i den löpande texten.</p>
-        </aside>
-
-        <details>
-            <summary>Mer information</summary>
-            <p>Den här informationen är innesluten med två &lt;details&gt; taggar. Vissa webbläsare gömmer därmed
-            den här texten och visar en liten pil som visar/gömmer den.</p>
-        </details>
-    </article>
+    <h3>Här är nästa del av artikeln</h3>
+    <p>
+      Här börjar den inledande texten av den andra delen av artikeln.
+    </p>
 
     <aside>
-        <p>Här är ytterligare en &lt;aside&gt; som agerar som sido-modul. Den innehåller sidans primära navigering men också
-            flera andra element såsom en sektion med extra information om hemsidan.</p>
-        <nav>
-            <h2>Navigering</h2>
-            Här är navigeringen för hemsidan, denna finns i ett &lt;nav&gt; för att vara lättillgängligt för screen-
-            readers.
-            <a href="nav1.html">En navigeringslänk</a>
-            <a href="nav1.html">En annan navigeringslänk</a>
-        </nav>
-
-        <section>
-            <h2>Om hemsidan</h2>
-            <p>Här finns mer information om hemsidan, inneslutet av en &lt;section&gt;, det passar bra eftersom att
-            denna del använder sig av en titel. Hade den inte haft en titel skulle en &lt;div&gt; passat bättre.
-                Här slutar sidomodulen!</p>
-        </section>
+      <p>
+        Här är en <code>&lt;aside&gt;</code> del i artikeln. Detta är en bit information som tillför något till artikeln
+        men som inte ska finnas i den löpande texten.
+      </p>
     </aside>
 
-    <footer>
-        Det här är en footer som alltid visas i nederkant på sidan. Officiellt så ska den inte innehålla så mycket text,
-        mest sammanfattande, kort information. Dock så har detta ofta gåtts ifrån och dagens footers är ofta stora med
-        mycket "flare".
-    </footer>
+    <details>
+      <summary>Mer information, här kan en <code>&lt;details&gt;</code>-taggs innehåll expanderas och visas</summary>
+      <p>
+        Den här informationen är inuti en <code>&lt;details&gt;</code>-tagg. Vissa webbläsare gömmer därmed
+        den här texten och visar en liten pil tillsammans med det som finns inuti <code>&lt;summary&gt;</code>-taggen som visar/gömmer den.
+      </p>
+    </details>
+  </article>
+
+  <aside>
+    <h2>Lite mer information från oss</h2>
+    <p>
+      Här finns ytterligare en <code>&lt;aside&gt;</code> innehållande med information om sidan, utanför artikeln, samt reklam.
+    </p>
+    <section>
+      <h3>Våra sponsorer</h3>
+      <img src="ad_img.jpg" alt="Ingen reklam hittades" height="400" width="400">
+    </section>
+
+    <section>
+      <h3>Vad vi gör</h3>
+      <p>
+        Här finns mer information inom den <code>&lt;aside&gt;</code> som nämns ovan, inneslutet av en <code>&lt;section&gt;</code>, det passar bra eftersom att
+        denna del använder sig av en titel. Hade den inte haft en titel skulle en <code>&lt;div&gt;</code> passat bättre.
+        Här slutar sidomodulen!
+      </p>
+    </section>
+  </aside>
+
+  <footer>
+    <h2>Kontakta oss</h2>
+    <p>
+      Det här är en footer som alltid visas i nederkant på sidan. Officiellt så ska den inte innehålla så mycket text.
+      Mest sammanfattande, kort, information och ofta kontaktinformation. Dock så har detta ofta gåtts ifrån och dagens footers är ofta stora med
+      mycket "flare".
+    </p>
+  </footer>
 </body>
 </html>
