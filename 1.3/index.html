@@ -5,44 +5,54 @@
     <title>Uppgift 1.3</title>
 </head>
 <body>
-    <header>
-        <h1>Uppgift 1.3</h1>
-    </header>
+  <header>
+    <h1>Uppgift 1.3</h1>
+  </header>
 
-    <main>
-        <article>
-            <header>
-                <h2>&lt;mark&gt;, &lt;time&gt; och &lt;wbr&gt;</h2>
-                <p>Här visas exempel på och gås igenom vad innebörden av de ovanstående semantiska textelementen är.</p>
-            </header>Title
+  <main>
+    <article>
+      <header>
+        <h2>&lt;mark&gt;, &lt;time&gt; och &lt;wbr&gt;</h2>
+        <p>
+          Här visas exempel på och gås igenom vad innebörden av de ovanstående semantiska textelementen är.
+        </p>
+      </header>Title
 
-            <h3>&lt;time&gt;</h3>
-            <p>
-                Med time-taggarna så kan ett tidselement ramas in. Detta är hjälpsamt för både sökmotorer, andra
-                programmerare och skärmläsare för personer med nedsatt syn. Time använder det universella formatet på
-                tid: YYYY-mm-dd HH:MM, detta måste följas när man använder time-elementet. Nedan är en tid <br>
-                <mark><time datetime="2017-10-11 21:40">11<sup>e</sup> oktober, 2017 klockan 21:40</time></mark><br>
-                Tiden ovan definierades inom time-taggar, men texten följer inte formatet YYYY-mm-dd osv? Detta är helt
-                ok, så länge taggen har elementet 'datetime' satt till det faktiska datumet som tidselementet pekar på
-                så bryts inga regler för hur &lt;time&gt; ska användas.
-            </p>
+      <h3>&lt;time&gt;</h3>
+      <p>
+        Med <code>&lt;time&gt;</code>-taggarna så kan ett tidselement ramas in. Detta är hjälpsamt för både sökmotorer, andra
+        programmerare och skärmläsare för personer med nedsatt syn. Time använder det universella formatet på
+        tid: YYYY-mm-dd HH:MM, detta måste följas när man använder time-elementet. Här är en sådan tid:
+        <mark><time datetime="2017-10-11 21:40">11<sup>e</sup> oktober, 2017 klockan 21:40</time></mark>.
+        Tiden definierades inom <code>&lt;time&gt;</code>-taggar, men den synliga texten följer inte det tidigare nämnda formatet. Detta är helt
+        ok, <mark>så länge <code>&lt;time&gt;</code> taggen har attributet <code>datetime</code> satt till rätt format och det datum och den tid</mark> som tidselementet ska peka på
+        så bryts inga regler för hur <code>&lt;time&gt;</code> ska användas. Så här ser det ut i den faktiska HTML-koden:
+      </p>
+      <pre>
+        &lt;time datetime="2017-10-11 21:40"&gt;11&lt;sup&gt;e&lt;/sup&gt; oktober, 2017 klockan 21:40&lt;/time&gt;
+      </pre>
+      <p>
+        Som tydligt syns så följer det underliggande <code>datetime</code>-attributet det format som spesats.
+      </p>
 
-            <h3>&lt;mark&gt;</h3>
-            <p>
-                Här är en inledande paragraf <mark>med lite markerad text.</mark> &lt;mark&gt; kan användas för att
-                markera text som har <mark>extra betydelse</mark> i en löpande text, nyckelord eller annat som håller
-                högre viktighet i det nuvarande sammanhanget.
-            </p>
+      <h3>&lt;mark&gt;</h3>
+      <p>
+        Här är en inledande paragraf <mark>med lite markerad text.</mark> <code>&lt;mark&gt;</code> kan användas för att
+        markera text som har <mark>extra betydelse</mark> i en löpande text, <mark>nyckelord</mark> eller annat som håller
+        högre viktighet i det nuvarande sammanhanget.
+      </p>
 
-            <h3>&lt;wbr&gt;</h3>
-            <p>
-                &lt;wbr&gt; används för att tala om för webbläsaren att just denna platsen passar bra att bryta till ny
-                rad. Notera att &lt;wbr&gt; inte har någon sluttagg! Nedan är ett exempel på ett
-                långt (och påhittat) ord med förutbestämt radbryt med &lt;wbr&gt;:<br>
-                långtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordBRYT!<wbr>långtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtord
-            </p>
-        </article>
-    </main>
-
+      <h3>&lt;wbr&gt;</h3>
+      <p>
+        <code>&lt;wbr&gt;</code> används för att tala om för webbläsaren att just denna platsen i ett ord passar bra att bryta till ny
+        rad. Notera att <code>&lt;wbr&gt;</code> inte har någon sluttagg! Nedan är ett exempel på ett
+        långt (och påhittat) ord med förutbestämt radbryt med <code>&lt;wbr&gt;</code>:<br>
+        långtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordBRYT!<wbr>långtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtordlångtord
+      </p>
+      <p>
+        Utan ett förutbestämt radbryt för exemplet ovan så hade ordet brutits när det börjat spilla över på högersidan av skärmen.
+      </p>
+    </article>
+  </main>
 </body>
 </html>
