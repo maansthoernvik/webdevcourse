@@ -1,244 +1,262 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <title>Uppgift 2.1</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Uppgift 2.1</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Uppgift 2.1</h1>
-    </header>
-    <nav>
-        <a href="../2.2/index.html">Gå till uppgift 2.2</a>
-        <a href="../2.3/index.html">Gå till uppgift 2.3</a>
-        <a href="../2.4/index.html">Gå till uppgift 2.4</a>
-        <a href="../2.5/index.html">Gå till uppgift 2.5</a>
-        <a href="../2.6/index.html">Gå till uppgift 2.6</a>
-        <a href="../2.7/index.html">Gå till uppgift 2.7</a>
-        <a href="../2.8/index.html">Gå till uppgift 2.8</a>
-    </nav>
-    <main>
-        <article>
-            <header>
-                <h2>Grundläggande CSS</h2>
-            </header>
+  <header>
+    <h1>Uppgift 2.1</h1>
+  </header>
+  <nav>
+    <h2>Navigering</h2>
+    <a href="../2.2/index.html">Uppgift 2.2: Text och listor</a>
+    <a href="../2.3/index.html">Uppgift 2.3: Marginaler, kantlinjer och padding</a>
+    <a href="../2.4/index.html">Uppgift 2.4: Bilder och bakgrunder</a>
+    <a href="../2.5/index.html">Uppgift 2.5: Navigering</a>
+    <a href="../2.6/index.html">Uppgift 2.6: Tabeller och formulär</a>
+    <a href="../2.7/index.html">Uppgift 2.7: Sidlayout</a>
+    <a href="../2.8/index.html">Uppgift 2.8: Anpassning till olika enheter</a>
+  </nav>
+  <main>
+    <article>
+      <header>
+        <h2>Grundläggande CSS</h2>
+      </header>
 
-            <section>
-                <h3>Externt länkade CSS-filer</h3>
-                <p>
-                    Externa CSS filer har flera fördelar mot intern CSS-kod. För det första så skapar det en
-                    separering mellan HTML markup och kod relaterad till design. Det blir lätt mycket design-
-                    relaterad kod vilket då leder till att, om man inte använder externa CSS-filer, att HTML-
-                    dokumenten lätt blir väldigt stora.
-                </p>
-                <p>
-                    Förutom detta så skapar även intern CSS-kod potentiellt en väldig massa copy-paste. Om en
-                    webbsida består av flera olika HTML-dokument så måste en &lt;style&gt; tagg användas på alla
-                    sidor som ska styleas och CSS-kod kommer antagligen att bli kopierad mellan sidorna. Har man
-                    istället en eller flera externa CSS-fil(er) så kan all designkod definieras på ett istället
-                    för flera ställen.
-                </p>
-            </section>
+      <section>
+        <h3>Externt länkade CSS-filer</h3>
+        <p>
+          Externa CSS-filer har flera fördelar mot intern CSS-kod. För det första så skapar det en
+          separering mellan HTML markup och kod relaterad till design. Det blir lätt mycket design-
+          relaterad kod vilket då leder till att, om man inte använder externa CSS-filer, att HTML-
+          dokumenten lätt blir väldigt stora.
+        </p>
+        <p>
+          Förutom detta så skapar även intern CSS-kod potentiellt en väldig massa copy-paste. Om en
+          webbsida består av flera olika HTML-dokument så måste en <code>&lt;style&gt;</code>-tagg användas på alla
+          sidor som ska styleas och CSS-kod kommer antagligen att bli kopierad mellan sidorna. Har man
+          istället en eller flera externa CSS-fil(er) så kan all designkod definieras på ett istället
+          för flera ställen.
+        </p>
+      </section>
 
-            <section>
-                <h3>Arv</h3>
-                <p>
-                    När man talar om arv i CSS så handlar det arv av olika designelement mellan HTML-taggar. Arv
-                    kan, tillexempel, ske när en behållare såsom en &lt;div&gt; får en grön färg tilldelad.
-                    Alla paragrafer och andra element inuti denna &lt;div&gt; kommer efter detta också att ha en
-                    grön färg. Även taggar som definieras inuti &lt;p&gt;-taggen kommer att få en grön
-                    färg, detta eftersom att de båda är barn (och barnbarn) av den översta diven.
-                </p>
-                <p>
-                    Alla olika attribut ärvs dock inte av barnen. Margins och borders, tillexempel, ärvs inte.
-                </p>
-            </section>
+      <section>
+        <h3>Arv</h3>
+        <p>
+          När man talar om arv i CSS så handlar det om arv av olika designelement mellan HTML-taggar. Arv
+          kan, tillexempel, ske när en behållare såsom en <code>&lt;div&gt;</code> får en grön färg tilldelad.
+          Alla paragrafer och andra element inuti denna <code>&lt;div&gt;</code> kommer efter detta också att ha en
+          grön färg. Även taggar som definieras inuti <code>&lt;p&gt;</code>-taggen kommer att få en grön
+          färg, detta eftersom att de båda är barn (och barnbarn) av den översta <code>&lt;div&gt;</code>-en.
+        </p>
+        <p>
+          Alla olika attribut ärvs dock inte av barnen. Margins och borders, tillexempel, ärvs inte.
+        </p>
+      </section>
 
-            <section>
-                <h3>The cascade & selektorer</h3>
-                <p>
-                    The cascade är "processen" som gås igenom när en webbläsare ska avgöra hur olika HTML-element
-                    ska se ut, beroende på dess CSS-attribut. The cascade går igenom alla attribut som är satta
-                    och avgör hur tillexempel en paragraf ska positioneras. The cascade avgörs genom bland annat
-                    arv men vad händer om en paragraf har fått sin font-storlek satt till två olika värden på två
-                    olika ställen? Vilken stil vinner?
-                </p>
-                <p>
-                    För att webbläsaren ska kunna avgöra den slutgiltiga font-storleken för en paragraf som fått
-                    denna satt på två olika ställen i CSS-filen så räknar den en sorts "poäng" för olika
-                    <em>selektorer</em>. Selektorer är en sorts tagg som används av CSS för att markera vilket
-                    HTML-element som ska formatteras. Olika selektorer är olika värda i CSS ögon. Nedan listas poängen:
-                </p>
-                <ul>
-                    <li>
-                        Tagg-selektor: 1 poäng (låg specificitet)
-                    </li>
-                    <li>
-                        Klass-selektor: 10 poäng
-                    </li>
-                    <li>
-                        ID-selektor: 100 poäng (hög specificitet)
-                    </li>
-                </ul>
-                <p>
-                    Från listan så kan man se att om man väljer att designa <em>alla</em> &lt;p&gt;-taggar med en
-                    tagg-selektor så räknas denna stil som 1 poäng för webbläsaren. Skulle CSS-filen då innehålla
-                    en till stil som istället designar en &lt;p&gt;-tagg med en klass-selektor så vinner denna stil
-                    över den som bara designade med en tagg-selektor.
-                </p>
-                <p>
-                    Så vad händer då om webbläsaren märker att poängen för två designer är lika? Kanske används
-                    två tagg-selektorer för &lt;p&gt;-taggen. I detta fall så används den stil som lagts på sist,
-                    det vill säga den stil som finns definierad <em>längst ned</em> i CSS-filen.
-                </p>
+      <section>
+        <h3>The cascade & selektorer</h3>
+        <p>
+          The cascade är "processen" som gås igenom när en webbläsare ska avgöra hur olika HTML-element
+          ska se ut, beroende på dess CSS-attribut. The cascade går igenom alla attribut som är satta
+          och avgör hur tillexempel en paragraf ska positioneras. The cascade avgörs genom bland annat
+          arv, men vad händer om en paragraf har fått sin font-storlek satt till två olika värden på två
+          olika ställen? Vilken stil vinner?
+        </p>
+        <p>
+          För att webbläsaren ska kunna avgöra den slutgiltiga font-storleken för en paragraf som fått
+          denna satt på två olika ställen i CSS-filen så räknar den en sorts "poäng" för olika
+          <em>selektorer</em>. Selektorer är sättet som används av CSS för att markera vilket
+          HTML-element som ska formatteras med en viss designregel. Olika selektorer är olika värda i CSS ögon. Nedan listas poängen:
+        </p>
+        <ul>
+          <li>
+            Tagg-selektor (väljer alla HTML-taggar, tillexempel alla paragrafer <code>&lt;p&gt;</code>): 1 poäng (låg specificitet)
+          </li>
+          <li>
+            Klass-selektor (väljer alla taggar med en viss klass tilldelad): 10 poäng
+          </li>
+          <li>
+            ID-selektor (väljer bara taggar som har ett visst ID): 100 poäng (hög specificitet)
+          </li>
+        </ul>
+        <p>
+          Från listan så kan man se att om man väljer att designa <em>alla</em> <code>&lt;p&gt;</code>-taggar med en
+          tagg-selektor så räknas denna stil som 1 poäng för webbläsaren. Skulle CSS-filen då innehålla
+          en till stil som istället designar en <code>&lt;p&gt;</code>-tagg med en klass-selektor så vinner denna stil
+          över den som bara designade med en tagg-selektor. Högst poäng vinner!
+        </p>
+        <p>
+          Så vad händer då om webbläsaren märker att poängen för två designer är lika? Kanske används
+          två tagg-selektorer för <code>&lt;p&gt;</code>-taggen. I detta fall så används den stil som lagts på sist,
+          det vill säga den stil som finns definierad <em>längst ned</em> i CSS-filen.
+        </p>
 
-                <h4>Mer om selektorer</h4>
-                <p>
-                    Vi vet redan om att det finns tagg, klass och ID-selektorer men det finns också fler.
-                </p>
-                <ul>
-                    <li>
-                        En tagg-selektor: <code>div { }</code>
-                        <p>
-                            Tagg-selektorer läggs på alla taggar som matchar. Tillexempel alla &lt;div&gt; som ovan.
-                        </p>
-                    </li>
-                    <li>
-                        En klass-selektor: <code>.klassnamn { }</code>
-                        <p>
-                            Klass-selektorer läggs på alla HTML-element som har en viss klass associerad med sig.
-                        </p>
-                    </li>
-                    <li>
-                        En id-selektor: <code>#idnummer { }</code>
-                        <p>
-                            Id-selektorer läggs på det HTML-element som har samma id-nummer som det som definierats i
-                            CSS.
-                        </p>
-                    </li>
-                    <li>
-                        En attribut-selektor: <code>a[href="mönster att matcha"] { }</code>
-                        <p>
-                            En attribut-selektor kan läggas till på en tagg-selektor för att också välja vilket attribut
-                            taggen ska ha för att den ska formatteras med just den här CSS-regeln. Tillexempel en viss
-                            adress för en &lt;a&gt;-tagg som ovan.
-                        </p>
-                    </li>
-                    <li>
-                        En barn-selektor: <code>body > h1 { }</code>
-                        <p>
-                            Det finns mängder av barn-selektorer, den mest grundläggande ovan. Denna gör så att alla
-                            &lt;h1&gt;-taggar som är direkta barn av &lt;body&gt;-taggen får formattering. Arv kommer
-                            alltså inte in här. Om det finns två &lt;h1&gt;-taggar inuti body-taggen men en av dessa
-                            headers ligger inuti en div medans den andra ligger direkt under body så kommer den header
-                            som är inuti div-taggen INTE att få formattering. Detta eftersom att den inte är ett direkt
-                            barn av body-taggen.
-                        </p>
-                        <p>
-                            Det finns även en hel del fler barnselektorer som fungerar som ovan men med sina egna
-                            tvister. <code>&lt;h1&gt;:first-child</code> kan tillexempel tillämpas för att bara
-                            formattera den första h1-taggen, om det finns flera. Den fullständiga koden blir då: <br>
-                            <code>body > h1:first-child { }</code>
-                        </p>
-                    </li>
-                </ul>
-            </section>
-            <section>
-                <h3>Enheter</h3>
-                <p>
-                    Det finns flera enheter för att bestämma storlek på olika HTML-element.
-                </p>
-                <ul>
-                    <li>
-                        <p>
-                            <em>in</em> står för "inch", en inch är 2.54 centimeter.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <em>cm</em> är vanliga centimetrar.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <em>mm</em> står för millimetrar.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <em>pt</em> står för "points" och 1pt är lika med 1/72 av 1in.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <em>pc</em> står för "picas" och 1pc är lika med 12pt.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <em>px</em> står för "pixels" och 1px är lika med 1/96 av 1in.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <em>em</em> är en storlek som är relativ mot den nuvarande fontstorleken. 1em är 100% av den
-                            nuvarande fontstorleken, 2em är 200% osv. Med nuvarande fontstorlek så menas det för det
-                            nuvarande HTML-elementet, tillexempel för en inneslutande &lt;div&gt;.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <em>ex</em> är en inte så vanlig storlek som räknar på x-storleken för den nuvarande fonten.
-                            x-storleken är höjden för den nuvarande fontens små bokstäver.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <em>%</em> är en relativ storlek som räknar på en %-sats för det inneslutande elementet.
-                            Sätts detta när tex. &lt;body&gt; är den direkta föräldern så blir %-satsen tex. 20% av hela
-                            skärmens yta (eftersom att &lt;body&gt; fyller fönstret).
-                        </p>
-                    </li>
-                </ul>
-            </section>
-            <section>
-                <h3>Hur ett CSS-dokument är uppbyggt</h3>
-                <p>
-                    Ett CSS-dokument består av en massa designregler som läses av, uppifrån och ned. Såsom nämnt
-                    tidigare så används den "regler" längst ned om två eller flera kolliderar (har samma prio) för ett
-                    element. För att klargöra ytterligare för hur en CSS-stil ska se ut så finns här några exempel:
-                </p>
-                <pre>
-                    <code>
-                        body {
-                            color: white;
-                            background-color: black;
-                        }
-                    </code>
-                </pre>
-                <p>
-                    Se på stilen ovan, den sätter färgen för alla element under &lt;body&gt;-taggen till vitt och
-                    bakgrunden till svart. Notera att stilerna måste avslutas med semi-kolon för att termineras och hela
-                    stil-klassen innesluts av <code>{}</code>. CSS-filen fylls på med stiler precis som ovan för olika
-                    element. De kan ha barn-selektorer, id-selektorer eller andra för att rätt element ska få rätt
-                    utseende. Se nedan hur en &lt;div&gt; med klassen .beautybox får ett tillägg.
-                </p>
-                <pre>
-                    <code>
-                        div .beautybox {
-                            font-family: Verdana;
-                            font-size: 1.2em;
-                        }
-                    </code>
-                </pre>
-                <p>
-                    Text inuti &lt;div&gt; med klassen .beautybox kommer att få Verdana-fonten och texten kommer att
-                    förstoras med 20%. Dock så kan denna formattering förstås skrivas över om fler designregler läggs
-                    till som är mer specifika än denna, eller lika specifik, bara definierad längre ned i filen.
-                </p>
-            </section>
-        </article>
-    </main>
+        <h4>Mer om selektorer</h4>
+        <p>
+          Vi vet redan om att det finns tagg, klass och ID-selektorer men det finns också fler.
+        </p>
+        <ul>
+          <li>
+            En tagg-selektor: <code>div { }</code>
+            <p>
+                Tagg-selektorer läggs på alla taggar som matchar. Tillexempel alla <code>&lt;div&gt;</code> som ovan.
+            </p>
+          </li>
+          <li>
+            En klass-selektor: <code>.klassnamn { }</code>
+            <p>
+                Klass-selektorer läggs på alla HTML-element som har en viss klass associerad med sig. Regeln ovan kommer då att välja denna <code>&lt;div&gt;</code>:
+            </p>
+            <pre>
+              &lt;div class="klassnamn"&gt;
+              ...
+            </pre>
+          </li>
+          <li>
+            En id-selektor: <code>#idnummer { }</code>
+            <p>
+              Id-selektorer läggs på det HTML-element som har samma id-nummer som det som definierats i
+              CSS. Regeln ovan kommer då att välja denna <code>&lt;div&gt;</code>:
+            </p>
+            <pre>
+              &lt;div id="idnummer"&gt;
+              ...
+            </pre>
+          </li>
+          <li>
+            En attribut-selektor: <code>a[href="mönster att matcha"] { }</code>
+            <p>
+              En attribut-selektor kan läggas till på en tagg-selektor för att också välja vilket attribut
+              taggen ska ha för att den ska formatteras med just den här CSS-regeln. Tillexempel en viss
+              adress för en <code>&lt;a&gt;</code>-tagg som ovan.
+            </p>
+          </li>
+          <li>
+            En barn-selektor: <code>body > h1 { }</code>
+            <p>
+              Det finns mängder av barn-selektorer, den mest grundläggande ovan. Denna gör så att alla
+              <code>&lt;h1&gt;</code>-taggar som är direkta barn av <code>&lt;body&gt;</code>-taggen får formattering. Arv kommer
+              alltså inte in här. Om det finns två <code>&lt;h1&gt;</code>-taggar inuti body-taggen men en av dessa
+              headers ligger inuti en div medans den andra ligger direkt under body så kommer den header
+              som är inuti div-taggen INTE att få formattering. Detta eftersom att den inte är ett direkt
+              barn av <code>&lt;body&gt;</code>-taggen.
+            </p>
+            <p>
+              Det finns även en hel del fler barnselektorer som fungerar som ovan men med sina egna
+              tvister. <code>h1:first-child</code> kan tillexempel tillämpas för att bara
+              formattera den första h1-taggen, om det finns flera. Den fullständiga koden blir då: <br>
+              <code>body > h1:first-child { }</code>
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>Enheter</h3>
+        <p>
+          Det finns flera enheter för att bestämma storlek på olika HTML-element.
+        </p>
+        <ul>
+          <li>
+            <p>
+              <em>in</em> står för "inch", en inch är 2.54 centimeter, eller 96px.
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>cm</em> är vanliga centimetrar.
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>mm</em> står för millimetrar.
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>pt</em> står för "points" och 1pt är lika med 1/72 av 1in.
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>pc</em> står för "picas" och 1pc är lika med 12pt.
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>px</em> står för "pixels" och 1px är lika med 1/96 av 1in. Pixlar är relativa den nuvarande skärmen. Om skärmen har en låg DPI (dots per inch)
+              så blir 1px en pixel. Har skärmen däremot en hög DPI (såsom en Apple Retina display) så är 1px faktiskt 2 pixlar hög och bred.
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>em</em> är en storlek som är relativ mot den nuvarande fontstorleken. 1em är 100% av den
+              nuvarande fontstorleken, 2em är 200% osv. Med nuvarande fontstorlek så menas det för det
+              nuvarande HTML-elementet, tillexempel för en inneslutande <code>&lt;div&gt;</code>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>ex</em> är en inte så vanlig storlek som räknar på x-storleken för den nuvarande fonten.
+              x-storleken är höjden för den nuvarande fontens små bokstäver.
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>%</em> är en relativ storlek som räknar på en %-sats för det inneslutande elementet.
+              Sätts detta när tex. <code>&lt;body&gt;</code> är den direkta föräldern så blir %-satsen tex. 20% av hela
+              skärmens yta (eftersom att <code>&lt;body&gt;</code> fyller fönstret).
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>Hur ett CSS-dokument är uppbyggt</h3>
+        <p>
+          Ett CSS-dokument består av en massa designregler som läses av, uppifrån och ned. Såsom nämnt
+          tidigare så används de "regler" längst ned om två eller flera kolliderar (har samma prioritet
+          under the cascades uträkning) för ett element. För att klargöra ytterligare för hur en CSS-stil
+          ska se ut så finns här några exempel:
+        </p>
+        <pre>
+          body {
+              color: white;
+              background-color: black;
+          }
+        </pre>
+        <p>
+          Se på stilen ovan, den sätter färgen för alla element under <code>&lt;body&gt;</code>-taggen till vitt och
+          bakgrunden till svart. Notera att stilerna måste avslutas med semi-kolon för att termineras och hela
+          stil-klassen innesluts av <code>{}</code>. CSS-filen fylls på med stiler precis som ovan för olika
+          element. De kan ha barn-selektorer, id-selektorer eller andra för att rätt element ska få rätt
+            utseende. Se nedan hur en <code>&lt;div&gt;</code> med klassen .beautybox får ett tillägg.
+        </p>
+        <pre>
+          div.beautybox {
+              font-family: Verdana;
+              font-size: 1.2em;
+          }
+        </pre>
+        <p>
+          Text inuti <code>&lt;div&gt;</code> med klassen <code>beautybox</code> kommer att få Verdana-fonten och texten kommer att
+          förstoras med 20%. Dock så kan denna formattering förstås skrivas över om fler designregler läggs
+          till som är mer specifika än denna, eller lika specifik, bara definierad längre ned i filen. Exempelvis så skulle padding
+          kunna läggas till i en annan CSS-designregel, så här:
+        </p>
+        <pre>
+          div {
+              padding: 5px 5px 10px 10px;
+          }
+        </pre>
+        <p>
+          Regeln ovan läggs då till för alla <code>&lt;div&gt;</code>-taggar eftersom att den inte är till för någon specifik klass
+          eller något specifikt ID. En <code>&lt;div&gt;</code> med klassen beautybox får då till slut både <code>font-family</code>,
+          <code>font-size</code> och <code>padding</code> tilldelat genom dessa två CSS-designregler.
+        </p>
+      </section>
+    </article>
+  </main>
 </body>
 </html>
