@@ -1,181 +1,193 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <title>Uppgift 2.2</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Uppgift 2.2</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Uppgift 2.2 </h1>
-    </header>
-    <main>
-        <article>
-            <h2>Fontfamiljer</h2>
-            <p>
-                Fontfamiljer är hur man i CSS väljer vilken font som man vill använda till sin text. Denna kan sättas
-                per element, på en hel klass eller för en tagg, precis som med andra CSS-regler. Det finns olika typer
-                av fontfamiljer, däribland serif, sans-serif och monospace. Serif-fontar används ofta till långa texter
-                eftersom att fonttypen har små "fötter" på bokstäverna, något som ska göra det lättare och smidigare att
-                läsa. Exempel på serif-fontar är Times New Roman, Times. Sans-serif-fontar används ofta till
-                överskrifter pga. deras rena och simpla utseende. Arial, Helvetica och Verdana är några exempel.
-                Monospaced betyder att storleken på varje bokstav är lika stor, detta används till exempel för att visa
-                kodsnuttar i text.
-            </p>
-            <p>
-                När man lägger till en font-familj på till exempel en paragraf så kan man också spesa backup-fontar.
-                Detta gör man genom att efter den font man helst vill formattera till lägga till fler alternativ,
-                separerat med kommatecken. Sist i denna lista så är det vanligt och bra att lägga till ett generiskt
-                val, såsom bara serif, sans-serif eller monospace. Detta instruerar webbläsaren att välja bland vilken
-                serif, sans-serif eller monospace font som helst som datorn redan installerat, det fungerar alltså som
-                en sorts backupfunktion som man i alla fall får bestämma stil på.
-            </p>
-            <pre>
-                <code>
-                    body {
-                        font-family: Arial, Helvetica, sans-serif;
-                    }
-                </code>
-            </pre>
-            <p>
-                Här ovan ser vi ett exempel på en vald font-familj som använder tre olika sans-serif fontar, Arial,
-                Helvetica eller en generisk sans-serif-font.
-            </p>
+  <header>
+    <h1>Uppgift 2.2 </h1>
+  </header>
 
-            <h2>Enheter</h2>
-            <p>
-                <em>xx-small, x-small, small, medium, large, x-large och xx-large</em> kan användas för att ställa in
-                storleken på en font, en bit text. Nedan är syntax för att ställa in fontstorlek.
-            </p>
-            <pre>
-                <code>
-                    p {
-                        font-size: xx-small;
-                    }
-                </code>
-            </pre>
-            <p>
-                Dessa storlekinställningarna har värden som beror på din webbläsares grundstorlek för fontar. Om
-                grundstorleken för en paragraf är 16 pixlar så kommer medium att vara 16 pixlar stor, medans small
-                kommer vara mindre, x-small ännu mindre osv. Motsatt sak händer då för large och uppåt förstås.
-            </p>
-            <h3>% och em-storlekar</h3>
-            <p>
-                Både <em>%</em> och <em>em</em> enheterna liknar small, medium, large osv. % fungerar som så att den
-                taggen som % använts på frågar sin förälder (container) vilket fontstorlek den har och tar sedan %-
-                satsen av den storleken. 100% på font-size sätter alltså font-storleken till densamma som föräldern.
-            </p>
-            <p>
-                <em>em</em> fungerar faktiskt på precis samma sätt som %, men för att använda em så använder man
-                istället 1 för att representera 100% av förälderns storlek. Se följande exempel:
-            </p>
-            <pre>
-                <code>
-                    p {
-                        font-size: 100%;
-                    }
-                    p {
-                        font-size: 1em;
-                    }
-                </code>
-            </pre>
-            <p>
-                Det koden ovan visar är ett likvärdigt sätt att sätta en fontstorlek på, 1em är 100% och 100% är 1em.
-                Vill man istället har dubbelt så stor text som föräldern använder man 2em eller 200%.
-            </p>
+  <nav>
+    <h2>Navigering</h2>
+    <a href="../2.1/index.html">Tillbaka till uppgift 2.1</a>
+  </nav>
 
-            <h2>Annat</h2>
-            <p>
-                Ett par andra attribut som är bra att känna till i CSS är <em>color</em>, <em>font</em> och
-                <em>list-style</em>. Color sätter färgen på texten, font är ett uttryck som kan användas för att sätta
-                alla olika typer av text-formattering i ett kommando och list-style används för att, precis som
-                font formatterar text, sätta alla typer av formattering på listor.
-            </p>
-            <h3>font och list-style</h3>
-            <p>
-                Font och list-style har gememsamt att de båda är kortkommandon för att slippa skriva alla olika typer
-                av formattering såsom font-weight, font-style, font-variant osv. för text och list-style-type,
-                list-style-position för listor. Nedan är två olika sätt att formattera text respektive listor både med
-                och utan deras kortkommandon vilket ger den efterföljande texten/listan.
-            </p>
-            <pre>
-                <code>
-                    p {
-                        font-style: italic;
-                        font-weight: normal;
-                        font-family: Arial, Helvetica, sans-serif;
-                        font-size: x-large;
-                    }
-                    p {
-                        font: italic normal x-large Arial, Helvetica, sans-serif;
-                    }
-                    ul {
-                        list-style-type: circle;
-                        list-style-position: inside;
-                    }
-                    ul {
-                        list-style: circle inside;
-                    }
-                </code>
-            </pre>
-            <p class="formatted_text">
-                Här är lite formatterad text.
-            </p>
-            <ul class="formatted_list">
-                <li>
-                    Ett listelement.
-                </li>
-                <li>
-                    Ett till listelement.
-                </li>
-            </ul>
-            <h3>color</h3>
-            <p>
-                <em>color</em> kan läggas på text för att formattera färgen, så här:
-            </p>
-            <pre>
-                <code>
-                    p.one {
-                        color: white;
-                    }
-                    p.two {
-                        color: #00ff00;
-                    }
-                    p.three {
-                        color: rgb(0, 255, 0);
-                    }
-                    p.four {
-                        color: hsl(120, 100%, 50%);
-                    }
-                    p.five {
-                        color: rgba(0, 255, 0, 0.5);
-                    }
-                </code>
-            </pre>
-            <p class="one">Ett</p>
-            <p class="two">Två</p>
-            <p class="three">Tre</p>
-            <p class="four">Fyra</p>
-            <p class="five">Fem</p>
-            <p>
-                Det finns flera olika sätt att lägga till färg på ett element. Man kan lägga till färg med text, hex-
-                koder, rgb-funktion eller hsl-funktion. Genom att lägga till ett "a" bakom rgb eller hsl så kan man
-                också ställa in transparens, om färgen ska vara genomskinlig. RGB-funktionen tar tre argument, värden
-                för nivån av röd, grön och blå. Det fjärde argumentet för transparens spesas mellan 0 och 1, i exemplet
-                ovan så är alltså paragrafen halvt genomskinlig med sitt värde på 0.5.
-            </p>
-            <h4>hsl(hue, saturation, lightness)</h4>
-            <p>
-                hsl() kan vara lite svårare att vänja sig vid eftersom den har ett något ofamiljärt användningssätt.
-                Det första värdet, hue, väljer färgen. Hue tar ett värde mellan 0 och 360, där 0 och 360 är röd. Låter
-                konstigt men se det som att ha gått runt ett helt varv i en cirkel och att du då är tillbaka på start.
-                Det andra argumentet, saturation, är hur "ren" färgen är i procent från 0 till 100. 0% ger alltid samma
-                gråa färg medans 100% ger än väldigt ren och fin färg som valts i hue. Det sista argumentet (eller näst
-                sista om man vill ställa in transparens) är lightness och bestämmer hur ljus färgen ska vara även här
-                med % mellan 0 och 100. 0 är svart och 100% är en helt vit färg. För att få renast möjliga färg utan att
-                riktigt blanda in ljus så används 50%.
-            </p>
-        </article>
-    </main>
+  <main>
+    <article>
+      <h2>Fontfamiljer</h2>
+      <p>
+        Fontfamiljer är hur man i CSS väljer vilken font som man vill använda till sin text. Denna kan sättas
+        per element, på en hel klass eller för en tagg, precis som med andra CSS-regler.
+      </p>
+      <p>
+        Det finns olika typer av fontfamiljer, däribland serif, sans-serif och monospace. Serif-fontar används ofta till långa texter
+        eftersom att fonttypen har små "fötter" på bokstäverna, något som ska göra det lättare och smidigare att
+        läsa. Exempel på serif-fontar är Times New Roman och Times.
+      </p>
+      <p>
+        Sans-serif-fontar används ofta till överskrifter pga. deras rena och simpla utseende. Arial, Helvetica och Verdana är några exempel.
+      </p>
+      <p>
+        Monospaced betyder att storleken på varje bokstav är lika stor, detta används till exempel för att visa
+        kodsnuttar i text.
+      </p>
+      <p>
+        När man lägger till en font-familj på till exempel en paragraf så kan man också spesa backup-fontar.
+        Detta gör man genom att efter den font man helst vill formattera till lägga till fler alternativ,
+        separerat med kommatecken. Sist i denna lista så är det vanligt och bra att lägga till ett generiskt
+        val, såsom bara serif, sans-serif eller monospace. Detta instruerar webbläsaren att välja bland vilken
+        serif, sans-serif eller monospace font som helst som datorn redan installerat, det fungerar alltså som
+        en sorts backupfunktion som man i alla fall får bestämma stil på.
+      </p>
+      <pre>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+      </pre>
+      <p>
+        Här ovan ser vi ett exempel på en vald font-familj som använder tre olika sans-serif fontar, Arial,
+        Helvetica eller en generisk sans-serif-font.
+      </p>
+
+      <h2>Enheter</h2>
+      <p>
+        <em>xx-small, x-small, small, medium, large, x-large och xx-large</em> kan användas för att ställa in
+        storleken på en font, en bit text. Nedan är syntax för att ställa in fontstorlek.
+      </p>
+      <pre>
+        p {
+            font-size: xx-small;
+        }
+      </pre>
+      <p>
+        Dessa storlekinställningarna har värden som beror på din webbläsares grundstorlek för fontar. Om
+        grundstorleken för en paragraf är 16 pixlar så kommer medium att vara 16 pixlar stor, medans small
+        kommer vara mindre, x-small ännu mindre osv. Motsatt sak händer då för large och uppåt förstås.
+      </p>
+      <h3>% och em-storlekar</h3>
+      <p>
+        Både <em>%</em> och <em>em</em> enheterna liknar small, medium, large osv. % fungerar som så att den
+        taggen som % använts på frågar sin förälder (container) vilket fontstorlek den har och tar sedan %-
+        satsen av den storleken. 100% på font-size sätter alltså font-storleken till densamma som föräldern.
+      </p>
+      <p>
+        <em>em</em> fungerar faktiskt på precis samma sätt som %, men för att använda em så använder man
+        istället 1 för att representera 100% av förälderns storlek. Se följande exempel:
+      </p>
+      <pre>
+        p {
+            font-size: 100%;
+        }
+        p {
+            font-size: 1em;
+        }
+      </pre>
+      <p>
+        Det koden ovan visar är ett likvärdigt sätt att sätta en fontstorlek på, 1em är 100% och 100% är 1em.
+        Vill man istället har dubbelt så stor text som föräldern använder man 2em eller 200%.
+      </p>
+
+      <h2>Annat</h2>
+      <p>
+        Ett par andra attribut som är bra att känna till i CSS är <em>color</em>, <em>font</em> och
+        <em>list-style</em>. Color sätter färgen på texten, font är ett uttryck som kan användas för att sätta
+        alla olika typer av text-formattering i ett kommando och list-style används för att, precis som
+        font formatterar text, sätta alla typer av formattering på listor.
+      </p>
+      <h3>font och list-style</h3>
+      <p>
+        Font och list-style har gememsamt att de båda är kortkommandon för att slippa skriva alla olika typer
+        av formattering såsom font-weight, font-style, font-variant osv. för text och list-style-type,
+        list-style-position för listor. Nedan är två olika sätt att formattera text respektive listor både med
+        och utan deras kortkommandon vilket ger den efterföljande texten/listan.
+      </p>
+      <pre>
+        p {
+            font-style: italic;
+            font-weight: normal;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-large;
+        }
+        p {
+            font: italic normal x-large Arial, Helvetica, sans-serif;
+        }
+
+        ul {
+            list-style-type: circle;
+            list-style-position: inside;
+        }
+        ul {
+            list-style: circle inside;
+        }
+      </pre>
+
+      <p>
+        Exemplet ovan resulterar i följande text och lista:
+      </p>
+      <p class="formatted_text">
+        Här är lite formatterad text.
+      </p>
+      <ul class="formatted_list">
+        <li>
+            Ett listelement.
+        </li>
+        <li>
+            Ett till listelement.
+        </li>
+      </ul>
+
+      <h3>color</h3>
+      <p>
+        <em>color</em> kan läggas på text för att formattera färgen, så här:
+      </p>
+      <pre>
+        p.one {
+            color: white;
+        }
+        p.two {
+            color: #00ff00;
+        }
+        p.three {
+            color: rgb(0, 255, 0);
+        }
+        p.four {
+            color: hsl(120, 100%, 50%);
+        }
+        p.five {
+            color: rgba(0, 255, 0, 0.5);
+        }
+      </pre>
+      <p>
+        Designen ovan genererar då följande utseende på nedan text. <code>p.one</code> har lagt på texten "ett",
+        <code>p.two</code> på texten "två" och så vidare.
+      </p>
+      <p class="one">Ett</p>
+      <p class="two">Två</p>
+      <p class="three">Tre</p>
+      <p class="four">Fyra</p>
+      <p class="five">Fem</p>
+      <p>
+        Det finns flera olika sätt att lägga till färg på ett element. Man kan lägga till färg med text, hex-
+        koder, rgb-funktion eller hsl-funktion. Genom att lägga till ett "a" bakom rgb eller hsl så kan man
+        också ställa in transparens, om färgen ska vara genomskinlig. RGB-funktionen tar tre argument, värden
+        för nivån av röd, grön och blå. Det fjärde argumentet för transparens spesas mellan 0 och 1, i exemplet
+        ovan så är alltså paragrafen halvt genomskinlig med sitt värde på 0.5.
+      </p>
+      <h4>hsl(hue, saturation, lightness)</h4>
+      <p>
+        hsl() kan vara lite svårare att vänja sig vid eftersom den har ett något ofamiljärt användningssätt.
+        Det första värdet, hue, väljer färgen. Hue tar ett värde mellan 0 och 360, där 0 och 360 är röd. Låter
+        konstigt men se det som att ha gått runt ett helt varv i en cirkel och att du då är tillbaka på start.
+        Det andra argumentet, saturation, är hur "ren" färgen är i procent från 0 till 100. 0% ger alltid samma
+        gråa färg medans 100% ger än väldigt ren och fin färg som valts i hue. Det sista argumentet (eller näst
+        sista om man vill ställa in transparens) är lightness och bestämmer hur ljus färgen ska vara även här
+        med % mellan 0 och 100. 0 är svart och 100% är en helt vit färg. För att få renast möjliga färg utan att
+        riktigt blanda in ljus så används 50%.
+      </p>
+    </article>
+  </main>
 </body>
 </html>
