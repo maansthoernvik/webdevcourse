@@ -6,142 +6,639 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Uppgift 2.3</h1>
-    </header>
-    <main>
-        <article>
-            <h2>Boxmodellen</h2>
-            <p>
-                En webbläsare ser allt innehåll i en webbsida som lådor, fyrkantiga former som bygger upp webbplatsen.
-                En paragraf är en låda med text, en bild är en låda med en bild, det finns till och med lådor med ännu
-                fler, mindre lådor inuti. För att styra hur lådorna integragerar så behöver du veta om några
-                grundläggande koncept.
-            </p>
-            <h3>Paddning</h3>
-            <p>
-                Paddning är mellanrum mellan till exempel en paragrafs text och lådan som innehåller textens kant. Du
-                kan se det som att paddningen är ramen runt en tavla och bilden i ramen är det faktiska materialet,
-                antingen en bild eller text eller något annat, kanske fler, mindre tavlor till och med.
-            </p>
-            <h3>Kantlinjer</h3>
-            <p>
-                Kantlinjer kan läggas till runt olika lådor. Man behöver inte lägga till kantlinjer på alla sidor utan
-                kan lägga till dem på en sida i taget också, till exempel över och under, till vänster eller runt hela
-                lådan.
-            </p>
-            <h3>Marginaler</h3>
-            <p>
-                Marginaler är mellanrum &gt;mellan&lt; lådor, alltså utanför en lådas kant fram till en annan lådas kant
-            </p>
-            <h3>Innehåll</h3>
-            <p>
-                Innehåll är "anledningen" varför en låda ens finns. Om lådan är tom så fyller den inte riktigt någon
-                funktion för din webbsida. Innehållet kan till exempel vara text, en bild eller fler mindre lådor.
-            </p>
-            <h3>Boxmodellen forts.</h3>
-            <p>
-                Koncepten ovan kan alla kombineras på valfritt sätt. Man kan ha bara padding, padding och margin eller
-                allting på en gång. Det går också helt OK att sätta padding och/eller margin bara på en sida av ett
-                element, se nedan för ett exempel.
-            </p>
-            <p class="big_space">En bit text</p><p>En till bit text</p>
-            <p>
-                Som du ser ovan så är mellanrummet mellan paragraferna väldigt stort i nederkant på den första i
-                förhållande till överkanten på den andra paragragen, men mellanrummet till den föregående är inte
-                förändrat. Detta kan åstadkommas genom att bara sätta <code>margin-bottom</code> på den första paragrafen eller
-                <code>margin-top</code> på den andra paragrafen.
+  <header>
+      <h1>Uppgift 2.3</h1>
+  </header>
 
-            <h2>Layoutbegrepp och hur de används</h2>
+  <nav>
+    <h2>Navigering</h2>
+    <a href="../2.1/index.html">Tillbaka till uppgift 2.1</a>
+  </nav>
+
+  <main>
+    <article>
+      <h2>Boxmodellen</h2>
+      <p>
+        En webbläsare ser allt innehåll i en webbsida som lådor, fyrkantiga former som bygger upp webbplatsen.
+        En paragraf är en låda med text, en bild är en låda med en bild, det finns till och med lådor med ännu
+        fler, mindre lådor inuti. För att styra hur lådorna integragerar så behöver du veta om några
+        grundläggande koncept.
+      </p>
+
+      <h3>Forma lådors utseende</h3>
+      <p>
+        Lådors utseende kan ändras med hjälp av flera olika attribut:
+      </p>
+      <ul>
+        <li>
+          <p>
+            <strong>Transparens</strong> kan uppnås med hjälp av antingen <code>rgba</code> eller <code>opacity och ställs då in så här:</code>
+          </p>
+          <pre>
+            div {
+              opacity: 0.5;
+            }
+          </pre>
+          <div class="opacity_div">
             <p>
-                Margin, padding och borders är alla viktiga att förstå för att styra sina lådor på en webbplats.
+              Denna lådan använder <code>opacity: 0.5;</code>
             </p>
-            <h3><code>margin</code></h3>
+          </div>
+          <p>
+            Eller så här:
+          </p>
+          <pre>
+            div {
+              color: rgba(255, 0, 0, 0,5);
+            }
+          </pre>
+          <div class="rgba_div">
             <p>
-                <code>margin</code> används som sagt för att lägga till mellanrum mellan sina lådor, utanför deras
-                respektive kanter. Man kan antingen använda genvägen <code>margin</code> eller ställa specifikt med en
-                egen attribut per sida med: <code>margin-right</code>, <code>margin-left</code>, <code>margin-top</code>,
-                <code>margin-bottom</code>. <code>margin</code> används genom att mata in fyra värden medans de mer
-                specifika attributen bara tar ett.
+              Denna lådan använder <code>color: rgba(255,0,0,0.5):</code>
             </p>
-            <pre>
-                <code>
-                    p {
-                        margin-top: 1em;
-                        margin-bottom: 1em;
-                        margin-left: 1em;
-                        margin-right: 1em;
-                        margin: 1em 1em 1em 1em;
-                    }
-                </code>
-            </pre>
+          </div>
+          <p>
+            Det senare exemplet ställer då in färgen på <code>&lt;div&gt;</code>-taggen till röd samt gör den halvt genomskinlig. Använder
+            man <code>opacity</code> så ska ett värde mellan 0 och 1 anges, där 1 är fullt synligt och 0 helt genomskinligt. <code>rgba()</code>
+            accepterar 4 argument, där de tre första används för att bestämma färgen, det fjärde argumentet fungerar precis som om <code>opacity</code>
+            skulle ha använts och accepterar på samma sätt ett värde mellan 0 och 1 anges, där 1 är fullt synligt och 0 helt genomskinligt.
+          </p>
+        </li>
+
+        <li>
+          För att få till <strong>rundade hörn</strong> på en låda så använder man <code>border-radius</code>. <code>border-radius</code> kan ta ett eller
+          flera argument (upp till 4). Anger man ett element så rundas alla hörn med samma värde, annars så blir det i följande ordning:
+          <ol type="1">
+            <li>
+              Övre vänstra
+            </li>
+            <li>
+              Övre högra
+            </li>
+            <li>
+              Nedre högra
+            </li>
+            <li>
+              Nedre vänstra
+            </li>
+          </ol>
+          <p>
+            Anges dock bara tre värden så blir skillnaden att de andra värdet appliceras på både det övre högra och det nedre vänsta hörnet.
+          </p>
+          <p>
+            Anges två värden så appliceras det första argumentet på både det övre vänstra och det nedre högra hörnet, medans det andra appliceras
+            på det övre högra och nedre vänstra hörnet.
+          </p>
+          <p>
+            Anges bara ett värde appliceras det på alla hörn.
+          </p>
+          <div class="equal_rounded_corners">
             <p>
-                Notera ovan att det <strong>inte</strong> behövs mellanrum mellan <code>margin</code>s olika värden.
-                Värdena läses in i följande ordning: ovan, höger, under, vänster. Om du ger margin tre värden istället
-                för fyra så läses följande in: ovan, höger och vänster, under. Om du ger margin två värden blir det
-                första för ovan och under och det andra för höger och vänster. Ger du margin ett värde sätts det för
-                <strong>alla</strong> sidor.
+              Denna lådan har samma rundning på alla hörn med <code>border-radius: 10px;</code>
             </p>
-            <h3><code>border</code></h3>
+          </div>
+          <div class="odd_rounded_corners">
             <p>
-                Kantlinjer hos en låda kan ställas in i detalj med olika CSS-attribut. <code>border</code> är precis
-                som <code>margin</code> ett snabbt sätt att ställa in allting med en gång. Se nedan för ett exempel.
+              Denna lådan har olika rundning på sina hörn med <code>border-radius: 10px 50px 25px;</code>
             </p>
-            <pre>
-                <code>
-                    p {
-                        border: 2px solid red;
-                        border-color: red;
-                        border-style: solid;
-                        border-width: 2px;
-                    }
-                </code>
-            </pre>
-            <p>
-                <code>border</code> tar tre argument: tjocklek, stil och färg. Kommandot ovan kommer att skapa en 2
-                pixlar bred solid kant runt alla paragrafer. Notera att de specifika attributen under <code>border</code>
-                visar hur man ska skriva om man inte vill använda genvägen utan ställa in allting separat.
-            </p>
-            <h3><code>padding</code></h3>
-            <p>
-                <code>padding</code> är, till skillnad från <code>margin</code> ett sätt att lägga till plats inuti
-                en box istället för runt utkanten med <code>margin</code>.
-            </p>
-            <pre>
-                <code>
-                    p {
-                        padding: 1em 1em 1em 1em;
-                        padding-top: 1em;
-                        padding-right: 1em;
-                        padding-bottom: 1em;
-                        padding-left: 1em;
-                    }
-                </code>
-            </pre>
-            <p>
-                Precis som med <code>margin</code> så kan <code>padding</code> ställas in med en genväg som tar 4
-                argument, ovan, höger, nedan, vänster. Det går även att följa <code>margin</code>s mönster där man
-                passerar färre värden till <code>padding</code>, då fungerar detta precis som med <code>margin</code>,
-                till exempel om tre värden har givits till <code>padding</code> så blir det första för ovan det andra
-                för höger och vänster och det sista för under osv.
-            </p>
-            <h3><code>outline</code></h3>
-            <p>
-                En kantlinje är gränsen för vart en låda slutar, efter kantlinjen så tar <code>outline</code> vid.
-                <code>outline</code> blir som en "extra" kantlinje utanför kantlinjen. <code>outline</code> innehåller
-                precis samma inställningar som en <code>border</code>
-            </p>
-            <pre>
-                <code>
-                    p {
-                        outline: 2px solid red;
-                        outline-color: red;
-                        outline-style: solid;
-                        outline-width: 2px;
-                    }
-                </code>
-            </pre>
-        </article>
-    </main>
+          </div>
+        </li>
+
+        <li>
+          <p>
+            <strong>Bakgrundsbilder</strong> kan läggas till på en låda genom <code>background-image</code> attributet. Man kan dock också
+            spesa flera bilder för att lägga till flera bakgrundsbilder, så här:
+          </p>
+          <pre>
+            div {
+              background-image: url(bild1.jpg), url(bild2.jpg);
+            }
+          </pre>
+          <p>
+            För att få det att se ut som man vill så kan man också inkludera både, eller var för sig, <code>background-position</code> och
+            <code>background-repeat</code>. <code>background-position</code> tar flera värden som input, där det första appliceras på den först
+            spesade bilden, ovan bild1.jpg, och bestämmer vart den ska placeras i den aktuella boxen. <code>background-position</code> tar följande
+            argument:
+          </p>
+          <ul>
+            <li>
+              <code>left top</code>
+            </li>
+            <li>
+              <code>left center</code>
+            </li>
+            <li>
+              <code>left bottom</code>
+            </li>
+            <li>
+              <code>right top</code>
+            </li>
+            <li>
+              <code>right center</code>
+            </li>
+            <li>
+              <code>right bottom</code>
+            </li>
+            <li>
+              <code>center top</code>
+            </li>
+            <li>
+              <code>center center</code>
+            </li>
+            <li>
+              <code>center bottom</code>
+            </li>
+          </ul>
+          <p>
+            <code>background-repeat</code> specificerar om bakgrunden ska repeteras eller inte och på vilket sätt den i så fall ska repeteras.
+            <code>background-repeat</code> accepterar följande argument:
+          </p>
+          <ul>
+            <li>
+              <code>repeat</code>
+            </li>
+            <li>
+              <code>repeat-x</code>
+            </li>
+            <li>
+              <code>repeat-y</code>
+            </li>
+            <li>
+              <code>no-repeat</code>
+            </li>
+            <li>
+              <code>space</code>
+            </li>
+            <li>
+              <code>round</code>
+            </li>
+            <li>
+              <code>initial</code>
+            </li>
+            <li>
+              <code>inherit</code>
+            </li>
+          </ul>
+          <p>
+            Nedan kan du se en dekorerad <code>&lt;div&gt;</code> som har byggts med hjälp av följande CSS-kod:
+          </p>
+          <pre>
+            div.image_background {
+              background-image: url(check_mark_circle_black.png), url(flowers.jpeg);
+              background-position: left center, right bottom;
+              background-repeat: repeat-x, no-repeat;
+            }
+          </pre>
+          <p>
+            Exemplet skulle dock lika gärna kunna ha använt denna, kortare, version:
+          </p>
+          <pre>
+            div.image_background {
+              background: url(check_mark_circle_black.png) left center repeat-x, url(flowers.jpeg) right bottom no-repeat
+            }
+          </pre>
+          <div class="image_background"></div>
+        </li>
+
+        <li>
+          <p>
+            <strong>Skuggning</strong> kan läggas till på boxar genom att använda <code>box-shadow</code> CSS-attributet. Detta attribut
+            kan lägga till skuggning runtom den aktuella boxen, antingen inuti eller utanför, i olika färger och utformning.
+            <code>box-shadow</code> kräver minst två argument för horisontell och vertikal offset, sedan finns det också följande inställningar
+            (som ska ges till <code>box-shadow</code> i samma ordning som de här listas):
+          </p>
+          <ol type="1">
+            <li>
+              <code>h-offset</code>, horisontell offset
+            </li>
+            <li>
+              <code>v-offset</code>, vertikal offset
+            </li>
+            <li>
+              <code>blur</code> ett större värde här ger en mindre och mindre skarp skugga.
+            </li>
+            <li>
+              <code>spread</code> ökar spridningen på skuggningen.
+            </li>
+            <li>
+              <code>color</code>
+            </li>
+            <li>
+              <code>inset</code> kan läggas till som ett sista argument för att få skuggningen på insidan av boxen istället för utanför.
+            </li>
+          </ol>
+          <p>
+            Här ser vi ett exempel på en boxskuggning som använder följande CSS-regel:
+          </p>
+          <pre>
+            div.inline_shade {
+               box-shadow: 0px 0px 10px 15px red inset;
+            }
+          </pre>
+          <div class="inline_shade"></div>
+        </li>
+
+        <li>
+          <p>
+            <strong>Gradienter</strong> kan användas för att stylea boxar, det finns två olika sätt att definiera dem: <code>linear-gradient()</code> och
+            <code>radial-gradient()</code> och de sätts på <code>background-image</code> elementet. <code>linear-gradient</code> kan ta flera argument, en riktning
+            , färg 1, färg 2, och så vidare. Om ingen riktning anges så går gradienten uppifrån och ner, minst två färger måste i alla fall anges. Nedan så har en
+            <code>&lt;div&gt;</code> fått följande gradient:
+          </p>
+          <pre>
+            div.linear_gradient {
+              background-image: linear-gradient(to top left, red, yellow 10%, green 80%);
+            }
+          </pre>
+          <div class="linear_gradient"></div>
+          <p>
+            Färger kan spesas med namn, som ovan, hexadecimala representationer, <code>rgb()</code>-funktionen osv.
+            Som du också ser ovan så kan färgskiften och när de ska ske också definieras. Om man vill ha en snabb övergång från röd till gul, kan man
+            som ovan ge den gula färgen en lägre procentdel så att gul tar över tidigare, nämligen efter 10% av <code>&lt;div&gt;</code>-taggen.
+          </p>
+          <p>
+            Märk att en gradient kan specificera följande fördefinierade riktningar, eller en exakt vinkel. Om man vill ange en vinkel skriver man istället:
+            <code>90deg</code>, eller en negativ vinkel <code>-35deg</code>.
+          </p>
+          <ul>
+            <li>
+              <code>to bottom</code>
+            </li>
+            <li>
+              <code>to top</code>
+            </li>
+            <li>
+              <code>to right</code>
+            </li>
+            <li>
+              <code>to bottom right</code>
+            </li>
+            <li>
+              Och så vidare...
+            </li>
+          </ul>
+          <p>
+            <code>radial-gradient()</code> används istället för att skapa en gradient som utgår från en punkt och expanderar ut i en cirkel. <code>radial-gradient()</code>
+            kommer att använda ellips-formen om inget annat spesas, det andra alternativet är <code>circle</code>. Genom att skriva <code>at</code> och sedan följa upp det
+            med en position så bestämmer man var gradienten ska utgå ifrån, spesas inget så blir mittpunkten på boxen vald. En position kan spesas med pixlar (px), procent (%)
+            eller nyckelord såsom <code>center</code>, <code>left</code>, <code>right</code> osv. Notera att om pixlar/procent ska användas så måste två tal tillhandahållas,
+            för att ge en <em>punkt</em> i boxen, till exempel: 10px 10px eller 25% 75%. Notera att nyckelordet <code>at</code> <em>alltid</em> måste komma före den position
+            som ska vara mittpunkten för <code>radial-gradient()</code>.
+          </p>
+          <p>
+            Det går även att spesa hur långt gradienten ska fortsätta med hjälp av fyra olika alternativ:
+          </p>
+          <ul>
+            <li>
+              <code>closest-side</code>
+            </li>
+            <li>
+              <code>closest-corner</code>
+            </li>
+            <li>
+              <code>farthest-side</code>
+            </li>
+            <li>
+              <code>farthest-corner</code>
+            </li>
+          </ul>
+          <p>
+            Dessa fyra alternativ bestämmer vart gradienten ska avsluta färgbytet. För till exempel closest-side så slutar alltså färgbytet vid cirkeln eller ellipsens
+            närmaste sida från mittpunkten på cirkeln/ellipsen.
+          </p>
+          <p>
+            Efter de <code>radial-gradient()</code>-specifika argumenten så spesas färgbyten på samma sätt som för <code>linear-gradient()</code>, med en lista av
+            färger och frivilliga %-tal som bestämmer när färgen ska bytas till.
+          </p>
+          <div class="radial_gradient"></div>
+          <p>
+            Boxen ovan har följande <code>radial-gradient:</code>
+          </p>
+          <pre>
+            div.radial_gradient {
+              background-image: radial-gradient(ellipse farthest-side at 75px 75px, red, yellow 10%, green 40%, blue 75%);
+            }
+          </pre>
+        </li>
+      </ul>
+
+      <h3>Paddning</h3>
+      <p>
+        Paddning är mellanrum mellan till exempel en paragrafs text och lådan som innehåller textens kant. Du
+        kan se det som att paddningen är ramen runt en tavla och bilden i ramen är det faktiska materialet,
+        antingen en bild eller text eller något annat, kanske fler, mindre tavlor till och med.
+      </p>
+
+      <h3>Kantlinjer</h3>
+      <p>
+        Kantlinjer kan läggas till runt olika lådor. Man behöver inte lägga till kantlinjer på alla sidor utan
+        kan lägga till dem på en sida i taget också, till exempel över och under, till vänster eller runt hela
+        lådan.
+      </p>
+      <h3>Marginaler</h3>
+      <p>
+          Marginaler är mellanrum &gt;mellan&lt; lådor, alltså utanför en lådas kant fram till en annan lådas kant
+      </p>
+
+      <h3>Innehåll</h3>
+      <p>
+        Innehåll är "anledningen" varför en låda ens finns. Om lådan är tom så fyller den inte riktigt någon
+        funktion för din webbsida. Innehållet kan till exempel vara text, en bild eller fler mindre lådor.
+      </p>
+
+      <h3>Boxmodellen forts.</h3>
+      <p>
+        Koncepten ovan kan alla kombineras på valfritt sätt. Man kan ha bara padding, padding och margin eller
+        allting på en gång. Det går också helt OK att sätta padding och/eller margin bara på en sida av ett
+        element, se nedan för ett exempel.
+      </p>
+      <p class="big_space">En bit text</p><p>En till bit text</p>
+      <p>
+        Som du ser ovan så är mellanrummet mellan paragraferna väldigt stort i nederkant på den första i
+        förhållande till överkanten på den andra paragragen, men mellanrummet till den föregående är inte
+        förändrat. Detta kan åstadkommas genom att bara sätta <code>margin-bottom</code> på den första paragrafen eller
+        <code>margin-top</code> på den andra paragrafen.
+      </p>
+
+      <h2>Layoutbegrepp och hur de används</h2>
+      <p>
+        Margin, padding och borders är alla viktiga att förstå för att styra sina lådor på en webbplats.
+      </p>
+
+      <h3><code>margin</code></h3>
+      <p>
+        <code>margin</code> används som sagt för att lägga till mellanrum mellan sina lådor, utanför deras
+        respektive kanter. Man kan antingen använda genvägen <code>margin</code> eller ställa specifikt med en
+        egen attribut per sida med: <code>margin-right</code>, <code>margin-left</code>, <code>margin-top</code>,
+        <code>margin-bottom</code>. <code>margin</code> används genom att mata in fyra värden medans de mer
+        specifika attributen bara tar ett.
+      </p>
+      <pre>
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            margin-left: 1em;
+            margin-right: 1em;
+            margin: 1em 1em 1em 1em;
+        }
+      </pre>
+      <p>
+        Notera ovan att det <strong>inte</strong> behövs mellanrum mellan <code>margin</code>s olika värden.
+        Värdena läses in i följande ordning: ovan, höger, under, vänster. Om du ger margin tre värden istället
+        för fyra så läses följande in: ovan, höger och vänster, under. Om du ger margin två värden blir det
+        första för ovan och under och det andra för höger och vänster. Ger du margin ett värde sätts det för
+        <strong>alla</strong> sidor.
+      </p>
+      <div class="margin_bottom"></div>
+      <div class="red"></div>
+      <p>
+        Ovan så har den övre, blåa, boxen en margin satt på sin nederkant, detta gör att det läggs till mellanrum mellan
+        lådorna.
+      </p>
+      <pre>
+        div.margin_bottom {
+          margin-bottom: 10px;
+        }
+      </pre>
+
+      <h3><code>border</code></h3>
+      <p>
+        Kantlinjer hos en låda kan ställas in i detalj med olika CSS-attribut. <code>border</code> är precis
+        som <code>margin</code> ett snabbt sätt att ställa in allting med en gång. Se nedan för ett exempel.
+      </p>
+      <pre>
+        div.border_example {
+            border: 2px solid red;
+            border-color: red;
+            border-style: solid;
+            border-width: 2px;
+        }
+      </pre>
+      <p>
+        <code>border</code> tar tre argument: tjocklek, stil och färg. Kommandot ovan kommer att skapa en 2
+        pixlar bred solid kant runt alla paragrafer. Notera att de specifika attributen under <code>border</code>
+        visar hur man ska skriva om man inte vill använda genvägen utan ställa in allting separat. Se nedan för hur designen
+        ovan skulle se ut på en <code>&lt;div&gt;</code>.
+      </p>
+      <div class="border_example"></div>
+
+      <h3><code>padding</code></h3>
+      <p>
+        <code>padding</code> är, till skillnad från <code>margin</code> ett sätt att lägga till plats inuti
+        en box istället för runt utkanten med <code>margin</code>.
+      </p>
+      <pre>
+        p {
+            padding: 1em 1em 1em 1em;
+            padding-top: 1em;
+            padding-right: 1em;
+            padding-bottom: 1em;
+            padding-left: 1em;
+        }
+      </pre>
+      <p>
+        Precis som med <code>margin</code> så kan <code>padding</code> ställas in med en genväg som tar 4
+        argument, ovan, höger, nedan, vänster. Det går även att följa <code>margin</code>s mönster där man
+        passerar färre värden till <code>padding</code>, då fungerar detta precis som med <code>margin</code>,
+        till exempel om tre värden har givits till <code>padding</code> så blir det första för ovan det andra
+        för höger och vänster och det sista för under osv.
+      </p>
+      <p>
+        För att exemplifiera hur padding fungerar kontra <code>margin</code> så ser vi nedan två lådor utan
+        mellanrum mellan varandra (då ingen <code>margin</code> används) men däremot så är den innehållande
+        texten en bit ifrån boxarnas kanter, just för att vi har lagt till <code>padding</code> för alla sidor.
+      </p>
+      <div class="red"></div>
+      <div class="padding_example ">
+        <p>
+          Text inuti lådan som har padding satt kommer att indenteras in från boxens kanter.
+        </p>
+      </div>
+      <p>
+        Du kan också se att lådan med padding blivit större än den ovan, röda, boxen. Detta är för att
+        <code>padding</code>-inställningen ökat storleken med det antal pixlar som är storleken för den tillagda paddingen.
+      </p>
+
+      <h3><code>outline</code></h3>
+      <p>
+        En kantlinje är gränsen för vart en låda slutar, efter kantlinjen så tar <code>outline</code> vid.
+        <code>outline</code> blir som en "extra" kantlinje utanför kantlinjen. <code>outline</code> innehåller
+        precis samma inställningar som en <code>border</code>
+      </p>
+      <pre>
+        p {
+            outline: 2px solid red;
+            outline-color: red;
+            outline-style: solid;
+            outline-width: 2px;
+        }
+      </pre>
+      <p>
+        Den här boxen har både en kantlinje (blå) och och <code>outline</code> (röd).
+      </p>
+      <div class="double_lined"></div>
+
+      <h3><code>visibility</code></h3>
+      <p>
+        För att gömma element så kan <code>visibility</code> sättas till värdet <code>hidden</code>. För att istället visa ett element
+        så används värdet <code>visible</code>. Detta kan vara användbart i en webbapplikation när något ska tas bort och inte längre
+        visas på skärmen. Man kan då med Javaskript sätta denna CSS-attribut till <code>hidden</code>.
+      </p>
+      <pre>
+        .hide {
+          visibility: hidden;
+        }
+      </pre>
+
+      <h3><code>clip-path</code></h3>
+      <p>
+        <code>clip-path</code> är ett lite mer förfinat sätt att gömma vissa delar av ett element. Till exempel för att bara gömma en del av en
+        bild så kan <code>clip-path</code> med fördel användas.
+      </p>
+      <p>
+        Det finns dock många olika sätt att definiera det som ska visas och det som ska gömmas:
+      </p>
+      <ul>
+        <li>
+          <p>
+            URL som refererar till en SVG-fil med &lt;clipPath&gt;-element.
+          </p>
+        </li>
+        <li>
+          <p>
+            Former som till exempel <code>inset</code>, <code>cirle</code>, <code>polygon</code>, <code>path</code>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Delar av en box såsom: <code>margin-box</code>, <code>border-box</code>, <code>padding-box</code>, <code>content-box</code>, med flera.
+            Detta innebär, exempelvis för <code>margin-box</code>, att det område utanför boxens margins (alltså områden utanför boxens ramar som används
+            för att distansera andra boxar) tas bort. Notera att en box-typ alltid finns definierad, men skrivs inget in explicit så används <code>border-box</code>
+            som default-värde. <code>border-box</code> innebär att man inkluderar både padding och kantlinjer i boxens totala storlek, så all clipping som görs använder
+            kantlinjerna som sin yttersta referenspunkt.
+          </p>
+        </li>
+        <li>
+          <p>
+            Former och delar av en box i kombination:
+          </p>
+          <pre>
+            .box {
+              clip-path: padding-box circle(50px at 0 100px);
+            }
+          </pre>
+          <p>
+            Detta tar då i fallet ovan ut <code>padding-box</code>en och skär ut en cirkel inuti, det material inuti cirkeln kommer att synas medans resten göms.
+            Som nämns ovan så används <code>border-box</code> om ingen box-type spesats.
+          </p>
+        </li>
+      </ul>
+      <div class="clip_path_example"></div>
+      <p>
+        För att göra exemplen ovan mer konkreta så ser vi ovan ett exempel på en <code>clip-path</code> som lagts till på en <code>&lt;div&gt;</code> som har en gradient-bakgrund.
+        Se nedan för CSS-regeln som skapade boxen.
+      </p>
+      <pre>
+        div.clip_path_example {
+          clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+        }
+      </pre>
+
+      <h3><code>display</code></h3>
+      <p>
+        <code>display</code> påverkar hur ett element kommer att visas och det finns många olika inställningar beroende på vilken effekt man vill få fram:
+      </p>
+      <ul>
+        <li>
+          <code>block</code>
+        </li>
+        <li>
+          <code>inline</code>
+        </li>
+        <li>
+          <code>contents</code>
+        </li>
+        <li>
+          <code>flex</code>
+        </li>
+        <li>
+          <code>grid</code>
+        </li>
+        <li>
+          <code>inline-block</code>
+        </li>
+        <li>
+          <code>inline-flex</code>
+        </li>
+        <li>
+          <code>inline-grid</code>
+        </li>
+        <li>
+          <code>inline-table</code>
+        </li>
+        <li>
+          <code>list-item</code>
+        </li>
+        <li>
+          <code>run-in</code>
+        </li>
+        <li>
+          <code>none</code>
+        </li>
+        <li>
+          Och många fler
+        </li>
+      </ul>
+      <p>
+        Olika HTML-taggar har olika default-värden för sin display-inställning. En <code>&lt;div&gt;</code> eller <code>&lt;p&gt;</code> har <code>block</code>, medans
+        <code>&lt;span&gt;</code> har inline.
+      </p>
+      <p>
+        <code>block</code> innebär att elementet kommer att visas på en egen rad och ta upp hela bredden för det element som innehåller just denna tagg.
+      </p>
+      <p>
+        <code>inline</code> innebär att elementet kommer att visas som en del av flödande text eller direkt efter ett annat element som också har <code>display</code>
+        satt till <code>inline</code>. <code>inline</code> gör också så att inställningar för <code>height</code> och <code>width</code> inte har någon effekt på elementet.
+      </p>
+      <p>
+        <code>contents</code> gör så att den box som har denna inställning försvinner och de element som är barn till boxen flyttas upp en nivå i sidhierarkin.
+      </p>
+      <p>
+        <code>inline-block</code> kan vara användbar då detta innebär att elementet kommer att, precis som för <code>inline</code> inte bryta rad utan visas som
+        en del av den löpande texten, men kan få sin <code>height</code> och <code>width</code> ändrad. Här nedan ser du ett exempel på en löpande text där
+        en <code>&lt;div&gt;</code> satts in innan en bit text. Denna bryter dock inte raden då den har <code>display</code> satt till <code>inline-block</code>.
+      </p>
+      <div class="inline_block_example"></div> En blå <code>&lt;div&gt;</code> är insatt före denna texten
+
+      <h3><code>overflow</code></h3>
+      <p>
+        <code>overflow</code> bestämmer vad som ska hända om exempelvis text löper hela vägen från vänster till höger och börjar "spilla över" kanten för behållaren.
+        Följande inställningar kan användas:
+      </p>
+      <ul>
+        <li>
+          <code>visible</code>, vilket innebär att allt överflöd inte klipps bort utan visas utanför den box som innehåller materialet.
+        </li>
+        <li>
+          <code>hidden</code>, allt överflöd göms.
+        </li>
+        <li>
+          <code>scroll</code>, en scrollbar läggs till som kan användas för att se det material som läckt utanför den innehållande boxens gränser.
+        </li>
+        <li>
+          <code>auto</code>, en scrollbar läggs till <em>om</em> överflöd finns.
+        </li>
+      </ul>
+      <p>
+        Nedan har vi en liten <code>&lt;div&gt;</code> som innehåller mer text än som får plats. Men eftersom inställningen för <code>overflow</code>
+        är satt till <code>auto</code> så läggs en scrollbar till för att kunna visa resterande text som spillt ut annars.
+      </p>
+      <div class="scroll_overflow">
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+      </div>
+    </article>
+  </main>
 </body>
 </html>

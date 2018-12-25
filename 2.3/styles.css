@@ -5,3 +5,97 @@ body {
 p.big_space {
     margin-bottom: 2em;
 }
+div.opacity_div {
+  width: 50%;
+  border: 1px solid blue;
+  color: blue;
+  opacity: 0.5;
+}
+div.rgba_div {
+  width: 50%;
+  border: 1px solid red;
+  color: rgba(255,0,0,0.5);
+}
+div.equal_rounded_corners {
+  width: 75%;
+  height: 50px;
+  background-color: yellow;
+  border-radius: 10px;
+}
+div.odd_rounded_corners {
+  width: 75%;
+  height: 50px;
+  background-color: red;
+  border-radius: 10px 50px 25px;
+}
+div.image_background {
+  width: 75%;
+  height: 150px;
+  border: 1px solid blue;
+  background-image: url(check_mark_circle_black.png), url(flowers.jpeg);
+  background-position: left center, right bottom;
+  background-repeat: repeat-x, no-repeat;
+}
+div.inline_shade {
+  width: 50%;
+  height: 150px;
+  background-color: blue;
+  box-shadow: 0px 0px 10px 15px red inset;
+}
+div.linear_gradient {
+  width: 50%;
+  height: 150px;
+  background-image: linear-gradient(to top left, red, yellow 10%, green 80%);
+}
+div.radial_gradient {
+  width: 50%;
+  height: 150px;
+  background-image: radial-gradient(ellipse farthest-side at 75px 75px, red, yellow 10%, green 40%, blue 75%);
+}
+div.margin_bottom {
+  width: 25%;
+  height: 50px;
+  background-color: blue;
+  margin-bottom: 10px;
+}
+div.red {
+  width: 25%;
+  height: 50px;
+  background-color: red;
+}
+div.border_example {
+  width: 25%;
+  height: 50px;
+  border: 2px solid red;
+  background-color: blue;
+}
+div.padding_example {
+  width: 25%;
+  height: 50px;
+  padding: 20px 20px 20px 20px;
+  background-color: blue;
+}
+div.double_lined {
+  width: 25%;
+  height: 50px;
+  border: 2px solid blue;
+  outline: 2px solid red;
+}
+div.clip_path_example {
+  width: 25%;
+  height: 100px;
+  background-image: linear-gradient(to top left, rgb(255,162,39), rgb(232,74,12), rgb(255,0,0), rgb(232,12,227), rgb(129,13,255));
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+div.inline_block_example {
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  display: inline-block;
+}
+div.scroll_overflow {
+  width: 25%;
+  height: 50px;
+  background-color: yellow;
+  overflow: auto;
+}
