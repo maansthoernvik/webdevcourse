@@ -59,11 +59,21 @@
       Förutom att sätta färger för olika länktillstånd så har jag även ovan satt in så att en annan mussymbol
       visas när man håller muspekaren över länken!
     </p>
+    <p>
+      Värt att påpeka är också ordningen för de definierade länkreglerna. Man kan lätt tro att det går bra
+      att spesa reglerna i vilken ordning man vill, men det är viktigt att hålla the cascade i åtanke när
+      dessa skrivs ned. Säg till exempel att <code>:hover</code> var definierad före <code>:visited</code>.
+      Då hade webbläsaren, när användaren hållt musen över länken, först stött på <code>:hover</code>-regeln
+      och kommit fram till att den regeln skall appliceras. Färgen hade satts till röd, bakgrundsfärgen hade ändrats
+      osv. Därefter hade webbläsaren stött på <code>:visited</code>-regeln och även applicerats denna, förutsatt
+      att användaren redan klickat på länken en gång tidigare. Det hade då överskridit den tidigare applicerade
+      färgändringen och satt färgen till orangeröd. Alltså hade färgen från <code>:hover</code> helt ignorerats!
+    </p>
 
     <h3>Egendesignade länkar</h3>
     <p>
       Här har vi två länkar, en som blivit designad med CSS för att se ut som en knapp och en till som använder
-      en bild.
+      en bild som en del av knappens design.
     </p>
     <a class="button_link" href=".">Klicka på mig!</a>
     <a class="picture_link" href=".">Eller på mig!</a>
