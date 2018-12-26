@@ -6,64 +6,68 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Uppgift 2.5</h1>
-    </header>
-    <main>
-        <article>
-            <h2>Länkar</h2>
-            <p>
-                Länkar är givetvis en viktig del av i princip alla webbsidor, att designa dem kräver att man vet lite
-                mer kring hur de fungerar och vilka sk. tillstånd länkar kan befinna sig i.
-            </p>
+  <header>
+    <h1>Uppgift 2.5</h1>
+  </header>
 
-            <h3>Länktillstånd</h3>
-            <p>
-                En länk som aldrig har klickats på befinner sig i ett "oklickat" tillstånd. Du vet säkert hur det ser ut
-                då länken har sin vanliga, blåa, färg. En länk kan även ha ett "klickat" tillstånd och får då som standard
-                en lila färg. Det finns även två till tillstånd som en länk kan befinna sig i: användarens mus befinner
-                sig på länken och länken håller på att klickas på. Dessa fyra tillstånd har givits fyra pseudo-klasser:
-                :link, :visited, :hover och :active. För att visa hur dessa fyra tillstånd kan designas så har vi här
-                ett exempel som byter ut den gamla vanliga färgkoden.
-            </p>
-            <pre>
-                <code>
-                a:link {
-                    color: orange;
-                }
-                a:visited {
-                    color: orangered;
-                }
-                a:hover {
-                    color: red;
-                    background-color: yellow;
-                    cursor: crosshair;
-                }
-                a:active {
-                    color: yellow;
-                    background-color: red;
-                }
-                </code>
-            </pre>
-            <p>
-                Ovan så byter vi ut den blåa färgen mot orange när länken bara ligger där, orangeröd när länken tidigare
-                har klickats på samt röd/gul när vi håller musen över den och till sist vänder vi på färgerna röd/gul när
-                vi klickar på en länk. Se nedan för en representation:
-            </p>
-            <a href=".">Klicka på mig!</a>
-            <p>
-                Förutom att sätta färger för olika länktillstånd så har jag även ovan satt in så att en annan mussymbol
-                visas när man håller muspekaren över länken!
-            </p>
+  <nav>
+    <h2>Navigering</h2>
+    <a href="../2.1/index.html">Tillbaka till uppgift 2.1</a>
+  </nav>
 
-            <h3>Egendesignade länkar</h3>
-            <p>
-                Här har vi två länkar, en som blivit designad med CSS för att se ut som en knapp och en till som använder
-                en bild.
-            </p>
-            <a class="button_link" href=".">Klicka på mig!</a>
-            <a class="picture_link" href=".">Eller på mig!</a>
-        </article>
-    </main>
+  <main>
+  <article>
+    <h2>Länkar</h2>
+    <p>
+      Länkar är givetvis en viktig del av i princip alla webbsidor, att designa dem kräver att man vet lite
+      mer kring hur de fungerar och vilka sk. tillstånd länkar kan befinna sig i.
+    </p>
+
+    <h3>Länktillstånd</h3>
+    <p>
+      En länk som aldrig har klickats på befinner sig i ett "oklickat" tillstånd. Du vet säkert hur det ser ut
+      då länken har sin vanliga, blåa, färg. En länk kan även ha ett "klickat" tillstånd och får då som standard
+      en lila färg. Det finns även två till tillstånd som en länk kan befinna sig i: användarens mus befinner
+      sig på länken och länken håller på att klickas på. Dessa fyra tillstånd har givits fyra pseudo-klasser:
+      :link, :visited, :hover och :active. För att visa hur dessa fyra tillstånd kan designas så har vi här
+      ett exempel som byter ut den gamla vanliga färgkoden.
+    </p>
+    <pre>
+      a:link {
+          color: orange;
+      }
+      a:visited {
+          color: orangered;
+      }
+      a:hover {
+          color: red;
+          background-color: yellow;
+          cursor: crosshair;
+      }
+      a:active {
+          color: yellow;
+          background-color: red;
+      }
+    </pre>
+    <p>
+      Ovan så byter vi ut den blåa färgen mot orange när länken bara ligger där, orangeröd när länken tidigare
+      har klickats på samt röd/gul när vi håller musen över den och till sist vänder vi på färgerna röd/gul när
+      vi klickar på en länk. Se nedan för en representation:
+    </p>
+    <a class="first_example" href=".">Klicka på mig!</a>
+    <p>
+      Förutom att sätta färger för olika länktillstånd så har jag även ovan satt in så att en annan mussymbol
+      visas när man håller muspekaren över länken!
+    </p>
+
+    <h3>Egendesignade länkar</h3>
+    <p>
+      Här har vi två länkar, en som blivit designad med CSS för att se ut som en knapp och en till som använder
+      en bild.
+    </p>
+    <a class="button_link" href=".">Klicka på mig!</a>
+    <a class="picture_link" href=".">Eller på mig!</a>
+  </article>
+  </main>
 </body>
 </html>

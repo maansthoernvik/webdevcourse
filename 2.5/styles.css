@@ -7,51 +7,63 @@ p {
     font: normal normal medium Arial, Helvetica, sans-serif;
 }
 
-a:link {
+a.first_example:link {
     color: orange;
     text-decoration: none;
 }
-a:visited {
-    color: orangered;
-}
-a:hover {
+a.first_example:hover {
     color: red;
     background-color: yellow;
     text-decoration: underline;
     cursor: crosshair;
 }
-a:active {
+a.first_example:active {
     color: yellow;
     background-color: red;
 }
+a.first_example:visited {
+    color: orangered;
+}
 
 a.button_link:link {
-    border: 2px solid black;
-    background-color: lightgray;
-    padding: 5px;
-    margin: 5em;
-    border-radius: 5px;
-    color: white;
+  padding: 5px;
+  border: 2px solid green;
+  border-radius: 5px;
+  color: green;
 }
 a.button_link:visited {
-    color: green;
+  border-color: grey;
+  color: grey;
 }
 a.button_link:hover {
-    color: lime;
-    background-color: white;
-    text-decoration: overline underline;
-    cursor: pointer;
+  border-color: lime;
+  color: lime;
 }
 a.button_link:active {
-    color: white;
-    background-color: lime;
+  border-color: yellow;
+  color: yellow;
 }
 
-a.picture_link {
+a.picture_link:link {
     background-image: url(download.png);
     background-size: 25px 25px;
     background-repeat: no-repeat;
     background-position: left center;
     padding: 5px 5px 5px 25px;
+    border: 2px solid black;
     border-radius: 5px;
+}
+a.picture_link:visited {
+  border-color: grey;
+  color: grey;
+}
+a.picture_link:hover {
+  border-color: yellow;
+  color: yellow;
+  background-color: red;
+}
+a.picture_link:active {
+  border-color: red;
+  color: red;
+  background-color: yellow;
 }
