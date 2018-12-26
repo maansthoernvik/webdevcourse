@@ -5,6 +5,10 @@ body {
     background: url(space_wallpaper.jpg) center center / 100% no-repeat fixed #fff;
 }
 
+nav > a {
+  color: white;
+}
+
 p {
     font: normal normal medium Arial, Helvetica, sans-serif;
 }
