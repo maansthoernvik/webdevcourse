@@ -99,3 +99,8 @@ div.scroll_overflow {
   background-color: yellow;
   overflow: auto;
 }
+div.no_scroll_overflow {
+  width: 25%;
+  height: 50px;
+  background-color: red;
+}
