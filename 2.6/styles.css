@@ -62,3 +62,17 @@ form.fieldset fieldset {
     border-radius: 25px;
     background-color: beige;
 }
+
+form.fieldset input[type="submit"] {
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 5px;
+}
+form.fieldset input[type="submit"]:hover {
+  border-color: red;
+  color: red;
+}
+form.fieldset input[type="submit"]:active {
+  border-color: yellow;
+  color: yellow;
+}

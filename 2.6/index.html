@@ -1,116 +1,160 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <title>Uppgift 2.6</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Uppgift 2.6</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Uppgift 2.6</h1>
-    </header>
-    <main>
-        <article>
-            <h2><code>table-layout</code></h2>
-            <p>
-                <code>table-layout</code> används för att ställa in hur webbläsaren ska rita en tabell. Inställningen
-                kan göra ritningen av tabellen snabbare genom att använda inställningen <code>fixed</code>. <code>fixed</code>
-                gör så att webbläsaren tvignas att rendera alla kolumner med samma bredd som bredden hos den första
-                radens kolumner, något som gör renderingen snabbare. <code>auto</code> kan också användas och berättar
-                då för webbläsaren att "rendera som du vill". Tabellen nedan använder <code>fixed</code>.
-            </p>
-            <table>
-                <caption>Här är caption</caption>
-                <colgroup>
-                    <col>
-                    <col class="column">
-                    <col>
-                    <col>
-                </colgroup>
-                <tr>
-                    <th>Kolumn 1</th>
-                    <th>Kolumn 2</th>
-                    <th>Kolumn 3</th>
-                    <th>Kolumn 4</th>
-                </tr>
-                <tr>
-                    <td>Data 1</td>
-                    <td>Data 2Data 2Data 2Data 2Data 2</td>
-                    <td>Data 3</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Data 1</td>
-                    <td>Data 2Data 2Data 2Data 2Data 2Data 2Data 2</td>
-                    <td>Data 3</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Data 1</td>
-                    <td>Data 2Data 2Data 2Data 2Data 2Data 2Data 2Data 2</td>
-                    <td>Data 3</td>
-                    <td></td>
-                </tr>
-            </table>
+  <header>
+    <h1>Uppgift 2.6</h1>
+  </header>
 
-            <h2><code>form</code> och CSS</h2>
-            <p>
-                Formulär kan modifieras på (förstås) många olika sätt med CSS. Ett bra sätt att få sina formulär att se
-                bättre ut är att ställa in fasta storlekar för alla <code>label</code>-element som associeras med
-                <code>input</code>-element. På detta sätt kan man få en rak linje med beskrivande text och dess inputfält.
-                Nedan ser vi ett exempel på denna inställning i ett basic formulär.
-            </p>
-            <form method="post" action=".">
-                <fieldset>
-                    <legend>Personinfo</legend>
-                    <label class="label" for="firstname1">Förnamn</label>
-                    <input type="text" name="firstname" id="firstname1"><br>
+  <nav>
+    <h2>Navigering</h2>
+    <a href="../2.1/index.html">Tillbaka till uppgift 2.1</a>
+  </nav>
 
-                    <label class="label" for="lastname1">Efternamn</label>
-                    <input type="text" name="lastname" id="lastname1"><br>
+  <main>
+    <article>
+      <h2><code>table-layout</code></h2>
+      <p>
+        <code>table-layout</code> används för att ställa in hur webbläsaren ska rita en tabell. Inställningen
+        kan göra ritningen av tabellen snabbare genom att använda inställningen <code>fixed</code>. <code>fixed</code>
+        gör så att webbläsaren tvingas att rendera alla kolumner med samma bredd som bredden hos den första
+        radens kolumner, något som gör renderingen snabbare. <code>auto</code> kan också användas och berättar
+        då för webbläsaren att "rendera som du vill". Tabellen nedan använder <code>fixed</code>.
+      </p>
+      <table>
+        <caption>Här är caption</caption>
+        <colgroup>
+          <col>
+          <col class="column">
+          <col>
+          <col>
+        </colgroup>
+        <tr>
+          <th>Kolumn 1</th>
+          <th>Kolumn 2</th>
+          <th>Kolumn 3</th>
+          <th>Kolumn 4</th>
+        </tr>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2Data 2Data 2Data 2Data 2</td>
+          <td>Data 3</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2Data 2Data 2Data 2Data 2Data 2Data 2</td>
+          <td>Data 3</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2Data 2Data 2Data 2Data 2Data 2Data 2Data 2</td>
+          <td>Data 3</td>
+          <td></td>
+        </tr>
+      </table>
 
-                    <label class="label" for="age">Ålder</label>
-                    <input type="number" name="age" id="age">
-                </fieldset>
-                <input type="submit">
-            </form>
-            <p>
-                Det går givetvis också bra med dessa inputfält att använda pseudo-klasser, nedan kan vi se hur fältet
-                ändrar färg när det väljs gentemot hur det ser ut när det är inaktivt.
-            </p>
-            <form class="color" method="post" action=".">
-                <fieldset>
-                    <legend>Personinfo</legend>
-                    <label class="label" for="firstname2">Förnamn</label>
-                    <input type="text" name="firstname" id="firstname2"><br>
+      <h2><code>form</code> och CSS</h2>
+      <p>
+        Formulär kan modifieras på (förstås) många olika sätt med CSS. Ett bra sätt att få sina formulär att se
+        bättre ut är att ställa in fasta storlekar för alla <code>label</code>-element som associeras med
+        <code>input</code>-element. På detta sätt kan man få en rak linje med beskrivande text och dess inputfält.
+        Nedan ser vi ett exempel på denna inställning i ett basic formulär.
+      </p>
+      <form method="post" action=".">
+        <fieldset>
+          <legend>Personinfo</legend>
+          <label class="label" for="firstname1">Förnamn</label>
+          <input type="text" name="firstname" id="firstname1"><br>
 
-                    <label class="label" for="lastname2">Efternamn</label>
-                    <input type="text" name="lastname" id="lastname2"><br>
+          <label class="label" for="lastname1">Efternamn</label>
+          <input type="text" name="lastname" id="lastname1"><br>
 
-                    <label class="label" for="age2">Ålder</label>
-                    <input type="number" name="age" id="age2">
-                </fieldset>
-                <input type="submit">
-            </form>
-            <p>
-                Ett <code>fieldset</code> är ett bra sätt att gruppera <code>input</code>-element och ger bra möjlighet
-                för CSS-formattering. Nedan ser vi hur bakgrunden har ändrats samt att kanterna jämnats ut.
-            </p>
-            <form class="fieldset" method="post" action=".">
-                <fieldset>
-                    <legend>Personinfo</legend>
-                    <label class="label" for="firstname3">Förnamn</label>
-                    <input type="text" name="firstname" id="firstname3"><br>
+          <label class="label" for="age">Ålder</label>
+          <input type="number" name="age" id="age">
+        </fieldset>
+        <input type="submit">
+      </form>
+      <p>
+        Alla labels på alla formulär som visas på den här sidan har fått samma pixelstorlek:
+      </p>
+      <pre>
+        form .label {
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+            padding: 10px;
+        }
+      </pre>
+      <p>
+        Det är också viktigt att ställa <code>display</code>-inställningen till <code>inline-block</code>
+        för att ens kunna sätta bredden på <code>&lt;input&gt;</code>-taggen.
+      </p>
 
-                    <label class="label" for="lastname3">Efternamn</label>
-                    <input type="text" name="lastname" id="lastname3"><br>
+      <h3>Pseudo-klasser</h3>
+      <p>
+        Det går givetvis också bra med dessa inputfält att använda pseudo-klasser, nedan kan vi se hur fältet
+        ändrar färg när det väljs gentemot hur det ser ut när det är inaktivt.
+      </p>
+      <form class="color" method="post" action=".">
+        <fieldset>
+          <legend>Personinfo</legend>
+          <label class="label" for="firstname2">Förnamn</label>
+          <input type="text" name="firstname" id="firstname2"><br>
 
-                    <label class="label" for="age3">Ålder</label>
-                    <input type="number" name="age" id="age3">
-                </fieldset>
-                <input type="submit">
-            </form>
-        </article>
-    </main>
+          <label class="label" for="lastname2">Efternamn</label>
+          <input type="text" name="lastname" id="lastname2"><br>
+
+          <label class="label" for="age2">Ålder</label>
+          <input type="number" name="age" id="age2">
+        </fieldset>
+        <input type="submit">
+      </form>
+      <p>
+        För att stylea input-fält på detta sätt måste pseudo-klassen <code>:focus</code> användas. I detta
+        fall så sätter vi då tillbaka färgen till vit när fältet markeras, så här:
+      </p>
+      <pre>
+        form.color input:focus {
+            background-color: white;
+        }
+      </pre>
+
+      <h3>Grupperingar med <code>&lt;fieldset&gt;</code></h3>
+      <p>
+        Ett <code>fieldset</code> är ett bra sätt att gruppera <code>input</code>-element och ger bra möjlighet
+        för CSS-formattering. Nedan ser vi hur bakgrunden har ändrats samt att kanterna jämnats ut. Här har vi
+        även en lite mer stylead submit-knapp.
+      </p>
+      <form class="fieldset" method="post" action=".">
+        <fieldset>
+          <legend>Personinfo</legend>
+          <label class="label" for="firstname3">Förnamn</label>
+          <input type="text" name="firstname" id="firstname3"><br>
+
+          <label class="label" for="lastname3">Efternamn</label>
+          <input type="text" name="lastname" id="lastname3"><br>
+
+          <label class="label" for="age3">Ålder</label>
+          <input type="number" name="age" id="age3">
+        </fieldset>
+        <input class="styled_submit" type="submit">
+      </form>
+      <p>
+        Följade CSS användes för att stylea <code>fieldset</code>:
+      </p>
+      <pre>
+        form.fieldset fieldset {
+            border-radius: 25px;
+            background-color: beige;
+        }
+      </pre>
+    </article>
+  </main>
 </body>
 </html>
