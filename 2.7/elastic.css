@@ -1,4 +1,51 @@
+html {
+  font-size: 1em;
+}
+
 body {
   margin: 0 auto;
+  width: 40em;
+}
+
+footer {
+  padding: 0.5em;
+  clear: both;
+  background-color: rgb(204, 135, 207);
+}
+
+div:not(.wrapper) {
+  box-sizing: border-box;
+  padding: 0.5em;
+}
+
+.wrapper {
+  width: 30em;
+  float: left;
+}
+
+.main_content {
   width: 20em;
+  float: right;
+  background-color: rgb(200, 155, 137);
+}
+
+.left_sidebar {
+  width: 10em;
+  float: left;
+  background-color: rgb(119, 207, 158);
+}
+
+/*
+Right sidebar ligger utanför wrappern. Eftersom att wrappern är 30em så låter
+vi right sidebar ha 10em, vilket låter oss fylla <body>s utrymme på 40em.
+*/
+.right_sidebar {
+  width: 10em;
+  float: right;
+  border: 0.1em solid red;
+  background-color: rgb(173, 188, 228);
+}
+
+.right_sidebar img {
+  width: 9em
 }

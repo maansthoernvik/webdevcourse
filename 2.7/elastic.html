@@ -15,17 +15,46 @@
   </header>
 
   <main>
-    <div>
+    <div class="wrapper">
+      <div class="main_content">
+        <h2>Sidinfo forts.</h2>
+        <p>
+          En padding på 0.5em har satts på alla <code>&lt;div&gt;</code>-taggar
+          förutom den wrapper som omsluter både vänster och mittkolumnen. För att
+          den storlek på 10, 20 och 10em som getts de tre kolumnerna ska hålla så
+          har också <code>box-sizing</code> satts till <code>border-box</code>. Detta
+          gör att dessa <code>&lt;div&gt;</code>-taggars storlek räknas ut tillsammans
+          med eventuell padding och kantlinjer (som syns på högerkolumnen).
+        </p>
+      </div>
 
+      <div class="left_sidebar">
+        <h2>Sidinfo</h2>
+        <p>
+          Denna sida är elastiskt byggd, vilket innebär att den följer webbläsarens
+          fontstorlek. <code>&lt;html&gt;</code>-taggen har fått 1em vilket bestämmer
+          att font-storleken för denna sidan är 100% av webbläsarens nuvarande fontstorlek.
+          <code>&lt;body&gt;</code>-taggen har sedan fått 40em för sidans innehåll, vilket då
+          är 40 ggr webbläsarens nuvarande fontstorlek.
+        </p>
+        <p>
+          De tre kolumnerna har getts 10, 20 och igen 10em i storlek. <code>float</code>
+          har använts för att få dem i position.
+        </p>
+      </div>
     </div>
 
-    <div>
-
-    </div>
-
-    <div>
-
+    <div class="right_sidebar">
+      <h2>Höger kolumn</h2>
+      <img src="flowers.jpeg" alt="No image found"/>
+      <p>
+        Denna bilden kommer att resizeas tillsammans med font-storleken på denna sida.
+      </p>
     </div>
   </main>
+
+  <footer>
+    <h2>Fotområde</h2>
+  </footer>
 </body>
 </html>
