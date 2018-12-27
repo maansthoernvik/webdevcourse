@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Uppgift 2.7</title>
+  <link rel="stylesheet" href="fixed.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Fixerad layout</h1>
+    <p>
+      Detta är rubrikområdet
+    </p>
+    <nav>
+      <a href="index.html">Tillbaka</a>
+    </nav>
+  </header>
+
+  <div class="fixed example_fixed"></div>
+
+  <main>
+    <div class="column_one">
+      <h2><code>postion</code></h2>
+      <p>
+        <code>position</code> kan användas för att styra vart ett HTML-element ska hamna på
+        en sida. Det finns ett antal olika inställingar som kan ges till <code>position</code>:
+      </p>
+      <ul>
+        <li>
+          <code>static</code>, som är defaultvärdet.
+        </li>
+        <li>
+          <code>absolute</code>, vilket möjliggör att placera ett element vart som helst
+          på sidan och ignorera platsen där elementet egentligen skulle hamnat. Se inställingarna
+          <code>top</code>, <code>left</code> osv. för information om hur man placerar ett
+          element som fått <code>position</code> satt till <code>absolute</code>.
+        </li>
+        <li>
+          <code>relative</code>, vilket gör att ett element kan placeras relativt till sin
+          nuvarande position i HTML-flödet.
+        </li>
+        <li>
+          <code>fixed</code>, som gör att ett element inte rör på sig, inte ens om webbsidan
+          scrollas. Denna sida har en färgglad fyrkant uppe i vänstra hörnet som är ett exempel
+          på en <code>&lt;div&gt;</code> som har <code>position</code> satt till <code>fixed</code>.
+          Som syns när man scrollar så är denna alltid synlig.
+        </li>
+      </ul>
+      <p>
+        Både <code>absolute</code>, <code>relative</code> och <code>fixed</code> har gemensamt att
+        de alla tre gör det möjligt att använda <code>top</code>, <code>left</code>, osv. Beroende
+        på vilken av de tre som använts så kommer då elementet att positioneras därefter.
+      </p>
+
+      <h3>Komplement till <code>position</code></h3>
+      <p>
+        Som nämnt så måste det efter <code>position</code> satts även anges vart elementet ska placeras,
+        annars kommer det inte att synas. För detta kan följande användas:
+      </p>
+      <ul>
+        <li>
+          <code>top</code>
+        </li>
+        <li>
+          <code>right</code>
+        </li>
+        <li>
+          <code>left</code>
+        </li>
+        <li>
+          <code>bottom</code>
+        </li>
+      </ul>
+      <p>
+        Alla dessa fyra inställningar tar ett argument, antingen i pixlar, em, % osv. och bestämmer
+        elementets position i förhållande till just den kanten. Exemplet ovan med den <code>fixed</code>-
+        positionerade <code>&lt;div&gt;</code>-taggen har följande:
+      </p>
+      <pre>
+        .example_fixed {
+          top: 10px;
+          left: 10px;
+        }
+      </pre>
+      <p>
+        Detta innebär då att den placeras 10 pixlar in från både över och vänsterkant. Man behöver inte
+        ange alla fyra kanter, det räcker vanligtvis med två för att få elementet att hamna där man vill
+        ha det.
+      </p>
+    </div>
+
+    <div class="column_three">
+      <h2>Fortsättning följer</h2>
+      <p>
+        Gå tillbaka till uppgiften och se den flytande layouten för fler beskrivningar av olika
+        CSS-inställningar!
+      </p>
+      <p>
+        Glöm inte titta på <code>&lt;footer&gt;</code>-taggen, längst ner på denna sida för en
+        beskrivning av <code>clear</code>.
+      </p>
+    </div>
+
+    <div class="column_two">
+      <h2><code>z-index</code></h2>
+    	<p>
+        Det är inte bara möjligt att placera element på X och Y-axlarna, det går även att lägga till
+        element på Z-axeln med hjälp av <code>z-index</code>. <code>z-index</code> tar ett nummer som
+        parameter, ju större nummer desto högre upp i "högen" ligger elementet. Ett element med <code>z-index</code>
+        5 kommer alltså att täcka ett element med <code>z-index</code> 3 om de ligger på precis samma ställe.
+        Se nedan för ett exempel:
+			</p>
+      <div class="high"></div>
+      <div class="low"></div>
+      <p>
+        Den blåa boxen ovan har en högre <code>z-index</code> och visas därför över den röda. Märk väl att
+        <em>bara</em> element som också har <code>position</code> satt till ett annat värde än
+        <code>static</code> blir påverkade av att man ändrar <code>z-index</code>.
+      </p>
+
+      <h2><code>float</code></h2>
+      <p>
+        <code>float</code> kan användas för att få till en liknande layout som denna sida har. Inställningen
+        används för att få ett element att "flyta" åt en sida. <code>float</code> accepterar tre argument:
+        <code>right</code>, <code>left</code> och <code>none</code>. Inställningen flyter ett element åt en
+        sida och låter annat material fylla på bakom sig. Denna sida har först använt <code>float: left;</code>
+        på den första kolumnen och sedan <code>float: right;</code> på den högra kolumnen. Mittkolumnen
+        har sedan tilldelats 30% på både <code>margin-left</code> och <code>margin-right</code> då detta är
+        storleken hos de båda sidokolumnerna. Margin behöver justeras då mittkolumnen annars kommer att hamna
+        under den vänstra kolumnen och expandera ut under den högra kolumnen. Margins används alltså för att
+        bestämma storleken hos mittkolumnen. Text kommer inte att hamna under de båda sidokolumnerna, dock kommer
+        behållaren att göra det.
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <h2>Fotområde med <code>clear</code></h2>
+    <p>
+      Det här fotområdet hamnar helt fritt här nere i och med att <code>clear</code> har använts. Denna
+      kan sättas till antingen: <code>left</code>, <code>right</code> och <code>both</code>. Denna är
+      användbar om det till exempel finns en massa element på en sida som använder <code>float</code> åt
+      olika håll och man vill att en ny box ska visas på sin egen rad, som denna <code>&lt;footer&gt;</code>.
+      Här har jag använt mig av <code>clear: both;</code> för att vare sig höger eller vänster sida ska få
+      innehålla något element, därmed visas denna box på sin egen rad.
+    </p>
+  </footer>
+</body>
+</html>

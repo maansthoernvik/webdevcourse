@@ -3,6 +3,7 @@ body {
     width: 75%;
 }
 
-p {
-    font: normal normal medium Arial, Helvetica, sans-serif;
+a {
+  display: block;
+  padding: 5px;
 }

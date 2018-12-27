@@ -1,0 +1,41 @@
+body {
+  margin: 0 auto;
+  width: 60%;
+}
+
+header {
+  padding: 10px;
+}
+
+footer {
+  padding: 10px;
+  clear: both;
+}
+
+div:not(.wrapper) {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 75%;
+  float: left;
+}
+
+.main_content {
+  width: 75%;
+  float: right;
+  background-color: rgb(200, 155, 137);
+}
+
+.main_sidebar {
+  width: 25%;
+  float: left;
+  background-color: rgb(119, 207, 158);
+}
+
+.other_sidebar {
+  width: 25%;
+  float: right;
+  background-color: rgb(173, 188, 228);
+}

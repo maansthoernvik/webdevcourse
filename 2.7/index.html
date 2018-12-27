@@ -1,16 +1,76 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <title>Uppgift 2.7</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Uppgift 2.7</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Uppgift 2.7</h1>
-    </header>
-    <main>
+  <header>
+    <h1>Uppgift 2.7</h1>
+  </header>
 
-    </main>
+  <nav>
+    <h2>Navigering</h2>
+    <a href="../2.1/index.html">Tillbaka till uppgift 2.1</a>
+  </nav>
+
+  <main>
+    <h2>Webbsidelayouter</h2>
+    <p>
+      Det finns tre olika sätt att i grunden strukturera sin webbsida med CSS, dessa
+      tre layouter är:
+    </p>
+    <ul>
+      <li>
+        <strong>Fixerad</strong>, innebär att sidan har en förutbestämd bredd, vanligtvis 960 pixlar.
+        Denna layouttyp används för att förenkla sin design både för framtida uppdateringar och under
+        bygget av webbplatsen. Att alltid jobba med ett bestämt antal pixlar i bredd gör att man inte
+        behöver oroa sig för vad som händer med sidan om besökarna använder en väldigt stor eller liten
+        skärm, sidan kommer att se likadan ut i alla fall. Det kan dock bli jobbigt för användare som
+        använder speciella skärmstorlekar att läsa sidans innehåll, utan att behöva zooma och scrolla
+        materialet.
+      </li>
+      <li>
+        <strong>Flytande</strong> layouter tar ett annat tillvägagångssätt till en webbsidas layout.
+        Istället för att använda ett bestämt antal pixlar så använder flytande layouter %-delar för att
+        bestämma storleken. Detta gör att oavsett vilken storlek skärmen som en besökare använder har, så
+        kommer lika stor <em>del</em> av skärmen täckas av olika element som finns på sidan. Detta gör det
+        dock svårare att förutse hur sidan kommer att se ut, med tanke på att designen som lagts till alltid
+        "följer med" när webbläsarfönstret görs större eller mindre. Man måste alltså se till att ingenting
+        händer med sidan om en användare exempelvis skulle göra sitt fönster väldigt stort.
+      </li>
+      <li>
+        En <strong>Elastisk</strong> design använder sig av ett tredje sätt att bestämma storleken på olika
+        element hos webbsidan, nämligen font-storleken. En stor fördel hos elastiska designer är att en
+        användares inställning för font-storlek även appliceras på andra element på sidan, inte bara text
+        alltså. Elastiska designer kan likna flytande designer väldigt mycket, den stora skillnaden är alltså
+        att man följer font-storleken hos användarens webbläsare. Elastiska designer kan dock vara svårare
+        att åstadkomma och kräver generellt sätt mycket mer testande för att se så att ingenting oförutsett
+        händer när storlekar ändras.
+      </li>
+    </ul>
+    <p>
+      HTML-tabeller var tidigare ett populärt val för att skapa sin tänkta layout. Detta har dock gåtts ifrån
+      då det skapar en hel del problem, just för att <code>&lt;table&gt;</code>-taggen inte alls är tänkt
+      för en sidas layout.
+    </p>
+    <p>
+      För att få en design att se ut som man vill med <code>&lt;table&gt;</code> kan göra att man behöver lägga
+      en <code>&lt;table&gt;</code>-tagg inuti en cell hos ett annat <code>&lt;table&gt;</code>. Detta skapar
+      onödigt mycket HTML-markup och komplicerar det för en designer som senare behöver göra ändringar. Det är numera
+      mycket mer tillförlitligt att använda enskilda boxar för det material man vill designa, och tilldela dessa
+      de CSS-regler som behövs för att få materialet inuti boxen att se ut som man vill och dyka upp där det är tänkt.
+    </p>
+
+    <h2>Exempel på layouter</h2>
+    <p>
+      Länkarna nedan pekar på sidor som exemplifierar olika layouttyper, som nämns i det tidigare stycket, samt
+      visar hur olika CSS-inställningar kan användas för att uppnå olika designer (utan att använda <code>&lt;table&gt;</code>)
+    </p>
+    <a href="fixed.html">Fixerad</a>
+    <a href="fluid.html">Flytande</a>
+    <a href="elastic.html">Elastisk</a>
+  </main>
 </body>
 </html>
