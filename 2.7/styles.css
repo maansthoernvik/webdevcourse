@@ -1,9 +1,19 @@
 body {
     margin: 0 auto;
-    width: 75%;
+    width: 960px;
 }
 
 a {
   display: block;
   padding: 5px;
+}
+
+.multi_column {
+  column-count: 3;
+}
+
+.constrained_multi_col {
+  width: 400px;
+  column-count: 3;
+  column-width: 150px;
 }

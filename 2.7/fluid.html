@@ -17,8 +17,42 @@
   <main>
     <div class="wrapper">
       <div class="main_content">
+        <h2>Begränsa flytande layouter</h2>
         <p>
-          Main content
+          Eftersom att flytande layouter baserar sin storlek på % så är det möjligt
+          att man genom att antingen använda en liten skärm eller genom att resizea
+          webbläsarfönstret förminska de boxar som innehåller sidans material till en
+          punkt där hela layouten förstörts. För att förhindra att en användare använder
+          sådana inställningar där sidan inte längre går att förstå så finns det ett par
+          användbara inställningar:
+        </p>
+        <ul>
+          <li>
+            <code>max-width</code>
+          </li>
+          <li>
+            <code>min-width</code>
+          </li>
+          <li>
+            <code>max-height</code>
+          </li>
+          <li>
+            <code>min-height</code>
+          </li>
+        </ul>
+        <p>
+          Namnen är hyffsat självförklarande. Min och max width används för att sätta
+          gränser på hur litet eller stort ett element får bli horisontellt. Samma sak
+          för height fast på höjden.
+        </p>
+        <p>
+          Om du provar att resizea denna sida så ser du att boxen nedan aldrig blir mindre än
+          en viss storlek (200px), min och max height kan användas på samma sätt:
+        </p>
+        <div class="min_width"></div>
+        <p>
+          Genom att bestämma ett minimum för bredden hos element som exempelvis innehåller
+          text så kan man försäkra sig att sidan alltid är läsbar.
         </p>
       </div>
 
@@ -26,14 +60,63 @@
         <h2><code>width</code> och <code>height</code></h2>
         <p>
           Flytande layouter använder % för att sätta bredden på sina sidor. Detta gör
-          att
+          att när sidan visas på olika skärmstorlekar så behålls proportionerna hos
+          sidans olika boxar. Exempelvis denna sidebar kommer alltid att uppta samma
+          procentuella del av skärmen.
+        </p>
+        <p>
+          För att ställa in bredden så använder man sig av <code>width</code>. På denna
+          sida är den alltså satt till ett %-tal, men man kan också änvända sig av andra
+          enheter såsom pixlar (för fixerade layouter) och <code>em</code>.
+        </p>
+        <p>
+          <code>height</code> bestämmer höjden på en box och kan, precis som <code>width</code>
+          sättas till %, pixlar och så vidare. Om man ska sätta % eller <code>em</code> på <code>height</code> (eller <code>width</code>)
+          på en box så måste dock den innehållande boxen ha en förutbestämd bredd eller höjd.
+          Om den inte har det så går det inte att räkna ut den procentuella delen av förälderns
+          höjd som ska tilldelas barnet. <code>height: 50%;</code> fungerar alltså bara om sidan
+          redan vet höjden på det element som tilldelats 50% höjdens förälder.
         </p>
       </div>
     </div>
 
     <div class="other_sidebar">
+      <h2><code>verical-align</code></h2>
       <p>
-        Other sidebar
+        <code>vertical-align</code> kan användas för att ändra positionen hos ett inline-element
+        och hur det ska visas i exempelvis en flödande text:
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        <img src="check_mark_circle_black.png" alt="Could not find image"/>
+        laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <p>
+        Här ovan så har vi en bild med <code>vertical-align</code> satt till <code>middle</code>.
+        Därmed så fästs bilden i mitten. Några andra värden som kan användas är:
+      </p>
+      <ul>
+        <li>
+          <code>top</code>, elementets topp fästs i höjd med den nuvarande linjens text höjd.
+        </li>
+        <li>
+          <code>bottom</code>, elementets nederkant fästs mot det lägsta elementet på den nuvarande linjen.
+        </li>
+        <li>
+          <code>text-top</code>, elementet fästs vid toppen på förälderns font.
+        </li>
+        <li>
+          <code>text-bottom</code>, elementet fästs vid nederkanten på förälderns font.
+        </li>
+        <li>
+          <code>middle</code>, elementet fästs i mitten på den nuvarande linjen text.
+        </li>
+      </ul>
+      <p>
+        Det går även att använde fasta värden, såsom pixlar, eller %. Värdet som anges blir då en offset
+        för vart elementet ska placeras <em>i förhållande</em> till vart i den flödande texten som
+        elementet placerats. Negativa värden kan också anges för att föskjuta i andra riktningen.
       </p>
     </div>
   </main>

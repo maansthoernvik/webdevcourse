@@ -10,11 +10,16 @@ header {
 footer {
   padding: 10px;
   clear: both;
+  background-color: rgb(204, 135, 207);
 }
 
 div:not(.wrapper) {
   padding: 10px;
   box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
 }
 
 .wrapper {
@@ -38,4 +43,10 @@ div:not(.wrapper) {
   width: 25%;
   float: right;
   background-color: rgb(173, 188, 228);
+}
+
+.min_width {
+  height: 50px;
+  min-width: 200px;
+  background-color: rgb(142, 245, 48);
 }

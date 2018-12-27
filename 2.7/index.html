@@ -71,6 +71,53 @@
     <a href="fixed.html">Fixerad</a>
     <a href="fluid.html">Flytande</a>
     <a href="elastic.html">Elastisk</a>
+
+    <h2><code>column-count</code> och <code>column-width</code></h2>
+    <p>
+      För att få till en sida med flera kolumner text så kan <code>column-count</code> och
+      <code>column-width</code> användas.
+    </p>
+    <div class="multi_column">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+      euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
+      minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+      aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
+      in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+      facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+      luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber
+      tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod
+      mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus
+      legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt
+      lectores legere me lius quod ii legunt saepius.
+    </div>
+    <p>
+      Ovan <code>&lt;div&gt;</code> har fått <code>column-count</code> satt till 3
+      och delar därmed upp texten i tre kolumner. För att bestämma en minimibredd
+      på en kolumn använder man <code>column-width</code>. Nedan har vi en box med
+      text som är 400px stor och har <code>column-count</code> satt till 3. Men,
+      eftersom att <code>column-width</code> är satt till 150px så visas texten i bara
+      två kolumner, då den tredje inte får plats:
+    </p>
+    <div class="constrained_multi_col">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+      euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
+      minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+      aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
+      in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+      facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+      luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber
+      tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod
+      mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus
+      legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt
+      lectores legere me lius quod ii legunt saepius.
+    </div>
+    <p>
+      <code>column-width</code> är användbart när man har flytande designer där en box
+      resizeas ner så att en box med text och flera kolumner går under gränsen för
+      att alla kolumner ska få plats, med <code>column-width</code> i åtanke. Det som då
+      händer är att texten istället visas i 1 mindre kolumner än tidigare, och tvärtom
+      om boxen blir större igen.
+    </p>
   </main>
 </body>
 </html>
