@@ -1,0 +1,14 @@
+main {
+  float: none;
+  width: 100%;
+}
+
+aside {
+  float: none;
+  width: 100%;
+}
+
+figure img {
+  float: none;
+  max-width: 100%;
+}

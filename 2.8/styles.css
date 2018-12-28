@@ -1,8 +1,45 @@
-body {
-    margin: 0 auto;
-    width: 75%;
+html {
+  color: white;
+  height: 100%;
+  font-size: 1em;
+  background: linear-gradient(to top left, rgb(84, 67, 173), rgb(78, 22, 101)) no-repeat center center fixed;
+  background-color: black;
 }
 
-p {
-    font: normal normal medium Arial, Helvetica, sans-serif;
+a {
+  margin-right: 0.5em;
+  color: white;
+}
+
+body {
+  margin: 0 auto;
+  width: 70%;
+}
+
+main, aside, footer, figure {
+  padding: 0.5em;
+  box-sizing: border-box;
+  border-radius: 0.5em;
+}
+
+main {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+figure {
+  margin: 0.5em;
+}
+
+aside {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+footer {
+  width: 100%;
+  clear: both;
+  background-color: rgba(1, 1, 1, 0.3);
 }

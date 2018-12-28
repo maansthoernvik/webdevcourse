@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Uppgift 2.8</title>
+  <link rel="stylesheet" href="orientation.css">
+</head>
+<body>
+  <header>
+    <h1>Uppgift 2.8</h1>
+  </header>
+
+  <nav>
+    <h2>Navigering</h2>
+    <a href="../../2.8/index.html">Tillbaka till uppgift 2.8</a>
+  </nav>
+
+  <main>
+    <article>
+      <h2>Skärmorientering</h2>
+      <p>
+        Den här sidan anpassas automatiskt beroende på om användaren använder landskapsvy
+        eller porträttvy på sin skärm. De tre <code>&lt;div&gt;</code>-taggar nedan visas
+        som kolumner i landskapsvy och rader i porträttvy. Dessutom så finns det brytpunkter
+        insatta som ändrar färgen på dem beroende på den skärm som användaren har och dess
+        max-bredd genom att använda en media query för <code>max-device-width</code>
+        (lite märkligt men detta är bara för att exemplifiera HUR man definierar
+        brytpunkter för max-bredder för skärmar). Du kan lätt testa denna funktionalitet med
+        hjälp av Google Chromes verktyg för att simulera olika skärmstorlekar.
+      </p>
+      <figure>
+        <img src="navigation.png" alt="No image found"/>
+        <figcaption>
+          Navigering till Google Chromes testverktyg
+        </figcaption>
+      </figure>
+      <p>
+        Klicka på ikonen som ser ut som en liten telefon framför en surfplatta. Genom att resizea
+        skärmen inne i det här verktygen så ska du kunna se att alla tre <code>&lt;div&gt;</code>
+        blir gröna när skärmen gjorts liten nog.
+      </p>
+
+      <div class="wrapper">
+        <div class="column_one">
+          <code>&lt;div&gt;</code> 1
+        </div>
+
+        <div class="column_two">
+          <code>&lt;div&gt;</code> 2
+        </div>
+
+        <div class="column_three">
+          <code>&lt;div&gt;</code> 3
+        </div>
+        <p class="warning">
+          VARNING! Din skärm är under 980 pixlar stor!
+        </p>
+      </div>
+    </article>
+  </main>
+
+</body>
+</html>

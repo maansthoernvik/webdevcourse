@@ -1,0 +1,13 @@
+main {
+  width: 73%;
+  float: right;
+}
+
+aside {
+  width: 25%;
+  float: left;
+}
+
+figure {
+  float: right;
+}
