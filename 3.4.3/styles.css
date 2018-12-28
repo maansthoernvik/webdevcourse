@@ -1,21 +1,25 @@
+main section {
+  clear: both;
+}
+
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 nav ul li {
-    float: left;
-    width: 100px;
-    margin: 10px;
+  float: left;
+  width: 100px;
+  margin: 10px;
 }
 nav ul li ul {
-    position: absolute;
-    background: lime;
+  position: absolute;
+  background: lime;
 }
 nav ul li ul li {
-    float: none;
+  float: none;
 }
 
 .hover {
-    background-color: green;
+  background-color: green;
 }
