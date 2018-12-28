@@ -3,10 +3,6 @@
     background-color: black;
 }
 
-nav > a {
-    font-size: 200%;
-}
-
 .error {
     border: 1px red dotted;
 }

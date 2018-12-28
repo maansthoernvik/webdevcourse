@@ -1,62 +1,69 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <title>Uppgift 3.2</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="../jquery/jquery-3.2.1.min.js"></script>
-    <script src="script3.js"></script>
+  <meta charset="UTF-8">
+  <title>Uppgift 3.2</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="../jquery/jquery-3.2.1.min.js"></script>
+  <script src="script3.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Uppgift 3.2</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Formulär</h2>
-            <p>
-                Det här formuläret har ett par funktioner länkade till sig. Funktionen är
-                att formuläret valideras när man trycker på submit och skickar inte in formuläret om det inte valideras.
-            </p>
-            <form id="form" target="#">
-                <fieldset>
-                    <legend>Personuppgifter</legend>
-                    <label for="name">Namn</label>
-                    <input id="name" name="name" type="text">
+  <header>
+    <h1>Uppgift 3.2</h1>
+  </header>
 
-                    <label for="age">Ålder</label>
-                    <input id="age" name="age" type="number">
-                </fieldset>
+  <nav>
+    <h2>Navigering</h2>
+    <a href="page2.html">&lt; Tillbaka</a>
+  </nav>
 
-                <fieldset>
-                    <legend>Övrigt</legend>
-                    <label for="food">Favoriträtt</label>
-                    <select id="food" name="food">
-                        <optgroup label="Kött">
-                            <option>Oxfilé</option>
-                            <option>Bacon</option>
-                        </optgroup>
-                        <optgroup label="Vegetariskt">
-                            <option>Jambalaya</option>
-                            <option>Ris</option>
-                        </optgroup>
-                    </select>
-                </fieldset>
-                <button type="submit">Skicka in</button><button type="reset">Återställ</button>
-            </form>
-        </section>
-        <section>
-            <h2>Scroll</h2>
-            <p>
-                Genom att scrolla i rutan full med text så kommer text att läggas till i rutan inunder. Tryck på knappen
-                för att stänga av scroll-funktionaliteten.
-            </p>
-            <button id="disableScroll">Stäng av scroll</button>
-            <div id="textBox">
-                TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
-            </div>
-            <div id="scrollTarget"></div>
-        </section>
-    </main>
+  <main>
+    <section>
+      <h2>Formulär</h2>
+      <p>
+        Det här formuläret har ett par funktioner länkade till sig. Funktionen är
+        att formuläret valideras när man trycker på submit och skickar inte in formuläret
+        om inte alla fält är korrekt ifyllda.
+      </p>
+      <form id="form" target="#">
+        <fieldset>
+          <legend>Personuppgifter</legend>
+          <label for="name">Namn</label>
+          <input id="name" name="name" type="text">
+
+          <label for="age">Ålder</label>
+          <input id="age" name="age" type="number">
+        </fieldset>
+
+        <fieldset>
+          <legend>Övrigt</legend>
+          <label for="food">Favoriträtt</label>
+          <select id="food" name="food">
+            <optgroup label="Kött">
+              <option>Oxfilé</option>
+              <option>Bacon</option>
+            </optgroup>
+            <optgroup label="Vegetariskt">
+              <option>Jambalaya</option>
+              <option>Ris</option>
+            </optgroup>
+          </select>
+        </fieldset>
+        <button type="submit">Skicka in</button><button type="reset">Återställ</button>
+      </form>
+    </section>
+    <section>
+      <h2>Scroll</h2>
+      <p>
+        Genom att scrolla i rutan full med text så kommer text att läggas till i rutan inunder. Tryck på knappen
+        för att stänga av eller sätta på scroll-funktionen, beroende på om den redan är på eller av.
+      </p>
+      <button id="disableScroll">Toggla scroll</button>
+      <div id="textBox">
+        TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
+      </div>
+      <div id="scrollTarget"></div>
+    </section>
+  </main>
 </body>
 </html>

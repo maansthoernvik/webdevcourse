@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <title>Uppgift 3.2</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="../jquery/jquery-3.2.1.min.js"></script>
-    <script src="script2.js"></script>
+  <meta charset="UTF-8">
+  <title>Uppgift 3.2</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="../jquery/jquery-3.2.1.min.js"></script>
+  <script src="script2.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Uppgift 3.2</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Lägg till och ta bort innehåll</h2>
-            <p>
-                Här är en simpel TODO-lista där man kan lägga till nya, ta bort och kryssa för element. Lägg till ett nytt
-                genom att skriva namnet på att-göra saken och tryck på 'Lägg till'. För att kryssa för, klicka på det
-                tillagda elementet och för att ta bort, klicka på ett redan förkryssat element.
-            </p>
-            <input id="todoName" type="text">
-            <button id="addTodoItem">Lägg till</button>
-            <ul id="todoList">
-                <li class="checked">
-                    Exempeltodo
-                </li>
-            </ul>
-            <p>
-                Det går även att använda ENTER (RETUR)-knappen för att lägga till en todo!
-            </p>
-        </section>
-    </main>
-    <nav>
-        <a href="page3.html">Nästa sida</a>
-    </nav>
+  <header>
+      <h1>Uppgift 3.2</h1>
+  </header>
+
+  <nav>
+    <h2>Navigering</h2>
+    <a href="index.html">&lt; Tillbaka</a>
+    <a href="page3.html">Nästa &gt;</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Lägg till och ta bort innehåll</h2>
+      <p>
+        Här är en simpel TODO-lista där man kan lägga till nya, ta bort och kryssa för element. Lägg till ett nytt
+        genom att skriva namnet på att-göra saken och tryck på 'Lägg till'. För att kryssa för, klicka på det
+        tillagda elementet och för att ta bort, klicka på ett redan förkryssat element.
+      </p>
+      <h3>Todo-lista</h3>
+      <input id="todoName" type="text">
+      <button id="addTodoItem">Lägg till</button>
+      <ul id="todoList">
+        <li class="checked">
+            Exempeltodo
+        </li>
+      </ul>
+      <p>
+        Det går även att använda ENTER (RETUR)-knappen för att lägga till en todo!
+      </p>
+    </section>
+  </main>
 </body>
 </html>
