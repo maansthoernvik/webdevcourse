@@ -22,7 +22,7 @@ $(document).ready(function() {
     var isWarm = today.getMonth() <= 7 && today.getMonth() >= 4;
 
     // isWarm är sann om den nuvarande månaden är mellan maj och augusti.
-    document.write("<h2>Här testar vi Date</h2>");
+    document.write("<h2>Här testar vi Date och Boolean</h2>");
     isWarm ? document.write("<p>Eftersom att vi är mellan maj och augusti så är det inte kallt ännu!</p>") :
         document.write("<p>Eftersom att vi INTE är mellan maj och augusti så är det antagligen kallt nu!</p>");
 
@@ -63,7 +63,7 @@ $(document).ready(function() {
      */
     var globalText = "Testar globala variabler."
     document.write("<h2>Här testar vi Global</h2>");
-    document.write("<p>Variabler och objekt kan definieras i olika sk. \"scopes\" i javascript. Variabler som definieras");
+    document.write("<p>Variabler och objekt kan definieras i olika sk. \"scopes\" i javascript. Variabler som definieras ");
     document.write("utanför alla funktioner är globala och kan därmed hämtas från vilken funktion som helst.</p>");
     document.write("<p>Här är en bit text som sparats i en global variabel: " + globalText + "</p>");
     document.write("<p>Variabler som istället definieras inuti en funktion kan inte användas på andra ställen än just i den funktionen.</p>");
