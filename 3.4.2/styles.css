@@ -1,19 +1,15 @@
-a {
-    font-size: 200%;
-}
-
 canvas {
-    border: 1px black solid;
+  border: 1px black solid;
 }
 
 .container {
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: row wrap;
-    -webkit-flex-flow: row wrap;
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
 }
 
 .item {
-    flex: 1;
-    margin-left: 75px;
+  flex: 1;
+  margin-left: 75px;
 }

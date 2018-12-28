@@ -1,69 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Uppgift 3.4.2</title>
-    <script src="../jquery/jquery-3.2.1.min.js"></script>
-    <script src="script.js"></script>
-    <script src="../libs/canvasplus1-1.js"></script>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Uppgift 3.4.2</title>
+  <script src="../jquery/jquery-3.2.1.min.js"></script>
+  <script src="script.js"></script>
+  <script src="../libs/canvasplus1-1.js"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
+  <header>
     <h1>Uppgift 3.4.2</h1>
-</header>
-<main>
+  </header>
+
+  <nav>
+    <h2>Navigering</h2>
+    <a href="index.html">&lt; Tillbaka</a>
+  </nav>
+
+  <main>
     <h2>Dynamisk grafik med <code>canvas</code></h2>
     <div class="container">
-        <div class="item">
-            <p>
-                Den här canvasen ritar linjer
-            </p>
-            <button id="lineButton">Rita</button><br>
-            <canvas id="lineCanvas" width="250" height="250"></canvas>
-        </div>
-        <div class="item">
-            <p>
-                Den här canvasen ritar bezier-kurvor
-            </p>
-            <button id="bezierButton">Rita</button><br>
-            <canvas id="bezierCanvas" width="250" height="250"></canvas>
-        </div>
-        <div class="item">
-            <p>
-                Den här canvasen ritar former
-            </p>
-            <button id="shapeButton">Rita</button><br>
-            <canvas id="shapeCanvas" width="250" height="250"></canvas>
-        </div>
-        <div class="item">
-            <p>
-                Den här canvasen ritar text
-            </p>
-            <button id="textButton">Rita</button><br>
-            <canvas id="textCanvas" width="250" height="250"></canvas>
-        </div>
-        <div class="item">
-            <p>
-                Den här canvasen visar transparens och skuggor
-            </p>
-            <button id="transparentButton">Rita</button><br>
-            <canvas id="transparentCanvas" width="250" height="250"></canvas>
-        </div>
-        <div class="item">
-            <p>
-                Den här canvasen visar en bitmappad bild
-            </p>
-            <button id="bitmapButton">Rita</button><br>
-            <canvas id="bitmapCanvas" width="250" height="250"></canvas>
-        </div>
-        <div class="item">
-            <p>
-                Här kommer bilden från den tidigare canvasen att dyka upp, denna kan man högerklicka på och spara.
-            </p>
-            <img id="imageToSave" src="" alt="Image from canvas">
-        </div>
+      <div class="item">
+        <p>
+          Den här canvasen ritar linjer
+        </p>
+        <button id="lineButton">Rita</button><br>
+        <canvas id="lineCanvas" width="250" height="250"></canvas>
+      </div>
+      <div class="item">
+        <p>
+          Den här canvasen ritar bezier-kurvor
+        </p>
+        <button id="bezierButton">Rita</button><br>
+        <canvas id="bezierCanvas" width="250" height="250"></canvas>
+      </div>
+      <div class="item">
+        <p>
+          Den här canvasen ritar former
+        </p>
+        <button id="shapeButton">Rita</button><br>
+        <canvas id="shapeCanvas" width="250" height="250"></canvas>
+      </div>
+      <div class="item">
+        <p>
+          Den här canvasen ritar text
+        </p>
+        <button id="textButton">Rita</button><br>
+        <canvas id="textCanvas" width="250" height="250"></canvas>
+      </div>
+      <div class="item">
+        <p>
+          Den här canvasen visar transparens och skuggor
+        </p>
+        <button id="transparentButton">Rita</button><br>
+        <canvas id="transparentCanvas" width="250" height="250"></canvas>
+      </div>
+      <div class="item">
+        <p>
+          Den här canvasen visar en bitmappad bild
+        </p>
+        <button id="bitmapButton">Rita</button><br>
+        <canvas id="bitmapCanvas" width="250" height="250"></canvas>
+      </div>
+      <div class="item">
+        <p>
+          Här kommer bilden från den tidigare canvasen att dyka upp, denna kan man högerklicka på och spara.
+        </p>
+        <img id="imageToSave" src="images/white.png" alt="Image from canvas">
+      </div>
     </div>
-</main>
+  </main>
 </body>
 </html>
