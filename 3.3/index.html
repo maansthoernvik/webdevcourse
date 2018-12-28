@@ -1,58 +1,59 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <title>Uppgift 3.3</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="../jquery/jquery-3.2.1.min.js"></script>
-    <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <title>Uppgift 3.3</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="../jquery/jquery-3.2.1.min.js"></script>
+  <script src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Uppgift 3.3</h1>
-    </header>
-    <main>
-        <article>
-            <h2>Popups</h2>
-            <p>
-                Det finns flera inbyggda popups som man kan använda sig av. <code>alert</code>, <code>prompt</code> och
-                <code>confirm</code> är tre popups som kan användas för lite olika saker. Alert låter användaren veta
-                att någonting skett eller är på väg att ska. Prompt ber användaren om information genom ett text-fält.
-                Confirm används för att be användaren om en bekräftelse.
-            </p>
-            <div>
-                <button id="alertButton">Alert!</button><br>
-                <button id="promptButton">Prompt!</button>
-                <p id="promptAnswer"></p>
-                <button id="confirmButton">Confirm!</button>
-                <p id="confirmAnswer"></p>
-            </div>
+  <header>
+    <h1>Uppgift 3.3</h1>
+  </header>
 
-            <h2>Öppna nya fönster</h2>
-            <p>
-                En annan form av popups kan tillämpas genom att öppna helt nya fönster. Detta görs genom <code>open</code>-
-                och <code>close</code>-funktionerna.
-            </p>
-            <button id="googleButton">Öppna Google</button>
-            <p>
-                Den öppnade sidan kan stängas mha. knappen nedan.
-            </p>
-            <button id="closeWindow">Stäng fönstret</button>
+  <main>
+    <article>
+      <h2>Popups</h2>
+      <p>
+        Det finns flera inbyggda popups som man kan använda sig av. <code>alert</code>, <code>prompt</code> och
+        <code>confirm</code> är tre popups som kan användas för lite olika saker. Alert låter användaren veta
+        att någonting skett eller är på väg att ska. Prompt ber användaren om information genom ett text-fält.
+        Confirm används för att be användaren om en bekräftelse.
+      </p>
+      <div>
+        <button id="alertButton">Alert!</button><br>
+        <button id="promptButton">Prompt!</button>
+        <p id="promptAnswer"></p>
+        <button id="confirmButton">Confirm!</button>
+        <p id="confirmAnswer"></p>
+      </div>
 
-            <h2>Intervall och timeouts</h2>
-            <p>
-                Intervall kan användas för att periodiskt utföra något. Nedan så får vi en div att blinka genom att i ett
-                intervall sätta och ta bort en css-klass som sätter bakgrundfärgen på div-en till limegrön.
-            </p>
-            <button id="blinkButton">Börja/sluta blinka</button>
-            <div id="blinkingDiv"></div>
-            <p>
-                Timeouts används som timers och utför något efter en utsatt tid. Knappen nedan sätter igång en timer på
-                3 sekunder som efter den tiden visar ett rött område.
-            </p>
-            <button id="timeoutButton">Starta/stoppa nedräkningen!</button><span id="timerText"></span>
-            <div id="timeoutDiv"></div>
-        </article>
-    </main>
+      <h2>Öppna nya fönster</h2>
+      <p>
+        En annan form av popups kan tillämpas genom att öppna helt nya fönster. Detta görs genom <code>open</code>-
+        och <code>close</code>-funktionerna.
+      </p>
+      <button id="googleButton">Öppna Google</button>
+      <p>
+        Den öppnade sidan kan stängas mha. knappen nedan.
+      </p>
+      <button id="closeWindow">Stäng fönstret</button>
+
+      <h2>Intervall och timeouts</h2>
+      <p>
+        Intervall kan användas för att periodiskt utföra något. Nedan så får vi en div att blinka genom att i ett
+        intervall sätta och ta bort en css-klass som sätter bakgrundfärgen på div-en till limegrön.
+      </p>
+      <button id="blinkButton">Börja/sluta blinka</button>
+      <div id="blinkingDiv"></div>
+      <p>
+        Timeouts används som timers och utför något efter en utsatt tid. Knappen nedan sätter igång en timer på
+        3 sekunder som efter den tiden visar ett rött område.
+      </p>
+      <button id="timeoutButton">Starta/stoppa nedräkningen!</button><span id="timerText"></span>
+      <div id="timeoutDiv"></div>
+    </article>
+  </main>
 </body>
 </html>

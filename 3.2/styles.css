@@ -1,28 +1,28 @@
 #textTarget {
-    color: white;
-    background-color: black;
+  color: white;
+  background-color: black;
 }
 
 .error {
-    border: 1px red dotted;
+  border: 1px red dotted;
 }
 
 .checked {
-    color: gray;
-    text-decoration: line-through;
+  color: gray;
+  text-decoration: line-through;
 }
 
 #textBox {
-    border: 2px red solid;
-    max-width: 15%;
-    max-height: 50px;
-    overflow: scroll;
-    overflow-wrap: break-word;
+  border: 2px red solid;
+  max-width: 15%;
+  max-height: 50px;
+  overflow: scroll;
+  overflow-wrap: break-word;
 }
 
 #scrollTarget {
-    border: 2px blue solid;
-    overflow: scroll;
-    overflow-wrap: break-word;
-    max-height: 200px;
+  border: 2px blue solid;
+  overflow: scroll;
+  overflow-wrap: break-word;
+  max-height: 200px;
 }
