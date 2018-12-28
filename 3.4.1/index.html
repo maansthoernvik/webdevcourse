@@ -1,60 +1,61 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <title>Uppgift 3.4.1</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="../jquery/jquery-3.2.1.min.js"></script>
-    <script src="../jquery/jquery.color-2.1.2.min.js"></script>
-    <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <title>Uppgift 3.4.1</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="../jquery/jquery-3.2.1.min.js"></script>
+  <script src="../jquery/jquery.color-2.1.2.min.js"></script>
+  <script src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Uppgift 3.4.1</h1>
-    </header>
-    <main>
-        <h2><code>show</code>, <code>hide</code> och <code>toggle</code></h2>
-        <p>
-            För att manipulera ett element på sin plats så finns det ett antal alternativ att använda. Show, hide, toggle
-            är tre sätt att manipulera om ett element ska visas eller gömmas. För att göra övergången mellan dessa states
-            så finns det även alternativ att ställa in ett delay för show och hide, spesat i millisekunder, alternativt
-            så kan funktionerna fadeIn eller fadeOut användas. Vill man bara delvis dölja ett objekt så kan man använda
-            sig av fadeTo som sätter transparensen hos ett element till det spesade värdet mellan 0 och 1, där 0 är
-            osynligt och 1 är helt synligt. Toggle-metoderna gör så att om elementet är gömt så visas det och vice
-            versa.
-        </p>
-        <div class="container">
-            <div class="flexItem">
-                <h3>Visningsalternativ</h3>
-                <button id="show">Show</button>
-                <button id="hide">Hide</button>
-                <button id="toggle">Toggle</button>
-                <button id="fadeIn">Fade In</button>
-                <button id="fadeOut">Fade Out</button>
-                <button id="fadeToggle">Fade Toggle</button>
-                <button id="fadeTo">Fade To 0,5 opacity</button>
-            </div>
-            <div class="flexItem targetDiv"></div>
-        </div>
+  <header>
+    <h1>Uppgift 3.4.1</h1>
+  </header>
 
-        <h2><code>animate</code></h2>
-        <p>
-            Animationer kan åstadkommas med hjälp av jquerys <code>animate</code>-funktion. Här nere ser vi ett exempel
-            på en animation som också har ett antal länkade sk. callbacks, händelser som utförs då den första animationen
-            gått klart. Detta skapar en kedjeeffekt som visar element efter element. Animationen nedan använder en linjär
-            animationsmodell, denna säkerställer att animationens hastighet hålls bestämd genom hela animationen, till skillnad
-            från swing som animerar olika snabbt beroende på hur långt gången den är. Animationerna nedan är också
-            inställda med olika hastighet, den första ganska långsam men sedan snabbar de på, animation efter animation
-            tills den sista som bara har 150 millisekunder på sig.
-        </p>
-        <div class="container">
-            <div class="flexItem divOne"></div>
-            <div class="flexItem divTwo"></div>
-            <div class="flexItem divThree"></div>
-            <div class="flexItem divFour"></div>
-            <div class="flexItem divFive"></div>
-        </div>
-        <button id="startAnimation">Starta animeringen!</button>
-    </main>
+  <main>
+    <h2><code>show</code>, <code>hide</code> och <code>toggle</code></h2>
+    <p>
+      För att manipulera ett element på sin plats så finns det ett antal alternativ att använda. Show, hide, toggle
+      är tre sätt att manipulera om ett element ska visas eller gömmas. För att göra övergången mellan dessa states
+      så finns det även alternativ att ställa in ett delay för show och hide, spesat i millisekunder, alternativt
+      så kan funktionerna fadeIn eller fadeOut användas. Vill man bara delvis dölja ett objekt så kan man använda
+      sig av fadeTo som sätter transparensen hos ett element till det spesade värdet mellan 0 och 1, där 0 är
+      osynligt och 1 är helt synligt. Toggle-metoderna gör så att om elementet är gömt så visas det och vice
+      versa.
+    </p>
+    <div class="container">
+      <div class="flexItem">
+        <h3>Visningsalternativ</h3>
+        <button id="show">Show</button>
+        <button id="hide">Hide</button>
+        <button id="toggle">Toggle</button>
+        <button id="fadeIn">Fade In</button>
+        <button id="fadeOut">Fade Out</button>
+        <button id="fadeToggle">Fade Toggle</button>
+        <button id="fadeTo">Fade To 0,5 opacity</button>
+      </div>
+      <div class="flexItem targetDiv"></div>
+    </div>
+
+    <h2><code>animate</code></h2>
+    <p>
+      Animationer kan åstadkommas med hjälp av jquerys <code>animate</code>-funktion. Här nere ser vi ett exempel
+      på en animation som också har ett antal länkade sk. callbacks, händelser som utförs då den första animationen
+      gått klart. Detta skapar en kedjeeffekt som visar element efter element. Animationen nedan använder en linjär
+      animationsmodell, denna säkerställer att animationens hastighet hålls bestämd genom hela animationen, till skillnad
+      från swing som animerar olika snabbt beroende på hur långt gången den är. Animationerna nedan är också
+      inställda med olika hastighet, den första ganska långsam men sedan snabbar de på, animation efter animation
+      tills den sista som bara har 150 millisekunder på sig.
+    </p>
+    <div class="container">
+      <div class="flexItem divOne"></div>
+      <div class="flexItem divTwo"></div>
+      <div class="flexItem divThree"></div>
+      <div class="flexItem divFour"></div>
+      <div class="flexItem divFive"></div>
+    </div>
+    <button id="startAnimation">Starta animeringen!</button>
+  </main>
 </body>
 </html>
