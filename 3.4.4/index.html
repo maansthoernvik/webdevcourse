@@ -1,70 +1,74 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <title>Uppgift 3.4.4</title>
-    <link href="../css/jquery-ui.min.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
-    <script src="../jquery/jquery-3.2.1.min.js"></script>
-    <script src="../jquery/jquery-ui.min.js"></script>
-    <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <title>Uppgift 3.4.4</title>
+  <link href="../css/jquery-ui.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <script src="../jquery/jquery-3.2.1.min.js"></script>
+  <script src="../jquery/jquery-ui.min.js"></script>
+  <script src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Uppgift 3.4.4</h1>
-    </header>
-    <main>
-        <section>
-            <h2 title="Programmering av hemsidor och webbservrar med hjälp av HTML, CSS, Javascript och mycket mer">
-                Webbutveckling
-            </h2>
-            <p>
-                Texten nedan och headern ovan har kopplade tooltips som visar mer information när man håller muspekaren över
-                dem.
-            </p>
-            <p>
-                Webbsidor tas fram med hjälp av många olika teknologier, osynliga för sina användare.
-                <span id="jsTooltipTarget" title="JS">JavaScript</span> lägger till dynamik till dagens moderna webbdesign.
-                <span id="htmlTooltipTarget" title="HTML">HTML</span> står för strukturen av sidorna, i vilken ordning
-                olika element läggs ut. <span id="cssTooltipTarget" title="CSS">CSS</span> står för utseendet, vilken
-                färg på bakgrund det ska vara tillexempel.
-            </p>
-        </section>
+  <header>
+    <h1>Uppgift 3.4.4</h1>
+  </header>
+  <main>
+    <section>
+      <h2 title="Programmering av hemsidor och webbservrar med hjälp av HTML, CSS, Javascript och mycket mer">
+        Webbutveckling
+      </h2>
+      <p>
+        Texten nedan och headern ovan har kopplade tooltips som visar mer information när man håller muspekaren över
+        dem.
+      </p>
+      <p>
+        Webbsidor tas fram med hjälp av många olika teknologier, osynliga för sina användare.
+        <span id="jsTooltipTarget" title="JS">JavaScript</span> lägger till dynamik till dagens moderna webbdesign.
+        <span id="htmlTooltipTarget" title="HTML">HTML</span> står för strukturen av sidorna, i vilken ordning
+        olika element läggs ut. <span id="cssTooltipTarget" title="CSS">CSS</span> står för utseendet, vilken
+        färg på bakgrund det ska vara tillexempel.
+      </p>
+    </section>
 
-        <section>
-            <h2>Tabbade paneler</h2>
-            <div class="tabbedPanels">
-                <ul>
-                    <li><a href="#js">JavaScript</a></li>
-                    <li><a href="#html">HTML</a></li>
-                    <li><a href="#css">CSS</a></li>
-                </ul>
-                <div id="js">
-                    <h3>Dynamik</h3>
-                    <img src="images/jslogo.png" alt="JavaScript-logotyp">
-                </div>
-                <div id="html">
-                    <h3>Struktur</h3>
-                    <img src="images/html5logo.png" alt="HTML-logotyp">
-                </div>
-                <div id="css">
-                    <h3>Design</h3>
-                    <img src="images/csslogo.jpg" alt="CSS-logotyp">
-                </div>
-            </div>
-        </section>
-    </main>
-<script id="jsTooltipTemplate" type="text/template">
+    <section>
+      <h2>Tabbade paneler</h2>
+      <div class="tabbedPanels">
+        <ul>
+          <li><a href="#js">JavaScript</a></li>
+          <li><a href="#html">HTML</a></li>
+          <li><a href="#css">CSS</a></li>
+        </ul>
+        <div id="js">
+          <h3>Dynamik</h3>
+          <img src="images/jslogo.png" alt="JavaScript-logotyp">
+        </div>
+        <div id="html">
+          <h3>Struktur</h3>
+          <img src="images/html5logo.png" alt="HTML-logotyp">
+        </div>
+        <div id="css">
+          <h3>Design</h3>
+          <img src="images/csslogo.jpg" alt="CSS-logotyp">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script id="jsTooltipTemplate" type="text/template">
     <h3>JavaScript</h3>
     <img src="images/jslogo.png" alt="JavaScript-logotyp">
-</script>
-<script id="htmlTooltipTemplate" type="text/template">
+  </script>
+
+  <script id="htmlTooltipTemplate" type="text/template">
     <h3>HTML</h3>
     <img src="images/html5logo.png" alt="HTML-logotyp">
-</script>
-<script id="cssTooltipTemplate" type="text/template">
+  </script>
+
+  <script id="cssTooltipTemplate" type="text/template">
     <h3>CSS</h3>
     <img src="images/csslogo.jpg" alt="CSS-logotyp">
-</script>
+  </script>
+
 </body>
 </html>
