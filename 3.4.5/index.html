@@ -1,112 +1,119 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <title>Uppgift 3.4.5</title>
-    <script src="../jquery/jquery-3.2.1.min.js"></script>
-    <script src="../jquery/jquery-ui.min.js"></script>
-    <script src="../jquery/jquery.validate.min.js"></script>
-    <script src="script.js"></script>
-
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Uppgift 3.4.5</title>
+  <script src="../jquery/jquery-3.2.1.min.js"></script>
+  <script src="../jquery/jquery-ui.min.js"></script>
+  <script src="../jquery/jquery.validate.min.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Uppgift 3.4.5</h1>
-    </header>
-    <main>
-        <h2>Formulär med Jquery</h2>
-        <p>
-            Nedan är ett formulär som ska skickas till Skatteverket där användaren ska fylla i intjänad summa under året
-            samt hur mycket han eller hon redan betalat i skatt. Det finns även informationsfält att fylla i om man är
-            gift/har en sambo och då har delad ekonomi.
-        </p>
+  <header>
+    <h1>Uppgift 3.4.5</h1>
+  </header>
+  <main>
+    <h2>Formulär med Jquery</h2>
+    <p>
+      Nedan är ett formulär som ska skickas till Skatteverket där användaren ska fylla i intjänad summa under året
+      samt hur mycket han eller hon redan betalat i skatt. Det finns även informationsfält att fylla i om man är
+      gift/har en sambo och då har delad ekonomi.
+    </p>
+    <p class="note">
+      Prova även att sätta skatteavdrag till 0 för att få en bekräftelseruta ( <code>confirm()</code> ) som frågar
+      om du verkligen inte har några skatteavdrag att göra.
+    </p>
 
-        <form action="#">
-            <fieldset>
-                <legend>Personinfo</legend>
+    <form action="#">
+      <fieldset>
+        <legend>Personinfo</legend>
 
-                <label for="name">För- & efternamn</label>
-                <input type="text"
-                       name="name"
-                       id="name"
-                       title="Du måste ange både för- och efternamn">
+        <label for="name">För- & efternamn</label>
+        <input type="text"
+               name="name"
+               id="name"
+               title="Ange både För- och Efternamn som börjar med stora bokstäver">
 
-                <label for="socialSecurity">Personnummer</label>
-                <input type="number"
-                       name="socialSecurity"
-                       id="socialSecurity">
+        <label for="socialSecurity">Personnummer</label>
+        <input type="number"
+               name="socialSecurity"
+               id="socialSecurity">
 
-                <p class="label">Äktenskapsstatus</p>
-                <div>
-                    <label for="single">Singel</label>
-                    <input type="radio"
-                           name="relationshipStatus"
-                           id="single"
-                           class="inline"
-                           title="Du måste fylla i din civilstatus">
+        <p class="label">Äktenskapsstatus</p>
+        <div>
+          <label for="single">Singel</label>
+          <input type="radio"
+                 name="relationshipStatus"
+                 id="single"
+                 class="inline"
+                 title="Du måste fylla i din civilstatus">
 
-                    <label for="sambo">Sambo</label>
-                    <input type="radio"
-                           name="relationshipStatus"
-                           id="sambo"
-                           class="inline">
+          <label for="sambo">Sambo</label>
+          <input type="radio"
+                 name="relationshipStatus"
+                 id="sambo"
+                 class="inline">
 
-                    <label for="married">Gift</label>
-                    <input type="radio"
-                           name="relationshipStatus"
-                           id="married"
-                           class="inline">
-                </div>
-            </fieldset>
+          <label for="married">Gift</label>
+          <input type="radio"
+                 name="relationshipStatus"
+                 id="married"
+                 class="inline">
+        </div>
+      </fieldset>
 
-            <fieldset id="partnerInfo">
-                <legend>Information om din partner</legend>
+      <fieldset id="partnerInfo">
+        <legend>Information om din partner</legend>
 
-                <label for="partnerName">För- & efternamn</label>
-                <input type="text" name="partnerName" id="partnerName">
+        <label for="partnerName">För- & efternamn</label>
+        <input type="text"
+               name="partnerName"
+               id="partnerName">
 
-                <label for="partnerSocialSecurity">Personnummer</label>
-                <input type="number" name="partnerSocialSecurity" id="partnerSocialSecurity">
-            </fieldset>
+        <label for="partnerSocialSecurity">Personnummer</label>
+        <input type="number"
+               name="partnerSocialSecurity"
+               id="partnerSocialSecurity">
+      </fieldset>
 
-            <fieldset id="incomeTypes">
-                <legend>Andra inkomster</legend>
+      <fieldset id="incomeTypes">
+        <legend>Andra inkomster</legend>
 
-                <div id="inheritanceContainer">
-                    <label for="inheritance">Arv</label>
-                    <input type="number" name="inheritance" id="inheritance">
-                </div>
-                <input type="checkbox" name="noInheritage" id="noInheritage" class="inline">
-                <label for="noInheritage">Jag har inte ärvt några pengar</label>
+        <div id="inheritanceContainer">
+          <label for="inheritance">Arv</label>
+          <input type="number" name="inheritance" id="inheritance">
+        </div>
+        <input type="checkbox" name="noInheritage" id="noInheritage" class="inline">
+        <label for="noInheritage">Jag har inte ärvt några pengar</label>
 
-                <div id="winningsContainer">
-                    <label for="winnings" class="block">Vinster</label>
-                    <input type="number" name="winnings" id="winnings">
-                </div>
-                <input type="checkbox" name="noWinnings" id="noWinnings" class="inline">
-                <label for="noWinnings">Jag har inte vunnit några pengar</label>
-            </fieldset>
+        <div id="winningsContainer">
+          <label for="winnings" class="block">Vinster</label>
+          <input type="number" name="winnings" id="winnings">
+        </div>
+        <input type="checkbox" name="noWinnings" id="noWinnings" class="inline">
+        <label for="noWinnings">Jag har inte vunnit några pengar</label>
+      </fieldset>
 
-            <fieldset>
-                <legend>Inkomst och skatt detta året</legend>
+      <fieldset>
+        <legend>Inkomst och skatt detta året</legend>
 
-                <label for="earnings">Inkomst före skatt</label>
-                <input type="number"
-                       name="earnings"
-                       id="earnings"
-                       title="Du måste fylla i din inkomst för det gångna året">
+        <label for="earnings">Inkomst före skatt</label>
+        <input type="number"
+               name="earnings"
+               id="earnings"
+               title="Du måste fylla i din inkomst för det gångna året">
 
-                <label for="deductibles">Skatteavdrag (summa)</label>
-                <input type="number"
-                       name="deductibles"
-                       id="deductibles">
+        <label for="deductibles">Skatteavdrag (summa)</label>
+        <input type="number"
+               name="deductibles"
+               id="deductibles"
+               title="Du måste fylla i avdrag">
 
-                <p>Summa skatt att betala:<span id="totalTaxPaid">0</span>kr</p>
-            </fieldset>
+      </fieldset>
 
-            <button type="submit">Skicka in</button>
-        </form>
-    </main>
+      <button type="submit">Skicka in</button>
+    </form>
+  </main>
 </body>
 </html>
